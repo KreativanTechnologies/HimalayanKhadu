@@ -49,21 +49,21 @@ const WhyHimalayan = () => {
           <div className="absolute w-[35vw] h-[32vw] md:w-[14vw] md:h-[13vw] overflow-hidden left-0 md:left-2/12 top-1/6 z-20 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
             <img
               className="w-full h-full object-cover object-center"
-              src="https://s3-alpha-sig.figma.com/img/1de3/2213/dfdddbd8dfa76ea055b0cf704b458b05?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JaWqoN0787rGTi64Opad-LjQPllDCwXX0BtQRDfN0tfhFHT43u9a3UDudtsEHqxKDE2S9~B2g~S6DsCvy9bPmRirG8y416UAtHDxRH0uvXq1QbWuFnxheh7T1KSyRKv5esDxo0f5AkoAz8hitElPEMnqEriXgmw9BZzqggWZvATkl1QiTO5FDNEZlf1TpVvJM2qeJi7oDau-TqLYmiqEPcbp8UnmTRjuPnv1oTNOVfPeIJpR2nhhe2lW2mWgm~rJG8VDscLsLU6X-9USdFM82cjSbIHWwKypqXbmWW2PN4WcBcLeQ8tZQT8yu2ReXAq~9xGxjVQHp8d~VZHSQFK2FQ__"
+              src="/images/HomePage/Why1.png"
               alt=""
             />
           </div>
           <div className="absolute w-[70vw] h-[60vw] md:w-[28vw] md:h-[25vw] overflow-hidden top-0 right-0 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
             <img
               className="w-full h-full object-cover object-center"
-              src="https://s3-alpha-sig.figma.com/img/1de3/2213/dfdddbd8dfa76ea055b0cf704b458b05?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JaWqoN0787rGTi64Opad-LjQPllDCwXX0BtQRDfN0tfhFHT43u9a3UDudtsEHqxKDE2S9~B2g~S6DsCvy9bPmRirG8y416UAtHDxRH0uvXq1QbWuFnxheh7T1KSyRKv5esDxo0f5AkoAz8hitElPEMnqEriXgmw9BZzqggWZvATkl1QiTO5FDNEZlf1TpVvJM2qeJi7oDau-TqLYmiqEPcbp8UnmTRjuPnv1oTNOVfPeIJpR2nhhe2lW2mWgm~rJG8VDscLsLU6X-9USdFM82cjSbIHWwKypqXbmWW2PN4WcBcLeQ8tZQT8yu2ReXAq~9xGxjVQHp8d~VZHSQFK2FQ__"
+              src="/images/HomePage/Why3.png"
               alt=""
             />
           </div>
           <div className="absolute w-[60vw] h-[50vw] md:w-[24vw] md:h-[20vw] overflow-hidden bottom-0 left-1/12 md:left-3/12 z-10 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
             <img
               className="w-full h-full object-cover object-center"
-              src="https://s3-alpha-sig.figma.com/img/1de3/2213/dfdddbd8dfa76ea055b0cf704b458b05?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JaWqoN0787rGTi64Opad-LjQPllDCwXX0BtQRDfN0tfhFHT43u9a3UDudtsEHqxKDE2S9~B2g~S6DsCvy9bPmRirG8y416UAtHDxRH0uvXq1QbWuFnxheh7T1KSyRKv5esDxo0f5AkoAz8hitElPEMnqEriXgmw9BZzqggWZvATkl1QiTO5FDNEZlf1TpVvJM2qeJi7oDau-TqLYmiqEPcbp8UnmTRjuPnv1oTNOVfPeIJpR2nhhe2lW2mWgm~rJG8VDscLsLU6X-9USdFM82cjSbIHWwKypqXbmWW2PN4WcBcLeQ8tZQT8yu2ReXAq~9xGxjVQHp8d~VZHSQFK2FQ__"
+              src="/images/HomePage/Why2.png"
               alt=""
             />
           </div>
