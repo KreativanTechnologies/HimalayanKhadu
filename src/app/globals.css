@@ -14,3 +14,9 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
 }
+
+.contactPageHeroImage {
+  background-image: url("../assets/contact//image1.png");
+  background-position: center center;
+  background-size: cover;
+}
