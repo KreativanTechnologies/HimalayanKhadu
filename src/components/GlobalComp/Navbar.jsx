@@ -8,8 +8,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='bg-white shadow-md py-4 px-6 md:px-12'>
-      <div className='flex justify-between items-center'>
+    <nav className='bg-white shadow-md py-4'>
+      <div className='flex responsivewidth justify-between items-center'>
         {/* Logo */}
         <div className='flex items-center'>
           <Image src={logoIcon} alt='Logo' className='size-[100px]' />
@@ -17,20 +17,13 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className='hidden lg:flex space-x-8 text-gray-700'>
-          {[
-            "Home",
-            "About",
-            "Destinations",
-            "Package",
-            "Blog",
-            "Contact Us",
-          ].map((item) => (
+          {navLinks.map((item) => (
             <a
-              key={item}
-              href='/'
+              key={item.name}
+              href={item.href}
               className='relative text-[#6a6a6a] text-base font-normal font-poppins after:block after:h-[2px] after:w-full after:bg-teal-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300'
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </div>
@@ -72,3 +65,30 @@ export default function Navbar() {
     </nav>
   );
 }
+
+const navLinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About",
+    href: "/About",
+  },
+  {
+    name: "Destinations",
+    href: "/Destinations",
+  },
+  {
+    name: "Package",
+    href: "/Package",
+  },
+  {
+    name: "Blog",
+    href: "/Blog",
+  },
+  {
+    name: "Contact",
+    href: "/Contact",
+  },
+];
