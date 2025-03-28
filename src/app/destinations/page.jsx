@@ -3,6 +3,8 @@ import DestinationHero from '../../components/DestinationsComp/DestinationHero';
 import OurTrips from "../../components/HomePageComp/OurTrips";
 import Section3 from '../../components/DestinationsComp/Section3';
 import OurDestination from '../../components/DestinationsComp/OurDestination';
+import ClientSay from "../../components/HomePageComp/ClientSay";
+import DestinationSlider from '../../components/DestinationsComp/DestinationSlider';
 
 const DestinationPage = () => {
   return (
@@ -10,7 +12,10 @@ const DestinationPage = () => {
       <DestinationHero />
       <OurTrips />
       <Section3 />
-      <OurDestination/>
+      <OurDestination />
+      <DestinationSlider/>
+      <ClientSay />
+
     </div>
   );
 }

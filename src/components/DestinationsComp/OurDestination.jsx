@@ -21,22 +21,19 @@ const data = [
 
 const OurDestination = () => {
   return (
-    <div className="w-full p-6">
-      {/* Heading */}
-      <h2 className="text-center text-3xl font-bold">
+    <div className="w-full px-6 md:px-18 py-16">
+      <h2 className="text-center text-3xl font-bold mb-12">
         Our <span className="text-[#0C8699]">Destinations</span>
       </h2>
 
-      {/* Image Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-4 w-full mt-6">
-        {/* First Row - Two Images */}
         <div className="relative col-span-1 md:col-span-2 row-span-1">
           <img
             className="w-full h-[200px] md:h-[280px] lg:h-[320px] object-cover rounded-xl shadow-md"
             src="/images/destinationPage/sectionimg3.png"
             alt="Destination 1"
           />
-          {/* Overlay Text */}
+
           <div className="absolute inset-0  flex flex-col justify-end p-4 rounded-xl">
             <h3 className="text-white text-lg md:text-xl font-bold">
               Winter Meghalaya Trip
