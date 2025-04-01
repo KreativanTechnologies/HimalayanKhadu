@@ -50,7 +50,7 @@ export default function Navbar() {
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } lg:hidden flex flex-col space-y-4 mt-4 overflow-hidden transition-all duration-300`}
       >
-        {["Home", "About", "Destinations", "Package", "Blog", "Contact Us"].map(
+        {["Home", "about", "Destinations", "Package", "Blog", "Contact Us"].map(
           (item) => (
             <a
               key={item}
@@ -73,7 +73,7 @@ const navLinks = [
   },
   {
     name: "About",
-    href: "/About",
+    href: "/about",
   },
   {
     name: "Destinations",
