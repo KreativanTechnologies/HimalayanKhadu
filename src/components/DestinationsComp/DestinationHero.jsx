@@ -2,8 +2,8 @@ import React from "react";
 
 const DestinationHero = () => {
   return (
-    <div className=" px-6 md:px-18  ">
-      <section className="flex flex-col md:flex-row  items-center gap-4 md:gap-18 md:h-full">
+    <div className=" px-6 md:px-18 pt-10 ">
+      <section className="flex flex-col md:flex-row  items-center gap-4 md:gap-18 ">
         {/* Left Section */}
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold leading-[1.3]">
