@@ -9,7 +9,7 @@ dotenv.config()
 
 mongoose
     .connect(
-        "mongodb+srv://kreativantech:kreativantech@ktbackends.x2yy7.mongodb.net/HimalayanKhadu"
+        "mongodb+srv://kreativantech:kretivantech@ktbackends.x2yy7.mongodb.net/?retryWrites=true&w=majority&appName=KTbackends"
     ).then(() => console.log("MongoDB connected"))
     .catch((error) => console.log(error))
 
