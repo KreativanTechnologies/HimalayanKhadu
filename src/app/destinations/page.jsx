@@ -15,7 +15,6 @@ const DestinationPage = () => {
       <OurDestination />
       <DestinationSlider/>
       <ClientSay />
-
     </div>
   );
 }
