@@ -6,17 +6,20 @@ import WhyChooseus from '../../components/AboutComponents/WhyChooseus'
 import ClientSay from '../../components/AboutComponents/ClientSay'
 import DiscoverTrips from '../../components/AboutComponents/OurPackages'
 
+const Herodata = {
+  img_Src : "/images/aboutimg/hero.png",
+  heading : "About Us"
+}
+
 const page = () => {
   return (
     <>
-    <Hero/>
+    <Hero data={Herodata}/>
     <AboutSection/>
     <DiscoverTrips/>
     <Memory/>
     <WhyChooseus/>
     <ClientSay/>
-
-      
     </>
   )
 }
