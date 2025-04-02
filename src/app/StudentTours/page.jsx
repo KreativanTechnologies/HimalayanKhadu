@@ -1,6 +1,7 @@
 
 import Image from "next/image"
-
+import Image1 from "../../assets/biketour/img1.png";
+import Image2 from "../../assets/biketour/img2.png";
 import DestinationSlider from '../../components/DestinationsComp/DestinationSlider';
 import ClientSay from "../../components/HomePageComp/ClientSay"
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan"
@@ -42,7 +43,7 @@ const Hero =() => {
         {/* Image Collage - Updated with all three images */}
         <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px]">
           {/* First image - Cycling with insurance text */}
-          <div className="absolute top-0 left-0 md:left-40  w-[200px] h-[180px] rounded-lg overflow-hidden shadow-lg transform rotate-[9.23deg] z-10  ">
+          <div className="absolute top-0 left-0 md:left-40  w-[200px] h-[180px] rounded-lg overflow-hidden shadow-lg transform rotate-[9.23deg] z-10 ">
             <Image src="/cycling-image.jpg" alt="Insurance qualways dreamt about" fill className="object-cover" />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/30 flex flex-col justify-end p-3">
             
