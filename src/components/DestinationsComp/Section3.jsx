@@ -83,7 +83,7 @@ const Section3 = () => {
             </button>
           </div>
 
-          <div className="h-56 sm:h-48   md:h-64 w-full flex items-end justify-end absolute bottom-0 ">
+          <div className="h-[11rem] sm:h-48   md:h-64 w-full flex items-end justify-end absolute bottom-0 ">
             <img
               className="h-full md:w-[17vw] object-cover "
               src="/images/destinationPage/section3cycle.png"
