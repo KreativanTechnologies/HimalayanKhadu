@@ -21,7 +21,7 @@ const data = [
 
 const OurDestination = () => {
   return (
-    <div className="w-full px-6 md:px-18 py-16 mt-10 md:mt-0 ">
+    <div className="w-full px-6 md:px-18 py-16  sm:mt-0 ">
       <h2 className="text-center text-3xl font-bold mb-12">
         Our <span className="text-[#0C8699]">Destinations</span>
       </h2>

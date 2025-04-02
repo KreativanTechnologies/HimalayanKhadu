@@ -2,7 +2,7 @@ import React from "react";
 
 const Section3 = () => {
   return (
-    <div className="h-screen w-full relative ">
+    <div className="h-full w-full relative ">
       <div>
         <div className="absolute z-30 h-10 w-10 left-[15.4rem] md:left-[24.2rem] -top-[2rem]">
           <img
@@ -83,7 +83,7 @@ const Section3 = () => {
             </button>
           </div>
 
-          <div className="h-56 sm:h-48   md:h-64 w-full flex items-end justify-end absolute bottom-0 ">
+          <div className="h-[11rem] sm:h-48   md:h-64 w-full flex items-end justify-end absolute bottom-0 ">
             <img
               className="h-full md:w-[17vw] object-cover "
               src="/images/destinationPage/section3cycle.png"
