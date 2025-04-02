@@ -27,16 +27,16 @@ const DestinationHero = () => {
         </div>
 
         {/* Right Section - Image Grid */}
-        <div className="md:w-1/2 flex md:mt-0 md:h-full justify-center md:justify-end items-center gap-4 relative px-6 ">
-          <div className="flex flex-col gap-4">
-            <div className=" w-[8rem] h-[8rem] lg:w-40 lg:h-40  flex items-end overflow-hidden rounded-xl ml-8 md:ml-16">
+        <div className="md:w-1/2 flex md:mt-0 md:h-full justify-center md:justify-end items-center gap-3 sm:gap-4 relative px-6 ">
+          <div className="flex flex-col gap-3 sm:gap-4">
+            <div className=" w-[5rem] h-[5rem] sm:w-[8rem]  sm:h-[8rem] lg:w-40 lg:h-40  flex items-end overflow-hidden rounded-xl ml-8 sm:ml-8 md:ml-16">
               <img
                 src="/images/destinationPage/megh1.webp"
                 alt="Mountain village"
                 className="w-full h-full   object-cover"
               />
             </div>
-            <div className="w-[10rem] h-[10rem] lg:w-56 lg:h-[14rem] md:ml-8 lg:ml-0 rounded-xl shadow-md overflow-hidden">
+            <div className="w-[7rem] h-[7rem]  sm:w-[10rem] sm:h-[10rem] lg:w-56 lg:h-[14rem] md:ml-8 lg:ml-0 rounded-xl shadow-md overflow-hidden">
               <img
                 src="/images/destinationPage/img1.webp"
                 alt="Cyclists"
@@ -44,15 +44,15 @@ const DestinationHero = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4 ">
-            <div className="w-[12rem] h-[16rem]  lg:w-72 lg:h-[22rem] overflow-hidden rounded-xl shadow-md">
+          <div className="flex flex-col gap-3 sm:gap-4 ">
+            <div className="w-[9rem] h-[10rem] sm:w-[12rem] sm:h-[16rem] lg:w-72 lg:h-[22rem] overflow-hidden rounded-xl shadow-md">
               <img
                 src="/images/destinationPage/img1.webp"
                 alt="Blue building with mural"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-[12rem]    lg:w-72 lg:h-20 bg-[#0C8699]  rounded-xl shadow-md mb-16 lg:mb-24 relative pr-6 lg:pr-12 pt-1.5 lg:pt-3">
+            <div className="w-[9rem] sm:w-[12rem]       lg:w-72 lg:h-20 bg-[#0C8699]  rounded-xl shadow-md mb-16 lg:mb-24 relative pr-6 lg:pr-12 pt-1.5 lg:pt-3">
               <div className="absolute -left-3 -top-1.5">
                 <img src="/images/destinationPage/plane.png" alt="" />
               </div>
