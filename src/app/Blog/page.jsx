@@ -20,6 +20,7 @@ export default function Blog() {
           <div className='inline-block rounded-full overflow-hidden'>
             <Image
               src={HeartNakoImage}
+              alt=""
               className='w-[100px] sm:w-[150px] md:w-[180px] lg:w-[216px] lg:h-[92px] rounded-[54px]'
             />
           </div>

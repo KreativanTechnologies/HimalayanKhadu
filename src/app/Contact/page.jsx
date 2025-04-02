@@ -160,7 +160,7 @@ export default function Contact() {
                   className='w-full px-4 py-3 border border-[#0099cc] border-opacity-30 rounded-full focus:outline-none focus:ring-1 focus:ring-[#0099cc] appearance-none'
                   required
                 >
-                  <option value='' disabled selected>
+                  <option value='' disabled>
                     Select Your Trip
                   </option>
                   <option value='adventure'>Adventure Trip</option>
@@ -182,7 +182,7 @@ export default function Contact() {
                   className='w-full px-4 py-3 border border-[#0099cc] border-opacity-30 rounded-full focus:outline-none focus:ring-1 focus:ring-[#0099cc] appearance-none'
                   required
                 >
-                  <option value='' disabled selected>
+                  <option value='' disabled>
                     Select a Location
                   </option>
                   <option value='mountains'>Mountains</option>
