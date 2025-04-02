@@ -77,7 +77,7 @@ const navLinks = [
   },
   {
     name: "Destinations",
-    href: "/Destinations",
+    href: "/destinations",
   },
   {
     name: "Package",
