@@ -26,18 +26,18 @@ const DestinationSlider = () => {
         Memories for <span className="text-[#0C8699]">Life</span>
       </h2>
 
-      <div className="relative flex items-center justify-center w-full h-[250px] md:h-[320px] overflow-hidden">
+      <div className="relative flex items-center justify-center w-full h-[250px] md:h-[320px] ">
         {data.map((item, index) => {
-          let positionClass = "opacity-0 scale-75 translate-x-0"; 
+          let positionClass = "opacity-0 scale-75 translate-x-0";
 
           if (index === current) {
-            positionClass = "z-20 scale-100 opacity-100 translate-x-0"; 
+            positionClass = "z-20 scale-100 opacity-100 translate-x-0";
           } else if (index === (current + 1) % data.length) {
             positionClass =
-              "z-10 scale-90 opacity-80 translate-x-28 md:translate-x-64"; 
+              "z-10 scale-90 opacity-80 translate-x-28 md:translate-x-64";
           } else if (index === (current - 1 + data.length) % data.length) {
             positionClass =
-              "z-10 scale-90 opacity-80 -translate-x-28 md:-translate-x-64"; 
+              "z-10 scale-90 opacity-80 -translate-x-28 md:-translate-x-64";
           }
 
           return (
