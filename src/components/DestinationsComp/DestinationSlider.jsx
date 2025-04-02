@@ -1,30 +1,12 @@
 "use client";
+
 import React, { useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
-
 const data = [
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
-  {
-    img_Src: "/images/destinationPage/img1.webp",
-  },
+  { img_Src: "/images/destinationPage/img1.webp" },
+  { img_Src: "/images/destinationPage/img1.webp" },
+  { img_Src: "/images/destinationPage/img1.webp" },
 ];
 
 const DestinationSlider = () => {
@@ -40,22 +22,22 @@ const DestinationSlider = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center px-6 md:px-18 py-10">
-      
       <h2 className="text-2xl md:text-3xl font-bold mb-6">
         Memories for <span className="text-[#0C8699]">Life</span>
       </h2>
 
-
-      <div className="relative flex items-center justify-center w-full h-[250px] md:h-[320px]">
+      <div className="relative flex items-center justify-center w-full h-[250px] md:h-[320px] overflow-hidden">
         {data.map((item, index) => {
-          let positionClass = "opacity-0 scale-75"; 
+          let positionClass = "opacity-0 scale-75 translate-x-0"; 
 
           if (index === current) {
-            positionClass = "z-20 scale-100 opacity-100"; 
+            positionClass = "z-20 scale-100 opacity-100 translate-x-0"; 
           } else if (index === (current + 1) % data.length) {
-            positionClass = "z-10 scale-90 opacity-80 translate-x--64"; 
+            positionClass =
+              "z-10 scale-90 opacity-80 translate-x-28 md:translate-x-64"; 
           } else if (index === (current - 1 + data.length) % data.length) {
-            positionClass = "z-10 scale-90 opacity-80 -translate-x-64"; 
+            positionClass =
+              "z-10 scale-90 opacity-80 -translate-x-28 md:-translate-x-64"; 
           }
 
           return (
@@ -75,7 +57,7 @@ const DestinationSlider = () => {
         {/* Left Button */}
         <button
           onClick={handleLeftClick}
-          className="absolute left-[-5px]  p-2 md:p-3 bg-[#0C8699] text-white rounded-full z-30 shadow-lg"
+          className="absolute left-2 md:left-[-5px] p-2 md:p-3 bg-[#0C8699] text-white rounded-full z-30 shadow-lg"
         >
           <FaChevronLeft size={16} />
         </button>
@@ -83,7 +65,7 @@ const DestinationSlider = () => {
         {/* Right Button */}
         <button
           onClick={handleRightClick}
-          className="absolute right-0  p-2 md:p-3 bg-[#0C8699] text-white rounded-full z-30 shadow-lg"
+          className="absolute right-2 md:right-0 p-2 md:p-3 bg-[#0C8699] text-white rounded-full z-30 shadow-lg"
         >
           <FaChevronRight size={16} />
         </button>

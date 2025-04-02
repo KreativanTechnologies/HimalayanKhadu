@@ -3,17 +3,17 @@ import React from "react";
 
 const data = [
   {
-    img: "/images/destinationPage/section3img1.png",
+    img: "/images/destinationPage/img1.webp",
     title: "Winter Meghalaya Trip",
     rewiew: 2,
   },
   {
-    img: "/images/destinationPage/section3img1.png",
+    img: "/images/destinationPage/img1.webp",
     title: "Winter Meghalaya Trip",
     rewiew: 2,
   },
   {
-    img: "/images/destinationPage/section3img1.png",
+    img: "/images/destinationPage/img1.webp",
     title: "Winter Meghalaya Trip",
     rewiew: 2,
   },
@@ -21,7 +21,7 @@ const data = [
 
 const OurDestination = () => {
   return (
-    <div className="w-full px-6 md:px-18 py-16">
+    <div className="w-full px-6 md:px-18 py-16 mt-10 md:mt-0 ">
       <h2 className="text-center text-3xl font-bold mb-12">
         Our <span className="text-[#0C8699]">Destinations</span>
       </h2>
@@ -45,7 +45,7 @@ const OurDestination = () => {
         <div className="relative col-span-1 row-span-1">
           <img
             className="w-full h-[200px] md:h-[280px] lg:h-[320px] object-cover rounded-xl shadow-md"
-            src="/images/destinationPage/sectionimg4.png"
+            src="/images/destinationPage/megh1.webp"
             alt="Destination 2"
           />
           <div className="absolute inset-0  flex flex-col justify-end p-4 rounded-xl">
