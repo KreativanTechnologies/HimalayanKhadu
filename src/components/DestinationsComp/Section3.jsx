@@ -2,7 +2,7 @@ import React from "react";
 
 const Section3 = () => {
   return (
-    <div className="h-screen w-full relative ">
+    <div className="h-full w-full relative ">
       <div>
         <div className="absolute z-30 h-10 w-10 left-[15.4rem] md:left-[24.2rem] -top-[2rem]">
           <img
