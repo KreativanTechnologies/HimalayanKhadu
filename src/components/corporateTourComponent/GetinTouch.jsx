@@ -27,12 +27,10 @@ export default function ContactForm() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden mt-10">
      
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{
-          backgroundImage: "url('/images/aboutimg/getintouch.png')",
-          filter: "brightness(0.8)",
-        }}
+      <img src="images/aboutimg/getintouch.png" alt="Get in touch"
+        className="absolute "
+       
+        
       />
 
     
@@ -57,7 +55,7 @@ export default function ContactForm() {
 
         {/* Contact Form */}
         <div className="w-full lg:w-7/12 bg-white rounded-lg shadow-xl p-6 md:p-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-teal-600">Get in Touch!</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[#0C8699]">Get in Touch!</h2>
 
              <form onSubmit={handleSubmit} className='space-y-6'>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -169,7 +167,7 @@ export default function ContactForm() {
                         <div className='flex justify-center'>
                           <button
                             type='submit'
-                            className='bg-[#0099cc] text-white px-6 py-2 rounded-full hover:bg-[#007aa3] transition-colors'
+                            className='bg-[#0C8699] text-white px-6 py-2 rounded-full hover:bg-[#007aa3] transition-colors'
                           >
                             Send Message
                           </button>
