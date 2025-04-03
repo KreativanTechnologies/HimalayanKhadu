@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <div className="px-6 sm:px-12 py-12 md:py-16 lg:py-20 h-fit">
+    <div className="responsivewidth  py-12 md:py-16 lg:py-20 h-fit">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         {/* Left content */}
         <div className="w-full md:w-1/2 max-w-2xl mx-auto space-y-4 text-center md:text-left">
