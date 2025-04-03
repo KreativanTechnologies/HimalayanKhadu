@@ -1,50 +1,52 @@
-import dotenv from "dotenv"
-import express from "express"
-import mongoose from "mongoose"
-import cookieParser from "cookie-parser"
-import cors from "cors"
+import dotenv from "dotenv";
+import express from "express";
+import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
+import cors from "cors";
 
-import authRouter from './routes/auth/auth-routes.js'
-dotenv.config()
+import authRouter from "./routes/auth/auth-routes.js";
+dotenv.config();
 
 mongoose
-    .connect(
-        "mongodb+srv://kreativantech:kretivantech@ktbackends.x2yy7.mongodb.net/?retryWrites=true&w=majority&appName=KTbackends"
-    ).then(() => console.log("MongoDB connected"))
-    .catch((error) => console.log(error))
+  .connect(
+    "mongodb+srv://kreativantech:t88BWPCp758RNUmn@ktbackends.x2yy7.mongodb.net/HimalayanKhadu"
+  )
+  .then(() => console.log("MongoDB connected"))
+  .catch((error) => console.log(error));
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(
-    cors({
-        origin: process.env.CLIENT_BASE_URL,      
-        methods: ["GET", "POST", "DELETE", "PUT"],  
-        allowedHeaders: [
-            "Content-Type",
-            "Authorization",
-            "Cache-Control",
-            "Expires",
-            "Pragma"
-        ],
-        credentials: true
-    })
-)
+  cors({
+    origin: process.env.CLIENT_BASE_URL,
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Cache-Control",
+      "Expires",
+      "Pragma",
+    ],
+    credentials: true,
+  })
+);
 
+app.use(cookieParser());
+app.use(express.json());
 
-app.use(cookieParser())
-app.use(express.json())
+app.get("/", (req, res) => {
+  res.send("Welcome to the API!");
+});
 
-app.use('/api/auth',authRouter)   
+app.use("/api/auth", authRouter);
 
+app.listen(PORT, () => console.log(`Server is now running on port : ${PORT}`));
 
-app.listen(PORT, (() => console.log(`Server is now running on port : ${PORT}`)))
-
-app.use((err,req,res,next)=>{
-
-    console.log(err.message,'asd')
-    res.json({
-        message : "intrernal error",
-        error : err.message
-    })
-})
+app.use((err, req, res, next) => {
+  console.log(err.message, "asd");
+  res.json({
+    message: "intrernal error",
+    error: err.message,
+  });
+});
