@@ -21,12 +21,12 @@ export default function ContactForm() {
       const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form submitted:", formData);
-        // Add your form submission logic here
+    
       };
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden mt-10">
-      {/* Background Image */}
+     
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
@@ -35,9 +35,9 @@ export default function ContactForm() {
         }}
       />
 
-      {/* Content Container */}
+    
       <div className="container mx-auto px-4 py-10 z-10 flex flex-col lg:flex-row  justify-between gap-8">
-        {/* Left Column - Query Text */}
+        {/* Left */}
         <div className="w-full lg:w-1/3 text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Have any Query?</h2>
           <p className="mb-8 opacity-90">
@@ -46,7 +46,7 @@ export default function ContactForm() {
             scrambled it to make a type specimen book.
           </p>
 
-          {/* Paper Airplane with Path */}
+          {/* arrow*/}
           <div className="relative h-32 w-full lg:block hidden">
             <div className="absolute top-0 left-0">
              <img src="/images/aboutimg/arrow.png" alt="" />
@@ -55,7 +55,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Right Column - Contact Form */}
+        {/* Contact Form */}
         <div className="w-full lg:w-7/12 bg-white rounded-lg shadow-xl p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-teal-600">Get in Touch!</h2>
 
