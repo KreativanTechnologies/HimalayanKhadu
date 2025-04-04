@@ -14,7 +14,6 @@ const page = () => {
             <Grid/>
             <ClientSay/>
             <Blogs/>
-          
         </div>
     )
 }
