@@ -20,3 +20,8 @@
   background-position: center center;
   background-size: cover;
 }
+
+
+.custom-list li::marker {
+  font-size: 1.5rem; 
+}

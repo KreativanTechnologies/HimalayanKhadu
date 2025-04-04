@@ -1,31 +1,40 @@
-// import React from 'react'
+"use client";
+import React, { useState, useEffect } from "react";
+import { FaMapMarkerAlt, FaTag, FaSmile, FaBolt, FaSearch } from "react-icons/fa";
 
-// const HeroSection = () => {
-//   return (
-//     <div>HeroSection</div>
-//   )
-// }
-
-// export default HeroSection
-
-import React from "react";
-import { FaMapMarkerAlt, FaTag, FaSmile, FaBolt } from "react-icons/fa";
+const images = [
+  "/images/HomePage/h1.png",
+  "/images/HomePage/h3.png",
+  "/images/HomePage/h4.png",
+];
 
 const HeroSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/HomePage/h1.png')" }}>
+    <div className="relative w-full h-screen bg-cover bg-center transition-all duration-1000"
+      style={{ backgroundImage: `url(${images[currentImage]})` }}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-white text-3xl md:text-5xl font-bold">
-          Book Your Trip Today To <span className="text-blue-400">Meghalaya.</span>
+          Book Your Trip Today To <span className="text-[#0C8699]">Meghalaya.</span>
         </h1>
-        <div className="mt-6 flex items-center w-full max-w-lg bg-white rounded-full shadow-md overflow-hidden">
+        <div className="mt-6 flex items-center w-full max-w-lg bg-white rounded-full shadow-md overflow-hidden px-4 py-2">
           <input
             type="text"
             placeholder="Type Your Location..."
-            className="w-full p-3 outline-none text-sm md:text-base"
+            className="w-full p-3 outline-none text-sm md:text-base bg-transparent"
           />
-          <button className="bg-blue-500 text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-base">Search</button>
+          <button className="bg-[#0C8699] text-white flex items-center px-6 py-3 rounded-full">
+            <FaSearch className="mr-2" /> Search
+          </button>
         </div>
       </div>
       <div className="absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 w-full max-w-2xl lg:max-w-5xl h-auto bg-[#0C8699] p-6 md:p-8 lg:p-16 rounded-lg shadow-lg flex flex-wrap justify-around items-center gap-4 md:gap-0">
