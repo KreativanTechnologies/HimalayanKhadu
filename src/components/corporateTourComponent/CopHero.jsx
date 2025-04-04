@@ -4,7 +4,7 @@ import React from 'react'
 const CopHero = () => {
   return (
     <div>
-      <main className="responsivewidth mx-auto px-4 py-12 md:py-20 font-poppins">
+      <main className="responsivewidth mx-auto px-4 py-12 md:py-16 font-poppins">
         <div className="flex flex-col md:flex-row  lg:justify-between gap-8 md:gap-16 ">
           {/* Text Content */}
           <div className="w-full md:w-[70vw] max-w-xl md:mt-8">
@@ -27,7 +27,7 @@ const CopHero = () => {
           </div>
 
           {/* Image Collage -  */}
-          <div className="w-full md:w-auto relative  md:h-[500px] gap-3 sm:gap-4 flex md:items-center justify-center">
+          <div className="w-full md:w-auto relative  md:h-[500px] md:-mt-10 gap-3 sm:gap-4 flex md:items-center justify-center">
             <div className="flex mb-[5vw]">
               <div className="w-[50vw] h-[50vw]  md:w-[19vw] md:h-[24vw] overflow-hidden rounded-xl shadow-md">
                 <img
@@ -38,7 +38,7 @@ const CopHero = () => {
               </div>
             </div>
             <div className="flex flex-col gap-3 md:gap-4 mt-5 md:mt-10">
-              <div className=" w-[28vw] h-[25vw] md:w-[12vw] md:h-[10vw]   flex items-end overflow-hidden rounded-xl">
+              <div className=" w-[28vw] h-[25vw] md:w-[12vw] md:h-[10vw] flex items-end overflow-hidden rounded-xl">
                 <img
                   src="/images/destinationPage/human2.webp"
                   alt="Mountain village"
