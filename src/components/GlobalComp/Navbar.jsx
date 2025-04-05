@@ -3,9 +3,11 @@ import logoIcon from "../../assets/logo.png";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <nav className='bg-white shadow-md py-4'>
@@ -31,10 +33,9 @@ export default function Navbar() {
         {/* Right Section */}
         <div className='flex items-center space-x-4'>
           <Search className='w-5 h-5 text-gray-600 cursor-pointer' />
-          <button className='bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition-all'>
+          <button className='bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition-all'  onClick={() => router.push('/Login')}>
             Login
           </button>
-          {/* Mobile Menu Button */}
           <button
             className='lg:hidden text-gray-700'
             onClick={() => setIsOpen(!isOpen)}

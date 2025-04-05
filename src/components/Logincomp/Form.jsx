@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from 'next/navigation';
 
 const Form = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -13,6 +14,7 @@ const Form = () => {
     e.preventDefault();
     console.log("Submitted Data:", formData);
   };
+  const router = useRouter();
 
   return (
     <div
@@ -63,7 +65,7 @@ const Form = () => {
         {/* Signup Link */}
         <p className="text-center text-sm text-[#0C8699] font-semibold  mt-4">
           Don’t have an Account?{" "}
-          <span className="text-[#0C8699]  font-bold hover:underline cursor-pointer">
+          <span className="text-[#0C8699]  font-bold hover:underline cursor-pointer" onClick={() => router.push('/Signup')}>
             Sign up
           </span>
         </p>
