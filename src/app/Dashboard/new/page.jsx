@@ -1,6 +1,6 @@
-import { DashboardShell } from "../../../components/Dashboard/dashboard_shell"
-import { DashboardHeader } from "../../../components/Dashboard/dashboard_header"
-import { ListingForm } from "../../../components/Dashboard/listing_form"
+import { DashboardShell } from "../../../components/Dashboard/dashboardShell"
+import { DashboardHeader } from "../../../components/Dashboard/dashboardHeader"
+import { ListingForm } from "../../../components/Dashboard/listingForm"
 
 export default function NewListingPage() {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { Button } from "../../components/ui/button"
-import { ModeToggle } from "../../components/Dashboard/mode-toggle"
+import { Button } from "../ui/button"
+import { ModeToggle } from "../../components/Dashboard/modeToggle"
 import { PlaneTakeoff } from "lucide-react"
 
 export function SiteHeader() {

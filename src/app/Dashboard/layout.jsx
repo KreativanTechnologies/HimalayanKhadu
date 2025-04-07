@@ -1,5 +1,5 @@
-import { DashboardNav } from "../../components/Dashboard/dashboard-nav"
-import { SiteHeader } from "../../components/Dashboard/site-header"
+import { DashboardNav } from "../../components/Dashboard/dashboardNav"
+import { SiteHeader } from "../../components/Dashboard/siteHeader"
 
 export default function DashboardLayout({ children }) {
   return (

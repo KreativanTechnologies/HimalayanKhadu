@@ -11,7 +11,7 @@ import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 import { Card, CardContent } from "../ui/card"
-import { ImageUploader } from "../Dashboard/image_uploader"
+import { ImageUploader } from "./imageUploader"
 import { Loader2 } from "lucide-react"
 
 // Mock data for editing
