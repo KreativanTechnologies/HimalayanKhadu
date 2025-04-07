@@ -4,7 +4,7 @@ import AboutSection from '../../components/AboutComponents/About'
 import Memory from '../../components/AboutComponents/Memory'
 import WhyChooseus from '../../components/AboutComponents/WhyChooseus'
 import ClientSay from '../../components/AboutComponents/ClientSay'
-import DiscoverTrips from '../../components/AboutComponents/OurPackagexplore'
+import DiscoverTrips from '../../components/AboutComponents/OurPackages'
 
 const Herodata = {
   img_Src : "/images/aboutimg/hero.png",
