@@ -1,76 +1,120 @@
-import React from 'react'
+"use client";
+import React from "react";
 import Image3 from "../../assets/spiritualTours/img3.png";
-import Image from 'next/image';
+import Image from "next/image";
 import { Star } from "lucide-react";
+import { useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 
 const Section5 = () => {
+  const tours = [
+    {
+      id: 1,
+      name: "Chandra Nahan Lake Trek",
+      price: "₹12,500",
+      reviews: 2,
+      rating: 5,
+      image: Image3,
+    },
+    {
+      id: 2,
+      name: "Chandra Nahan Lake Trek1",
+      price: "₹12,500",
+      reviews: 2,
+      rating: 5,
+      image: Image3,
+    },
+    {
+      id: 3,
+      name: "Chandra Nahan Lake Trek2 ",
+      price: "₹12,500",
+      reviews: 2,
+      rating: 5,
+      image: Image3,
+    },
+    {
+      id: 4,
+      name: "Chandra Nahan Lake Trek3",
+      price: "₹12,500",
+      reviews: 2,
+      rating: 5,
+      image: Image3,
+    },
+    {
+      id: 5,
+      name: "Chandra Nahan Lake Trek4",
+      price: "₹12,500",
+      reviews: 2,
+      rating: 5,
+      image: Image3,
+    },
+    {
+      id: 6,
+      name: "Chandra Nahan Lake Trek12",
+      price: "₹12,500",
+      reviews: 2,
+      rating: 5,
+      image: Image3,
+    },
+  ];
+  const scrollRef = useRef(null);
 
-     const tours = [
-        {
-          id: 1,
-          name: "Chandra Nahan Lake Trek",
-          price: "₹12,500",
-          reviews: 2,
-          rating: 5,
-          image: Image3,
-        },
-        {
-          id: 2,
-          name: "Chandra Nahan Lake Trek",
-          price: "₹12,500",
-          reviews: 2,
-          rating: 5,
-          image: Image3,
-        },
-        {
-          id: 3,
-          name: "Chandra Nahan Lake Trek",
-          price: "₹12,500",
-          reviews: 2,
-          rating: 5,
-          image: Image3,
-        },
-      ]; 
+  const scroll = (direction) => {
+    const container = scrollRef.current;
+    const scrollAmount = 400;
+
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
   return (
-   <>
-    <div className='responsivewidth  font-poppins mt-10'>
-        <h1 className='text-center text-[4vh] md:text-[5vh] font-bold'>Mountains</h1>
-     <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-10'>
+    <>
+      <div className="responsivewidth  font-poppins mt-10">
+        <h1 className="text-center text-[4vh] md:text-[5vh] font-bold">
+          Mountains
+        </h1>
+        <div className="mt-10">
+          <div
+            ref={scrollRef}
+            className="flex   space-x-6 py-4 pl-4 scroll-smooth overflow-x-hidden"
+          >
             {tours.map((tour) => (
               <div
                 key={tour.id}
-                className='flex items-start space-x-4 p-4 rounded-lg'
+                className="min-w-[200px]   md:min-w-[360px] md:flex-row flex flex-col items-start md:space-x-4 p-4 rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.1)]   bg-white"
               >
-                <div className='flex-shrink-0'>
+                <div className="md:flex-shrink-0 ">
                   <Image
                     src={tour.image || Image3}
                     alt={tour.name}
-                    className='w-32 h-24 rounded-lg object-cover'
+                    className="w-[170px]  md:w-32 h-24 rounded-lg object-cover"
                   />
                 </div>
-                <div className='flex flex-col'>
-                  <h3 className='font-semibold text-lg'>{tour.name}</h3>
-                  <div className='flex items-center mt-1'>
-                    <span className='text-gray-600 text-sm'>Starting From:</span>
-                    <span className='text-teal-500 font-semibold ml-1'>
+                <div className="flex flex-col md:gap-2  ">
+                  <h3 className="font-semibold text-[14px]">{tour.name}</h3>
+                  <div className="flex items-center mt-1">
+                    <span className=" text-[12px] ">Starting From:</span>
+                    <span className="text-[#0C8699] font-semibold ml-1 text-[14px] ">
                       {tour.price}
                     </span>
                   </div>
-                  <div className='flex items-center mt-1'>
+                  <div className="flex md:gap-1 items-center mt-1">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
                         size={16}
-                        className={`${
+                        className={` ${
                           i < tour.rating
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
-                        }`}
+                        } `}
                       />
                     ))}
-                    <span className='text-gray-500 text-sm ml-2'>
+                    <span className="text-gray-500 text-[13px] ml-2">
                       ({tour.reviews} Reviews)
                     </span>
                   </div>
@@ -78,10 +122,26 @@ const Section5 = () => {
               </div>
             ))}
           </div>
-      
-    </div>
-   </>
-  )
-}
 
-export default Section5
+          {/* Buttons Below */}
+          <div className="flex justify-center mt-4 space-x-4 text-white">
+            <button
+              onClick={() => scroll("left")}
+              className="p-3 bg-[#0C8699] rounded-full "
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="p-3 bg-[#0C8699] rounded-full"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Section5;

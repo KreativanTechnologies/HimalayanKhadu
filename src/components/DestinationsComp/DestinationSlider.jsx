@@ -26,7 +26,7 @@ const DestinationSlider = () => {
         Memories for <span className="text-[#0C8699]">Life</span>
       </h2>
 
-      <div className="relative flex items-center justify-center w-full h-[250px] md:h-[320px] ">
+      <div className="relative flex items-center justify-center w-full h-[250px] md:h-[320px] overflow-hidden">
         {data.map((item, index) => {
           let positionClass = "opacity-0 scale-75 translate-x-0";
 
@@ -57,7 +57,7 @@ const DestinationSlider = () => {
         {/* Left Button */}
         <button
           onClick={handleLeftClick}
-          className="absolute left-2 md:left-[-5px] p-2 md:p-3 bg-[#0C8699] text-white rounded-full z-30 shadow-lg"
+          className="absolute left-2 md:left-[1px] p-2 md:p-3 bg-[#0C8699] text-white rounded-full z-30 shadow-lg"
         >
           <FaChevronLeft size={16} />
         </button>

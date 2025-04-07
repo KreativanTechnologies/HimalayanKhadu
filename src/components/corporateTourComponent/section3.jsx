@@ -30,7 +30,7 @@ const Section3 = () => {
     ]
   return (
     <>
-      <div className='responsivewidth md:p-0 p-5 flex md:flex-row-reverse flex-col justify-center items-center  gap-12 mb-16 font-poppins'>
+      <div className='responsivewidth md:p-0 p-5 flex md:flex-row-reverse flex-col justify-center items-center  gap-12 my-16 font-poppins'>
             <div className='w-full md:w-1/2'>
               <h1 className='text-[4vh] md:text-[5vh] font-bold mb-6'>
                 <span className='text-black'>Why Our Clients  </span>{" "}
