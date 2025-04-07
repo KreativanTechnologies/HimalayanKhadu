@@ -1,6 +1,6 @@
-import { DashboardShell } from "../../components/Dashboard/dashboardShell.jsx"
-import { DashboardHeader } from "../../components/Dashboard/dashboardHeader.jsx"
-import { ListingForm } from "../../components/Dashboard/listingForm.jsx"
+import { DashboardShell } from "../../../../components/Dashboard/dashboardShell.jsx"
+import { DashboardHeader } from "../../../../components/Dashboard/dashboardHeader.jsx"
+import { ListingForm } from "../../../../components/Dashboard/listingForm.jsx"
 
 export default function EditListingPage({ params }) {
   return (

@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function DashboardPage() {
   return (
-    <DashboardShell>
+    <DashboardShell> 
       <DashboardHeader heading="Listings" text="Manage your travel listings and packages.">
         <Button asChild>
           <Link href="/Dashboard/new">
