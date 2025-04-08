@@ -47,10 +47,9 @@ const Section3 = () => {
             </h2>
 
             <p className="leading-relaxed mt-2 text-md sm:text-lg md:text-[1.6vw]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
+  At <span className="font-semibold text-[#0C8699]">Himalayan Khadu</span>, we believe every journey should tell a story. With 100+ handpicked destinations and 200+ happy travelers, we bring you closer to nature, culture, and unforgettable moments. From peaceful Himalayan valleys to thrilling mountain adventures, your perfect escape starts here — with us.
+</p>
+
 
             <div className=" grid grid-cols-1 gap-4 sm:0  sm:flex sm:flex-wrap  md:justify-start space-x-6 md:space-x-8 my-4">
               <div className="h-[2.5rem] md:h-[3.5rem] lg:h-18">
