@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import BgMapImage from "/assets/contact/bgMap.png";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -46,7 +45,7 @@ export default function Contact() {
       <div className='relative '>
         <div className='absolute inset-0 z-0'>
           <Image
-            src={BgMapImage}
+            src='/assets/contact/bgMap.png'
             alt='Google Maps Background'
             fill
             className='object-cover'

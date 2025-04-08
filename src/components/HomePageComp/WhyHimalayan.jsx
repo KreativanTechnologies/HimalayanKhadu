@@ -5,8 +5,8 @@ const WhyHimalayan = () => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="w-full h-full p-[4vw]">
-      <div className="w-full h-full gap-[3vw] flex flex-col md:flex-row">
+    <div className="w-full h-full p-[4vw] md:p-0 md:px-[4vw] relative">
+      <div className="w-full h-full gap-[3vw] flex flex-col md:flex-row relative">
 
         <div className="w-full h-full py-[2vw] flex flex-col gap-2 md:gap-[1vw]">
           <h1 className="text-xl md:text-[2.5vw] font-semibold">
@@ -97,22 +97,22 @@ const WhyHimalayan = () => {
           </div>
         </div>
 
-        <div className="w-full h-[70vw] md:h-full relative">
-          <div className="absolute w-[35vw] h-[32vw] md:w-[14vw] md:h-[13vw] overflow-hidden left-0 md:left-2/12 top-1/6 z-20 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
+        <div className=" relative w-full h-[70vw] md:h-full flex justify-end p-[5vw]">
+          <div className="absolute w-[35vw] h-[32vw] md:w-[14vw] md:h-[13vw] overflow-hidden left-0 md:left-2/12 top-5/12 md:top-3/12 z-20 rounded-[1vw] hover:z-40 cursor-pointer hover:scale-110 duration-1000">
             <img
               className="w-full h-full object-cover object-center"
               src="/images/HomePage/Why1.png"
               alt=""
             />
           </div>
-          <div className="absolute w-[70vw] h-[60vw] md:w-[28vw] md:h-[25vw] overflow-hidden top-0 right-0 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
+          <div className="w-[70vw] h-[60vw] md:w-[28vw] md:h-[25vw] overflow-hidden rounded-[1vw] hover:z-40 cursor-pointer hover:scale-110 duration-1000">
             <img
               className="w-full h-full object-cover object-center"
               src="/images/HomePage/Why3.png"
               alt=""
             />
           </div>
-          <div className="absolute w-[60vw] h-[50vw] md:w-[24vw] md:h-[20vw] overflow-hidden bottom-0 left-1/12 md:left-3/12 z-10 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
+          <div className="absolute w-[60vw] h-[50vw] md:w-[24vw] md:h-[20vw] overflow-hidden bottom-0 left-1/12 md:left-3/12 z-10 rounded-[1vw] hover:z-40 cursor-pointer hover:scale-110 duration-1000">
             <img
               className="w-full h-full object-cover object-center"
               src="/images/HomePage/Why2.png"

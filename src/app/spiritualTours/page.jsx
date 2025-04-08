@@ -1,8 +1,5 @@
 "use client";
 import { Star } from "lucide-react";
-import Image1 from "/assets/spiritualTours/img1.png";
-import Image2 from "/assets/spiritualTours/img2.png";
-import Image3 from "/assets/spiritualTours/img3.png";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
 import ClientSay from "../../components/HomePageComp/ClientSay";
@@ -17,7 +14,7 @@ const SpiritualTours = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 2,
@@ -25,7 +22,7 @@ const SpiritualTours = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 3,
@@ -33,7 +30,7 @@ const SpiritualTours = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
   ];
 
@@ -61,14 +58,14 @@ const SpiritualTours = () => {
         <div className='w-full md:w-1/2 relative'>
           <div className='relative z-10'>
             <Image
-              src={Image1}
+              src='/assets/spiritualTours/img1.png'
               alt='Buddhist stupa with prayer flags'
               className='w-full h-auto rounded-lg object-cover'
             />
           </div>
           <div className='absolute bottom-[-40px] right-[-20px] z-10 hidden md:block'>
             <Image
-              src={Image2}
+              src='/assets/spiritualTours/img2.png'
               alt='Buddhist temple'
               className='w-64 h-auto rounded-lg object-cover shadow-lg'
             />
@@ -85,7 +82,7 @@ const SpiritualTours = () => {
           >
             <div className='flex-shrink-0'>
               <Image
-                src={tour.image || Image3}
+                src={tour.image || '/assets/spiritualTours/img3.png'}
                 alt={tour.name}
                 className='w-32 h-24 rounded-lg object-cover'
               />

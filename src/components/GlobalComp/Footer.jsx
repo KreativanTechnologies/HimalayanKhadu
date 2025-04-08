@@ -1,6 +1,4 @@
 import React from "react";
-// import logoIcon from "/assets/himalya.png";
-// import Image from "next/image";
 import {
   Dribbble,
   Facebook,

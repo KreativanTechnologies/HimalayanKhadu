@@ -1,6 +1,4 @@
 "use client";
-// import logoIcon from "/assets/himalya.png";
-// import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { useRouter } from 'next/navigation';
