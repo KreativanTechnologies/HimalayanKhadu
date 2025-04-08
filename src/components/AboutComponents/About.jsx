@@ -10,8 +10,18 @@ export default function AboutSection() {
             <span className="text-[#0C8699]">About</span> Himalayan Khadu
           </h2>
           <p className="text-gray-700 leading-relaxed text-[1.6vh] sm:text-[2vh] sm:text-base">
-            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s.
+          <strong>"Where passion meets the peaks!"</strong>
+          <br/>
+          <br/>
+          At Himalayan Khadu, we believe that the mountains are more than just a destination—they're an emotion. Born from a love for the wild, untouched beauty of the Himalayas, our goal is to connect every traveler with the raw, soul-refreshing magic of nature.
+          With years of trekking and travel experience under our belts, we’re not just another tour operator—we’re a community of explorers, dreamers, and mountain lovers. From thrilling high-altitude treks to peaceful nature escapes, every journey we curate is designed to awaken your spirit and challenge your limits.
+          <br/>
+          <br/>
+          Safety, sustainability, and unforgettable experiences are at the heart of everything we do. Our certified trek leaders, thoughtful itineraries, and local insights ensure that you get the best of adventure—with none of the stress.
+          So whether you’re a first-time trekker or a seasoned mountaineer, Himalayan Khadu is your trusted companion in the mountains.
+          <br/>
+          <br/>
+          Let’s wander where the Wi-Fi is weak and the connection is real. 
           </p>
           <div className="pt-4">
             <button className="bg-[#0C8699] text-white rounded-full px-6 py-2">Book Your Trip</button>
