@@ -10,6 +10,6 @@ export default function EditListingPage({ params }) {
         <ListingForm id={params.id} />
       </div>
     </DashboardShell>
-  )
+  )  
 }
 
