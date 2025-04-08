@@ -30,10 +30,11 @@ export default function Navbar() {
                 >
                   <div className='flex items-center gap-1 cursor-pointer text-[#6a6a6a] text-base font-normal font-poppins relative after:block after:h-[2px] after:w-full after:bg-teal-600 after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-300'>
                     {item.name}
-                    <ChevronDown className='w-4 h-4 mt-0.5' />
+                    {/* <ChevronDown className='w-4 h-4 mt-0.5' /> */}
                   </div>
                   {isPackageOpen && (
-                    <div className='absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-48 z-50 py-2'>
+                    
+                    <div className='absolute left-0 top-full  bg-white shadow-md rounded-md w-48 z-50 py-2'>
                       {[
                         { name: "Spiritual Trips", href: "/spiritualTours" },
                         { name: "Student Tours", href: "/StudentTours" },
@@ -62,10 +63,10 @@ export default function Navbar() {
                 >
                   <div className='flex items-center gap-1 cursor-pointer text-[#6a6a6a] text-base font-normal font-poppins relative after:block after:h-[2px] after:w-full after:bg-teal-600 after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-300'>
                     {item.name}
-                    <ChevronDown className='w-4 h-4 mt-0.5' />
+                    {/* <ChevronDown className='w-4 h-4 mt-0.5' /> */}
                   </div>
                   {isMoreOpen && (
-                    <div className='absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-48 z-50 py-2'>
+                    <div className='absolute left-0 top-full bg-white shadow-md rounded-md w-48 z-50 py-2'>
                       {[
                         { name: "Trekking", href: "/trekking" },
                         { name: "Cycling", href: "/Cycling" },
