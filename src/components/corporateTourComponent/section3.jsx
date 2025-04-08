@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Image1 from "../../assets/biketour/img1.png";
-import Image2 from "../../assets/biketour/img2.png";
+import Image1 from "/assets/biketour/img1.png";
+import Image2 from "/assets/biketour/img2.png";
 import React from 'react'
 import { ul } from 'framer-motion/client';
 

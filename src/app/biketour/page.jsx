@@ -1,7 +1,7 @@
 "use client";
 import { Star, Clock } from "lucide-react";
-import Image1 from "../../assets/biketour/img1.png";
-import Image2 from "../../assets/biketour/img2.png";
+import Image1 from "/assets/biketour/img1.png";
+import Image2 from "/assets/biketour/img2.png";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
 import ClientSay from "../../components/HomePageComp/ClientSay";

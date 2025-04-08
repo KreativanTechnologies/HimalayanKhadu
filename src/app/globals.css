@@ -19,7 +19,7 @@
 }
 
 .contactPageHeroImage {
-  background-image: url("../assets/contact//image1.png");
+  background-image: url("/assets/contact/image1.png");
   background-position: center center;
   background-size: cover;
 }

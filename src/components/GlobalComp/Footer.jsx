@@ -1,6 +1,6 @@
 import React from "react";
-import logoIcon from "../../assets/logo.png";
-import Image from "next/image";
+// import logoIcon from "/assets/himalya.png";
+// import Image from "next/image";
 import {
   Dribbble,
   Facebook,
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
           <div>
             <div className='text-teal-600'>
-              <Image src={logoIcon} className=' size-[152px]' alt='logo' />
+              <img src='/assets/logo1.png' className=' size-[152px]' alt='logo' width={23} height={12}/>
             </div>
 
             <p className='mt-4 max-w-xs line-clamp-4 justify-start text-white text-base font-light font-poppins'>

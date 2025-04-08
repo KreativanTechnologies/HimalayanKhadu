@@ -1,8 +1,8 @@
 "use client";
 import { Star } from "lucide-react";
-import Image1 from "../../assets/spiritualTours/img1.png";
-import Image2 from "../../assets/spiritualTours/img2.png";
-import Image3 from "../../assets/spiritualTours/img3.png";
+import Image1 from "/assets/spiritualTours/img1.png";
+import Image2 from "/assets/spiritualTours/img2.png";
+import Image3 from "/assets/spiritualTours/img3.png";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
 import ClientSay from "../../components/HomePageComp/ClientSay";

@@ -1,8 +1,8 @@
 
 import Image from "next/image"
 import { Clock, Star } from "lucide-react";
-import Image1 from "../../assets/biketour/img1.png";
-import Image2 from "../../assets/biketour/img2.png";
+import Image1 from "/assets/biketour/img1.png";
+import Image2 from "/assets/biketour/img2.png";
 import DestinationSlider from '../../components/DestinationsComp/DestinationSlider';
 import ClientSay from "../../components/HomePageComp/ClientSay"
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan"

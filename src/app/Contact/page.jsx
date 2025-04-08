@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import BgMapImage from "../../assets/contact/bgMap.png";
+import BgMapImage from "/assets/contact/bgMap.png";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

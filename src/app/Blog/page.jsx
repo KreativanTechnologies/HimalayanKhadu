@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import CyclingImage from "../../assets/cycling.png";
-import HimalyaImage from "../../assets/himalya.png";
-import HeartNakoImage from "../../assets/heartNako.png";
+import CyclingImage from "/assets/cycling.png";
+import HimalyaImage from "/assets/himalya.png";
+import HeartNakoImage from "/assets/heartNako.png";
 export default function Blog() {
   return (
     <div className='py-8 bg-gray-50'>

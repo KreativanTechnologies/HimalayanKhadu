@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image3 from "../../assets/spiritualTours/img3.png";
+import Image3 from "/assets/spiritualTours/img3.png";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { useRef } from "react";
