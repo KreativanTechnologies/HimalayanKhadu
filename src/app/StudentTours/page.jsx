@@ -32,13 +32,9 @@ const Hero =() => {
               A Journey of Discovery for <span className="text-teal-600">Young Minds</span>
             </h1>
             <p className="text-gray-700 leading-relaxed">
-              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+  Embark on an unforgettable adventure designed especially for students! Our Student Tours combine learning, exploration, and fun — all packed into one thrilling experience. Whether it's discovering new cultures, bonding with classmates, or stepping outside your comfort zone, every moment is crafted to inspire curiosity and create lasting memories. Perfect for educational trips, college getaways, or just a break from books, this journey promises excitement, knowledge, and friendship at every stop.
+</p>
+
           </div>
   
         {/* Image Collage - Updated with all three images */}

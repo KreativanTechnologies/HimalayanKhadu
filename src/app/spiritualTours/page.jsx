@@ -47,15 +47,13 @@ const SpiritualTours = () => {
             <span className='text-teal-500'>Tours</span>
           </h1>
           <p className='text-gray-800 leading-relaxed'>
-            Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          Discover peace and serenity amidst the majestic Himalayas with our specially curated spiritual tours. Whether you're seeking inner peace, a break from the hustle, or a meaningful connection with nature and culture — our spiritual journeys offer it all.
+<br />
+<br />
+From meditative lakes and ancient temples to sacred trails surrounded by snow-capped peaks, each destination is designed to rejuvenate your soul and elevate your spirit.
+<br />
+<br />
+Join us on a path of mindfulness, healing, and self-discovery through the sacred landscapes of Himachal Pradesh and beyond. Let the calm winds, serene chants, and peaceful vistas guide you to your true self.
           </p>
         </div>
         <div className='w-full md:w-1/2 relative'>

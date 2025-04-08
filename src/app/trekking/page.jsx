@@ -11,8 +11,8 @@ const TrekkingPage = () => {
       <>
           <TrekkingHero />
           <Nexttrip />
-                <Recommended/>
-                <DestinationSlider/>
+          <Recommended/>
+          <DestinationSlider/>
           <ClientSay />
            <Blogs/>
       
