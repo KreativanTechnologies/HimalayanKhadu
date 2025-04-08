@@ -117,7 +117,6 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {/* Mobile Menu */}
 <div
   className={`${
     isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
