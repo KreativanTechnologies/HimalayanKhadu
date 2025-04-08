@@ -1,8 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import CyclingImage from "/assets/cycling.png";
-import HimalyaImage from "/assets/himalya.png";
-import HeartNakoImage from "/assets/heartNako.png";
 export default function Blog() {
   return (
     <div className='py-8 bg-gray-50'>
@@ -19,7 +16,7 @@ export default function Blog() {
           </p>
           <div className='inline-block rounded-full overflow-hidden'>
             <Image
-              src={HeartNakoImage}
+              src="/assets/heartNako.png"
               alt=""
               className='w-[100px] sm:w-[150px] md:w-[180px] lg:w-[216px] lg:h-[92px] rounded-[54px]'
             />
@@ -35,7 +32,7 @@ export default function Blog() {
             >
               <div className='w-[163px] relative flex-shrink-0'>
                 <Image
-                  src={CyclingImage}
+                  src='/assets/cycling.png'
                   alt='Mountain landscape'
                   className='w-full h-full rounded-md object-cover '
                 />
@@ -63,7 +60,7 @@ export default function Blog() {
           >
             <div className='relative'>
               <Image
-                src={HimalyaImage}
+                src='/assets/himalya.png'
                 alt='Mountain landscape with people'
                 width={300}
                 height={200}

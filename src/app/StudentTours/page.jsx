@@ -1,8 +1,6 @@
 
 import Image from "next/image"
 import { Clock, Star } from "lucide-react";
-import Image1 from "/assets/biketour/img1.png";
-import Image2 from "/assets/biketour/img2.png";
 import DestinationSlider from '../../components/DestinationsComp/DestinationSlider';
 import ClientSay from "../../components/HomePageComp/ClientSay"
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan"
@@ -134,7 +132,7 @@ const Recomended = () => {
             {/* Tour Image with Tag */}
             <div className='relative'>
               <Image
-                src={tour.image || Image2}
+                src={tour.image || '/assets/biketour/img2.png'}
                 alt={tour.name}
                 className='w-full h-48 object-cover'
               />

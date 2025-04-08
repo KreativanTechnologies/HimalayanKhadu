@@ -27,21 +27,21 @@ const BookTour = () => {
             alt=""
           />
         </div>
-        <div className="absolute w-[30vw] z-20 top-[22vw] right-[15vw] h-[30vw] sm:w-[17vw] sm:h-[15vw] sm:top-[5vw] sm:right-[8vw] rounded-[0.5vw] rotate-[10deg] overflow-hidden hover:scale-110 duration-1000 cursor-pointer hover:rounded-[3vw]">
+        <div className="absolute w-[30vw] z-20 top-[22vw] right-[15vw] h-[30vw] sm:w-[17vw] sm:h-[15vw] sm:top-[5vw] sm:right-[8vw] rounded-[0.5vw] overflow-hidden hover:scale-110 duration-1000 cursor-pointer">
           <img
             className="w-full h-full object-center object-cover"
             src="/images/HomePage/Tour4.png"
             alt=""
           />
         </div>
-        <div className="absolute w-[30vw] z-20 top-[60vw] left-[15vw] h-[30vw] sm:w-[17vw] sm:h-[15vw] sm:top-[12vw] sm:left-[30vw] rounded-[0.5vw] rotate-[10deg] sm:rotate-[5deg] overflow-hidden hover:scale-110 duration-1000 cursor-pointer hover:rounded-[3vw]">
+        <div className="absolute w-[30vw] z-20 top-[60vw] left-[15vw] h-[30vw] sm:w-[17vw] sm:h-[15vw] sm:top-[12vw] sm:left-[30vw] rounded-[0.5vw] rotate-[10deg] sm:rotate-[5deg] overflow-hidden hover:scale-110 duration-1000 cursor-pointer">
           <img
             className="w-full h-full object-center object-cover"
             src="/images/HomePage/Why3.png"
             alt=""
           />
         </div>
-        <div className="absolute w-[30vw] z-20 top-[60vw] right-[15vw] h-[30vw] sm:w-[17vw] sm:h-[15vw] sm:top-[14vw] sm:left-[53vw]  rounded-[0.5vw] rotate-[-10deg] overflow-hidden hover:scale-110 duration-1000 cursor-pointer hover:rounded-[3vw]">
+        <div className="absolute w-[30vw] z-20 top-[60vw] right-[15vw] h-[30vw] sm:w-[17vw] sm:h-[15vw] sm:top-[14vw] sm:left-[53vw]  rounded-[0.5vw] rotate-[-10deg] overflow-hidden hover:scale-110 duration-1000 cursor-pointer">
           <img
             className="w-full h-full object-center object-cover"
             src="/images/HomePage/Tour2.png"

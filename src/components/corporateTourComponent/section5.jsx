@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image3 from "/assets/spiritualTours/img3.png";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { useRef } from "react";
@@ -15,7 +14,7 @@ const Section5 = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 2,
@@ -23,7 +22,7 @@ const Section5 = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 3,
@@ -31,7 +30,7 @@ const Section5 = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 4,
@@ -39,7 +38,7 @@ const Section5 = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 5,
@@ -47,7 +46,7 @@ const Section5 = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
     {
       id: 6,
@@ -55,7 +54,7 @@ const Section5 = () => {
       price: "₹12,500",
       reviews: 2,
       rating: 5,
-      image: Image3,
+      image: '/assets/spiritualTours/img3.png',
     },
   ];
   const scrollRef = useRef(null);
@@ -89,7 +88,7 @@ const Section5 = () => {
               >
                 <div className="md:flex-shrink-0 ">
                   <Image
-                    src={tour.image || Image3}
+                    src={tour.image || '/assets/spiritualTours/img3.png'}
                     alt={tour.name}
                     className="w-[170px]  md:w-32 h-24 rounded-lg object-cover"
                   />

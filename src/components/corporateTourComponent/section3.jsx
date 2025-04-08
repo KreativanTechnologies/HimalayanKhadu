@@ -1,8 +1,5 @@
 import Image from 'next/image'
-import Image1 from "/assets/biketour/img1.png";
-import Image2 from "/assets/biketour/img2.png";
 import React from 'react'
-import { ul } from 'framer-motion/client';
 
 const Section3 = () => {
 
@@ -48,14 +45,14 @@ const Section3 = () => {
             <div className='w-full md:w-1/2 relative'>
               <div className='relative z-10'>
                 <Image
-                  src={Image1}
+                  src='/assets/biketour/img1.png'
                   alt='Buddhist stupa with prayer flags'
                   className='w-full h-auto rounded-lg object-cover'
                 />
               </div>
               <div className='absolute bottom-[-40px] right-[-20px] z-10 '>
                 <Image
-                  src={Image2}
+                  src='/assets/biketour/img2.png'
                   alt='Buddhist temple'
                   className='w-[50vw] md:w-64 h-auto rounded-lg object-cover shadow-lg'
                 />
