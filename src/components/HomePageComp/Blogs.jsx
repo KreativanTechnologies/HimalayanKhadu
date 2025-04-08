@@ -62,6 +62,7 @@ const Blogs = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main blog posts - left side */}
+<<<<<<< HEAD
          {mainBlogPosts.map((post) => (
   <div
     key={post.id}
@@ -86,6 +87,36 @@ const Blogs = () => {
   </div>
 ))}
 
+=======
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2].map((item) => (
+              <div
+                key={item}
+                className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src="/images/HomePage/IMG_2895.JPG"
+                    alt="Adventure in mountains"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex justify-between text-sm text-gray-500 mb-2">
+                    <span className='text-[#9A9A9A] text-[16px] font-Poppins'>08-11-2021</span>
+                    <span className='text-[##64607D] text-[16px] font-Poppins'>10 min ago</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 font-poppins">Partiality on or continuing in particular principles</h3>
+                  <p className="text-gray-700 text-[16px] font-poppins">
+                    Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed
+                    necessary.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+>>>>>>> d0ccf2701b9dcc911fb77a60cc05deb0b1137599
 
           {/* Sidebar blog posts - right side */}
           <div className="space-y-6 self-start">
