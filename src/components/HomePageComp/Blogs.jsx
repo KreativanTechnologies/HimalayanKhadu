@@ -62,32 +62,6 @@ const Blogs = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main blog posts - left side */}
-<<<<<<< HEAD
-         {mainBlogPosts.map((post) => (
-  <div
-    key={post.id}
-    className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-  >
-    <div className="relative h-64">
-      <Image
-        src={post.image}
-        alt={post.title}
-        fill
-        className="object-cover"
-      />
-    </div>
-    <div className="p-4">
-      <div className="flex justify-between text-sm text-gray-500 mb-2">
-        <span className='text-[#9A9A9A] text-[16px] font-Poppins'>{post.date}</span>
-        <span className='text-[##64607D] text-[16px] font-Poppins'>{post.time}</span>
-      </div>
-      <h3 className="text-xl font-semibold mb-2 font-poppins">{post.title}</h3>
-      <p className="text-gray-700 text-[16px] font-poppins">{post.description}</p>
-    </div>
-  </div>
-))}
-
-=======
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2].map((item) => (
               <div
@@ -116,7 +90,6 @@ const Blogs = () => {
               </div>
             ))}
           </div>
->>>>>>> d0ccf2701b9dcc911fb77a60cc05deb0b1137599
 
           {/* Sidebar blog posts - right side */}
           <div className="space-y-6 self-start">
