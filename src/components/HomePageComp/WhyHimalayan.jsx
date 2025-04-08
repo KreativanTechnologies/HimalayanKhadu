@@ -49,21 +49,21 @@ const WhyHimalayan = () => {
           <div className="absolute w-[35vw] h-[32vw] md:w-[14vw] md:h-[13vw] overflow-hidden left-0 md:left-2/12 top-1/6 z-20 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
             <img
               className="w-full h-full object-cover object-center"
-              src="/images/HomePage/Why1.png"
+              src="\images\HomePage\IMG_2895.JPG"
               alt=""
             />
           </div>
           <div className="absolute w-[70vw] h-[60vw] md:w-[28vw] md:h-[25vw] overflow-hidden top-0 right-0 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
             <img
               className="w-full h-full object-cover object-center"
-              src="/images/HomePage/Why3.png"
+              src="\images\HomePage\IMG_3826.JPG"
               alt=""
             />
           </div>
           <div className="absolute w-[60vw] h-[50vw] md:w-[24vw] md:h-[20vw] overflow-hidden bottom-0 left-1/12 md:left-3/12 z-10 rounded-[1vw] hover:scale-110 hover:z-40 cursor-pointer duration-1000 hover:rounded-[4vw]">
             <img
               className="w-full h-full object-cover object-center"
-              src="/images/HomePage/Why2.png"
+              src="\images\HomePage\IMG_4159.JPG"
               alt=""
             />
           </div>

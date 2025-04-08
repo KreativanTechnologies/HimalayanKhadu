@@ -7,7 +7,7 @@ import ClientSay from '../../components/AboutComponents/ClientSay'
 import DiscoverTrips from '../../components/AboutComponents/OurPackages'
 
 const Herodata = {
-  img_Src : "/images/aboutimg/hero.png",
+  img_Src : "/images/aboutimg/IMG_4421.JPG",
   heading : "About Us"
 }
 

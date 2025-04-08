@@ -3,52 +3,54 @@ import React, { useState } from "react";
 
 const data = [
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_5181.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_4136.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_4159.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_5315.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_6010.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_6244.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_6843.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_4421.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
     {
-        
-        img: "/images/Packageimg/Rectangle 188.png",
+        img: "/images/Packageimg/IMG_4155.JPG",
         title: "Winter Meghalaya Trip",
         review: 2,
     },
-];
+].map(item => ({
+    ...item,
+    img: `${item.img}?resize=100x150` // Reduced width to 150px
+}));
 
 const Grid = () => {
     const [visibleItems, setVisibleItems] = useState(6);
@@ -75,7 +77,7 @@ const Grid = () => {
                         <div className="absolute top-2 right-2 bg-opacity-50 text-white text-xs md:text-xl px-6 py-1 rounded -lg font-bold">
                             3D 2N
                         </div>
-                        <div className="absolute top-1/2 z-40  left-[-90px] transform -translate-y-1/2 -rotate-90   py-4 text-gray-400 text-2xl font-bold">
+                        <div className="absolute top-1/2 z-40  left-[-99px] transform -translate-y-1/2 -rotate-90   py-4 text-gray-400 text-2xl font-bold">
                           Meghalaya Trip
                         </div>
                         <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t via-transparent to-transparent rounded-xl">

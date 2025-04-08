@@ -28,7 +28,7 @@ const Blogs = () => {
               >
                 <div className="relative h-64">
                   <Image
-                    src="/images/HomePage/latestBlogs.png"
+                    src="/images/HomePage/IMG_2895.JPG"
                     alt="Adventure in mountains"
                     fill
                     className="object-cover"
