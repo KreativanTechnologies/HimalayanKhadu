@@ -19,7 +19,7 @@ const page = () => {
       <Nexttrip />
       <Recommended/>
       <DestinationSlider/>
-      <ClientSay />
+      <ClientSay/>
     </div>
   )
 }

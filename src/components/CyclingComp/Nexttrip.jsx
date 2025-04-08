@@ -14,14 +14,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const tripsData = {
   "Top Destinations": [
-    { id: 1, title: "Winter Meghalaya Trip", duration: "6 Nights, 7 Days", price: "₹ 12,500", badge: "Best Seller", image: "/images/HomePage/h1.png" },
-    { id: 2, title: "Summer Goa Trip", duration: "5 Nights, 6 Days", price: "₹ 14,000", badge: "20% OFF", image: "/images/HomePage/h1.png" },
-    { id: 3, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
-    { id: 4, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
-    { id: 5, title: "Winter Meghalaya Trip", duration: "6 Nights, 7 Days", price: "₹ 12,500", badge: "Best Seller", image: "/images/HomePage/h1.png" },
-    { id: 6, title: "Summer Goa Trip", duration: "5 Nights, 6 Days", price: "₹ 14,000", badge: "20% OFF", image: "/images/HomePage/h1.png" },
-    { id: 7, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
-    { id: 8, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 1, title: "Kashmir Great Lakes Trek", duration: "6 Nights, 7 Days", price: "₹ 12,500", badge: "Best Seller", image: "/images/HomePage/h1.png" },
+    { id: 2, title: "Chandranahan Lake Trek", duration: "4 Nights, 5 Days", price: "₹ 14,000", badge: "20% OFF", image: "/images/HomePage/h1.png" },
+    { id: 3, title: "Tarsar Marsar Lake Trek", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 4, title: "Valley of Flowers Trek", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 5, title: "Buran Ghati Trek", duration: "6 Nights, 7 Days", price: "₹ 12,500", badge: "Best Seller", image: "/images/HomePage/h1.png" },
+    { id: 6, title: "Kedarkantha Trek", duration: "5 Nights, 6 Days", price: "₹ 14,000", badge: "20% OFF", image: "/images/HomePage/h1.png" },
+    { id: 7, title: "Har Ki Dun Trek", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 8, title: "Sar Pass Trek", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
   ],
   "New Launches": [
     { id: 9, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },

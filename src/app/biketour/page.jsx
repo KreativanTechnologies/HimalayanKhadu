@@ -20,16 +20,9 @@ const BikeTour = () => {
             <span className='text-teal-500'>India</span>
           </h1>
           <p className='text-gray-800 leading-relaxed'>
-            Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+  Discover the thrill of two-wheeled adventures through the majestic landscapes of India. From the winding roads of the Himalayas to the scenic coastal routes of the South, our curated bike tours offer an unforgettable way to explore nature, culture, and hidden gems. Whether you're a seasoned rider or a curious traveler, each journey promises breathtaking views, vibrant local experiences, and the freedom of the open road. Let the mountains call you — and ride into a story worth telling.
+</p>
+
         </div>
         <div className='w-full md:w-1/2 relative'>
           <div className='relative z-10'>
