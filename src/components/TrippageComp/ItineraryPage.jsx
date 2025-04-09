@@ -44,10 +44,10 @@ const itineraryData = [
   
 const ItineraryItem = ({ day, title, details, isOpen, onToggle }) => (
   <div className="relative flex items-start mb-12">
-    {/* Day Label */}
+    {/* Day */}
     <div className="w-24 text-right pr-4 text-teal-600 font-bold text-lg">Day {day}</div>
 
-    {/* Dot aligned on single vertical line */}
+
     <div className="relative w-6 flex justify-center items-start">
       <div className="w-3 h-3 bg-teal-500 rounded-full z-10 mt-1" />
     </div>
@@ -94,7 +94,7 @@ const ItineraryTimeline = () => {
         />
       ))}
 
-      {/* Download PDF Button */}
+     
       <div className="text-center mt-10">
         <button className="bg-teal-600 text-white px-6 py-2 rounded-full hover:bg-teal-700 transition">
           Download PDF
