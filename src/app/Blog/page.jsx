@@ -1,8 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import CyclingImage from "../../assets/cycling.png";
-import HimalyaImage from "../../assets/himalya.png";
-import HeartNakoImage from "../../assets/heartNako.png";
 
 export default function Blog() {
   const featuredArticles = [
@@ -10,7 +7,7 @@ export default function Blog() {
       title: "Cycling Through the Himalayas: A Ride to Remember",
       date: "04-02-2024",
       time: "10 min read",
-      image: CyclingImage,
+      image: '/assets/cycling.png',
       description:
         "Explore the untouched trails and high-altitude paths of the Himalayas by bike. A perfect blend of thrill, endurance, and breathtaking views awaits you.",
     },
@@ -18,7 +15,7 @@ export default function Blog() {
       title: "Soul Searching in Spiti: A Winter Escape",
       date: "16-01-2024",
       time: "7 min read",
-      image: CyclingImage,
+      image: '/assets/cycling.png',
       description:
         "Uncover the tranquil beauty of Spiti Valley during winter. Discover monasteries, snow-covered landscapes, and silence that speaks to your soul.",
     },
@@ -26,7 +23,7 @@ export default function Blog() {
       title: "Top 5 Local Dishes You Must Try in Nako",
       date: "28-12-2023",
       time: "4 min read",
-      image: CyclingImage,
+      image: '/assets/cycling.png',
       description:
         "From steaming momos to buttery thukpa, here’s what not to miss when dining like a local in Nako – the heart of Himachal’s hidden flavors.",
     },
@@ -104,7 +101,7 @@ export default function Blog() {
           </p>
           <div className='inline-block rounded-full overflow-hidden'>
             <Image
-              src={HeartNakoImage}
+              src='/assets/heartNako.png'
               alt='Heart of Nako'
               className='w-[100px] sm:w-[150px] md:w-[180px] lg:w-[216px] lg:h-[92px] rounded-[54px]'
             />
@@ -148,7 +145,7 @@ export default function Blog() {
           >
             <div className='relative'>
               <Image
-                src={HimalyaImage}
+                src='/assets/himalya.png'
                 alt={entry.title}
                 width={300}
                 height={200}
