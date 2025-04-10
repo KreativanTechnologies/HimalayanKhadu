@@ -8,7 +8,7 @@ import Blogs from "../../components/HomePageComp/Blogs"
 
 const page = () => {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full flex flex-col '>
       <HeroSection/>
       <OurTrips/>
       <BookTour/>
