@@ -10,17 +10,10 @@ const DestinationHero = () => {
             Our Popular Trips in <br />{" "}
             <span className="text-[#0C8699]">Meghalaya</span>
           </h2>
-          <p className=" py-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+          <p className="py-2">
+  Explore the hidden wonders of Meghalaya — from living root bridges and mystical caves to sparkling waterfalls and serene villages. Our curated trips let you experience the vibrant culture, natural beauty, and offbeat trails of the Abode of Clouds. Whether you’re chasing clouds in Cherrapunji or boating through crystal-clear waters in Dawki, we promise an adventure that’s soulful, safe, and unforgettable.
+</p>
+
           <button className="text-md px-4 py-1 z-10 sm:px-[1.5vw] sm:py-[0.5vw] sm:text-[1.2vw] font-medium rounded-full text-white bg-[#0C8699]">
             Book Your Trip
           </button>

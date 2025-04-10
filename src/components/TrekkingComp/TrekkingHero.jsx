@@ -6,22 +6,15 @@ const TrekkingHero = () => {
       <section className="flex flex-col md:flex-row  items-center gap-4 md:gap-18 ">
         {/* Left Section */}
         <div className="md:w-1/2 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold leading-[1.3]">
-            Best Treks in <br className="hidden lg:flex" />{" "}
-            <span className="text-[#0C8699]">India</span>
-          </h2>
-          <p className=" py-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
+  <h2 className="text-3xl md:text-5xl font-bold leading-[1.3]">
+    Best Treks in <br className="hidden lg:flex" />{" "}
+    <span className="text-[#0C8699]">India</span>
+  </h2>
+  <p className="py-2">
+    Discover the most breathtaking treks across India, from the snow-capped peaks of Himachal to the lush green trails of the Western Ghats. These treks are not just adventures—they are journeys into the heart of nature, culture, and self-discovery. Whether you're a beginner or an experienced trekker, India's diverse landscapes offer something for everyone. Explore majestic mountains, hidden waterfalls, serene valleys, and spiritual trails that will leave you inspired and refreshed.
+  </p>
+</div>
+
 
         {/* Right Section */}
         <div className="md:w-1/2 flex md:mt-0 justify-center items-center sm:gap-4 relative ">

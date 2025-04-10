@@ -45,24 +45,22 @@ const tripsData = {
   ],
 };
 
-
 const categories = Object.keys(tripsData);
 
-export default function Recommended() {
+export default function DiscoverTrips() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <div className="container px-6 md:px-18 py-10 pt-32">
+    <div className="container px-6 md:px-18 py-10 pt-16">
       <motion.h2
         className="text-3xl font-bold text-center mb-6"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-      >
-        <span className="text-teal-600">Recommended</span> Trips
+      >Related <span className="text-teal-600">Trips </span> 
       </motion.h2>
       
-      <motion.div className="flex flex-wrap justify-center gap-4 mb-6">
+      {/* <motion.div className="flex flex-wrap justify-center gap-4 mb-6">
         {categories.map((category) => (
           <motion.button
             key={category}
@@ -78,7 +76,7 @@ export default function Recommended() {
             {category}
           </motion.button>
         ))}
-      </motion.div>
+      </motion.div> */}
       
       <AnimatePresence mode="wait">
         <motion.div 
