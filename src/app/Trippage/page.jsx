@@ -6,7 +6,7 @@ import DestinationSlider from '../../components/DestinationsComp/DestinationSlid
 import ClientSay from "../../components/HomePageComp/ClientSay";
 import RelatedTrip from '../../components/TrippageComp/RelatedTrip';
 const Herodata = {
-    img_Src : "/images/Cyclingimg/Rectangle 1.png",
+    img_Src : "/images/Cyclingimg/Rectangle1.png",
   }
 
 const page = () => {
