@@ -5,6 +5,12 @@ import cookieParser from "cookie-parser"
 import cors from "cors"
 
 import authRouter from './routes/auth/auth-routes.js'
+import adminTourPackageRouter from './routes/admin/tourPackage-routes.js'
+import clientCartRouter from './routes/client/cart-routes.js'
+import clientOrderRouter from './routes/client/order-routes.js'
+import clientReviewRouter from './routes/client/review-routes.js'
+import clientSearchRouter from './routes/client/search-routes.js'
+import clientTourPackageRouter from './routes/client/tourPackage-routes.js'
 
 dotenv.config();
 
@@ -42,6 +48,14 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authRouter);
+
+app.use("/api/admin",adminTourPackageRouter);
+
+app.use("/api/client/cart",clientCartRouter);
+app.use("/api/client/order",clientOrderRouter);
+app.use("/api/client/review",clientReviewRouter);
+app.use("/api/client/search",clientSearchRouter);
+app.use("/api/client/package",clientTourPackageRouter);
 
 app.listen(PORT, () => console.log(`Server is now running on port : ${PORT}`));
 

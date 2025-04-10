@@ -4,20 +4,21 @@ import React from "react";
 const data = [
   {
     img: "/images/destinationPage/img1.webp",
-    title: "Winter Meghalaya Trip",
-    rewiew: 2,
+    title: "Himachal Himalayan Trek",
+    rewiew: 12,
   },
   {
     img: "/images/destinationPage/img1.webp",
-    title: "Winter Meghalaya Trip",
-    rewiew: 2,
+    title: "Kerala Backwater Escape",
+    rewiew: 18,
   },
   {
     img: "/images/destinationPage/img1.webp",
-    title: "Winter Meghalaya Trip",
-    rewiew: 2,
+    title: "Rajasthan Desert Safari",
+    rewiew: 25,
   },
 ];
+
 
 const OurDestination = () => {
   return (
