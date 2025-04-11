@@ -18,9 +18,7 @@ import clientTourPackageRouter from './routes/client/tourPackage-routes.js'
 dotenv.config();
 
 mongoose
-  .connect(
-    "mongodb+srv://kreativantech:t88BWPCp758RNUmn@ktbackends.x2yy7.mongodb.net/HimalayanKhadu"
-  )
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
@@ -30,7 +28,7 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     // origin: process.env.CLIENT_BASE_URL,
-    origin: "http://localhost:3000/",
+    origin: process.env.CLIENT_BASE_URL,
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",

@@ -1,19 +1,25 @@
-import {v2 as cloudinary} from 'cloudinary'
-import multer from 'multer'
+import { v2 as cloudinary } from 'cloudinary';
+import multer from 'multer';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 cloudinary.config({
-  cloud_name: "dnkdjldi7",
-  api_key: "376815484778978",
-  api_secret: "6MXoraa11_oW1K2eCubMJ3XOrHM"
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const storage = new multer.memoryStorage();
+const storage = multer.memoryStorage();
 
-export async function imageUploadUtil(file) {
-  const result = await cloudinary.uploader.upload(file, {
-    resource_type: "auto", 
-  });
-  return result;
+export async function imageUploadUtil(fileBuffer) {
+  const result = await cloudinary.uploader.upload_stream(
+    { resource_type: 'auto' },
+    (error, result) => {
+      if (error) throw new Error(error.message);
+      return result;
+    }
+  );
 }
 
 export const upload = multer({ storage });
