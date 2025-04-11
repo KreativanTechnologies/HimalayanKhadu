@@ -1,4 +1,4 @@
-import ProductReview from "../../models/Review.js";
+import ProductReview from "../../models/review.js";
 import Order from "../../models/order.js";
 import tourPackages from "../../models/tourPackages.js";
 
