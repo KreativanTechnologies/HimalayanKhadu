@@ -2,12 +2,20 @@ import razorpay from "../../helpers/razorpay.js";
 import Order from "../../models/order.js";
 import crypto from "crypto";
 
+const RAZORPAY_FEE_PERCENTAGE = 0.02;
+const GST_PERCENTAGE = 0.18;
+
 export const createOrder = async (req, res) => {
   try {
     const { userId, tourPackageId, quantity, travelers, totalPrice } = req.body;
 
+    // Calculate Razorpay fee + GST
+    const razorpayFee = totalPrice * RAZORPAY_FEE_PERCENTAGE;
+    const gst = razorpayFee * GST_PERCENTAGE;
+    const totalWithFee = totalPrice + razorpayFee + gst;
+
     const options = {
-      amount: totalPrice * 100,
+      amount: Math.round(totalWithFee * 100),
       currency: "INR",
       receipt: `receipt_${Date.now()}`,
     };
@@ -21,22 +29,17 @@ export const createOrder = async (req, res) => {
       travelers,
       totalPrice,
       razorpayOrderId: razorpayOrder.id,
+      razorpayFee: razorpayFee.toFixed(2),
+      gst: gst.toFixed(2),
+      totalPayable: totalWithFee.toFixed(2),
     });
 
-    const razorpayOrderId = "order_NxZ12v4Fnr3p9M";
-    const razorpayPaymentId = "pay_NxZP7Fsn0A0gPq"; // Mock ID
-
-    const key_secret = "YOUR_RAZORPAY_KEY_SECRET";
-    const body = `${razorpayOrderId}|${razorpayPaymentId}`;
-
-    const expectedSignature = crypto
-      .createHmac("sha256", key_secret)
-      .update(body)
-      .digest("hex");
-
-    console.log(expectedSignature);
-
-    res.status(201).json({ success: true, order, razorpayOrder });
+    res.status(201).json({
+      success: true,
+      order,
+      razorpayOrder,
+      totalPayable: totalWithFee.toFixed(2),
+    });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
   }

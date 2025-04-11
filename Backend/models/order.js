@@ -24,8 +24,13 @@ const OrderSchema = new mongoose.Schema(
         },
       },
     ],
-    totalPrice: { type: Number, required: true },
+    totalPrice: { type: Number, required: true }, // Price before Razorpay fees
+    razorpayFee: { type: Number },               // Razorpay fee (e.g., 2% of totalPrice)
+    gst: { type: Number },                       // GST on Razorpay fee
+    totalPayable: { type: Number },              // totalPrice + razorpayFee + gst
+
     currency: { type: String, default: "INR" },
+
     paymentStatus: {
       type: String,
       enum: ["Pending", "Paid", "Failed"],
