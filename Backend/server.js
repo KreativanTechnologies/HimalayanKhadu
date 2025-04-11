@@ -5,7 +5,10 @@ import cookieParser from "cookie-parser"
 import cors from "cors"
 
 import authRouter from './routes/auth/auth-routes.js'
+
 import adminTourPackageRouter from './routes/admin/tourPackage-routes.js'
+import adminOrderRouter from './routes/admin/order-routes.js'
+
 import clientCartRouter from './routes/client/cart-routes.js'
 import clientOrderRouter from './routes/client/order-routes.js'
 import clientReviewRouter from './routes/client/review-routes.js'
@@ -49,7 +52,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRouter);
 
-app.use("/api/admin",adminTourPackageRouter);
+app.use("/api/admin/package",adminTourPackageRouter);
+app.use("/api/admin/order",adminOrderRouter);
 
 app.use("/api/client/cart",clientCartRouter);
 app.use("/api/client/order",clientOrderRouter);

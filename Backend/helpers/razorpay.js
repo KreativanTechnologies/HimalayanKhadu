@@ -1,12 +1,8 @@
-// import paypal from "paypal-rest-sdk"
-// import dotenv from "dotenv"
-// dotenv.config()
+import Razorpay from "razorpay";
 
-// paypal.configure({
-//     mode : 'sandbox',     // for testing on local
-//     // mode : process.env.PAYPAL_MODE,     // for live on web
-//     client_id : process.env.PAYPAL_CLIENT_ID,
-//     client_secret : process.env.PAYPAL_CLIENT_SECRET
-// })
+const instance = new Razorpay({
+  key_id: '',
+  key_secret: '',
+});
 
-// export default paypal
+export default instance;
