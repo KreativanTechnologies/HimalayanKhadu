@@ -4,9 +4,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+     "start": "node server.js",
+  "build": "echo 'No build step needed'"
   },
   "keywords": [],
   "author": "",
