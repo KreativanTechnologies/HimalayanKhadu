@@ -14,6 +14,11 @@ export const CartSchema = new mongoose.Schema(
           ref: "tourPackages",
           required: true,
         },
+        quantity: {
+          type: Number,
+          default: 1,
+          min: 1,
+        },
       },
     ],
   },
