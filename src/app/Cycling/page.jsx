@@ -4,7 +4,7 @@ import DestinationSlider from '../../components/DestinationsComp/DestinationSlid
 import Gallery from '../../components/CyclingComp/Gallery';
 import Nexttrip from '../../components/CyclingComp/Nexttrip';
 import Recommended from '../../components/CyclingComp/Recommended';
-import ClientSay from "../../components/HomePageComp/ClientSay";
+// import ClientSay from "../../components/HomePageComp/ClientSay";
 
 const Herodata = {
     img_Src : "/images/Cyclingimg/Rectangle 1.png",
@@ -19,7 +19,7 @@ const page = () => {
       <Nexttrip />
       <Recommended/>
       <DestinationSlider/>
-      <ClientSay/>
+      {/* <ClientSay/> */}
     </div>
   )
 }

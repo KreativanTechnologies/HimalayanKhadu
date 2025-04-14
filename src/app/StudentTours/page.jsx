@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { Clock, Star } from "lucide-react";
 import DestinationSlider from '../../components/DestinationsComp/DestinationSlider';
-import ClientSay from "../../components/HomePageComp/ClientSay"
+// import ClientSay from "../../components/HomePageComp/ClientSay"
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan"
 import Blogs from "../../components/HomePageComp/Blogs"
 export default function page() {
@@ -11,7 +11,7 @@ export default function page() {
         <Hero />
         <Recomended/>
         <DestinationSlider/>
-        <ClientSay/>
+        {/* <ClientSay/> */}
         <WhyHimalayan/>
         <Blogs/>
         {/* <Cards/> */}
