@@ -20,9 +20,7 @@ const Footer = () => {
             </div>
 
             <p className='mt-4 max-w-xs line-clamp-4 justify-start text-white text-base font-light font-poppins'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s...
+            When Himalayan Khadu began its journey, it wasn't just about travel—it was about making dreams come alive. From the very first trek, we set out to be the link between wanderers and the wild, unexplored beauty of the Himalayas.
             </p>
           </div>
 
