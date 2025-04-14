@@ -131,8 +131,8 @@ const Recomended = () => {
                 src={tour.image || '/assets/biketour/img2.png'}
                 alt={tour.name}
                 className='w-full h-48 object-cover'
-                width={500}
-                height={300}
+                width={600}
+              height={400}
               />
               {tour.tag && (
                 <div

@@ -199,7 +199,7 @@ const TourBooking = () => {
             key={tour.id}
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
-          
+            /* Tour Image with Tag */
             <div className='relative' style={{ width: '100%' }}>
               <Image
                 src={tour.image || '/assets/biketour/img2.png'}
@@ -327,7 +327,7 @@ const Recomended = () => {
             key={tour.id}
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
-        
+            {/* Tour Image with Tag */}
             <div className='relative' style={{ width: '100%' }}>
                     <Image
                     src={tour.image || '/assets/biketour/img2.png'}

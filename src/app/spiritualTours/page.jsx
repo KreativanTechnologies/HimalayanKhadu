@@ -88,7 +88,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               <Image
                 src={tour.image || '/assets/spiritualTours/img3.png'}
                 alt={tour.name}
-                
+               
                 className='w-32 h-24 rounded-lg object-cover'
                 width={128} 
                 height={96}
