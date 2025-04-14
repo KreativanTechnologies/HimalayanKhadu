@@ -18,9 +18,8 @@ const BikeTour = () => {
             <span className='text-teal-500'>India</span>
           </h1>
           <p className='text-gray-800 leading-relaxed'>
-  Discover the thrill of two-wheeled adventures through the majestic landscapes of India. From the winding roads of the Himalayas to the scenic coastal routes of the South, our curated bike tours offer an unforgettable way to explore nature, culture, and hidden gems. Whether you're a seasoned rider or a curious traveler, each journey promises breathtaking views, vibrant local experiences, and the freedom of the open road. Let the mountains call you — and ride into a story worth telling.
-</p>
-
+            Discover the thrill of two-wheeled adventures through the majestic landscapes of India. From the winding roads of the Himalayas to the scenic coastal routes of the South, our curated bike tours offer an unforgettable way to explore nature, culture, and hidden gems. Whether you're a seasoned rider or a curious traveler, each journey promises breathtaking views, vibrant local experiences, and the freedom of the open road. Let the mountains call you — and ride into a story worth telling.
+          </p>
         </div>
         <div className='w-full md:w-1/2 relative'>
           <div className='relative z-10'>
@@ -28,6 +27,8 @@ const BikeTour = () => {
               src='/assets/biketour/img1.png'
               alt='Buddhist stupa with prayer flags'
               className='w-full h-auto rounded-lg object-cover'
+              width={500}
+              height={300}
             />
           </div>
           <div className='absolute bottom-[-40px] right-[-20px] z-10 hidden md:block'>
@@ -35,6 +36,8 @@ const BikeTour = () => {
               src='/assets/biketour/img2.png'
               alt='Buddhist temple'
               className='w-64 h-auto rounded-lg object-cover shadow-lg'
+              width={300}
+              height={300}
             />
           </div>
         </div>
@@ -196,12 +199,14 @@ const TourBooking = () => {
             key={tour.id}
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
-            {/* Tour Image with Tag */}
-            <div className='relative'>
+            /* Tour Image with Tag */
+            <div className='relative' style={{ width: '100%' }}>
               <Image
                 src={tour.image || '/assets/biketour/img2.png'}
                 alt={tour.name}
                 className='w-full h-48 object-cover'
+                width={300} // Added width property
+                height={192} // Added height property
               />
               {tour.tag && (
                 <div
@@ -214,7 +219,7 @@ const TourBooking = () => {
               )}
             </div>
 
-            {/* Tour Details */}
+            {/* /* Tour Details */} 
             <div className='p-4'>
               <div className='flex justify-between items-start mb-2'>
                 <h3 className='font-semibold text-gray-900'>{tour.name}</h3>
@@ -323,24 +328,26 @@ const Recomended = () => {
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
             {/* Tour Image with Tag */}
-            <div className='relative'>
-              <Image
-                src={tour.image || '/assets/biketour/img2.png'}
-                alt={tour.name}
-                className='w-full h-48 object-cover'
-              />
-              {tour.tag && (
-                <div
-                  className={`absolute top-3 left-3 py-1 px-3 rounded-md text-xs font-medium text-white ${
-                    tour.tag === "Best Seller" ? "bg-teal-600" : "bg-blue-600"
-                  }`}
-                >
-                  {tour.tag}
-                </div>
-              )}
-            </div>
+            <div className='relative' style={{ width: '100%' }}>
+                    <Image
+                    src={tour.image || '/assets/biketour/img2.png'}
+                    alt={tour.name}
+                    className='w-full h-48 object-cover'
+                    width={300} // Added width property
+                    height={192} // Added height property
+                    />
+                    {tour.tag && (
+                    <div
+                      className={`absolute top-3 left-3 py-1 px-3 rounded-md text-xs font-medium text-white ${
+                      tour.tag === "Best Seller" ? "bg-teal-600" : "bg-blue-600"
+                      }`}
+                    >
+                      {tour.tag}
+                    </div>
+                    )}
+                  </div>
 
-            {/* Tour Details */}
+                  {/* Tour Details */}
             <div className='p-4'>
               <div className='flex justify-between items-start mb-2'>
                 <h3 className='font-semibold text-gray-900'>{tour.name}</h3>
