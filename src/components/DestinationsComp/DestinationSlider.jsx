@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 const data = [
-  { img_Src: "/images/destinationPage/img1.webp" },
-  { img_Src: "/images/destinationPage/img1.webp" },
-  { img_Src: "/images/destinationPage/img1.webp" },
+  { img_Src: "/images/destinationPage/IMG_1005.JPG" },
+  { img_Src: "/images/destinationPage/IMG_1065.JPG" },
+  { img_Src: "/images/destinationPage/IMG_1194.JPG" },
 ];
 
 const DestinationSlider = () => {

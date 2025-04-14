@@ -31,7 +31,7 @@ const DestinationHero = () => {
             </div>
             <div className="w-[7rem] h-[7rem]  sm:w-[10rem] sm:h-[10rem] lg:w-56 lg:h-[14rem] md:ml-8 lg:ml-0 rounded-xl shadow-md overflow-hidden">
               <img
-                src="/images/destinationPage/img1.webp"
+                src="/images/destinationPage/IMG_0339.JPG"
                 alt="Cyclists"
                 className="w-full h-full object-cover"
               />
