@@ -51,7 +51,7 @@ export default function Contact() {
             className='object-cover'
           />
         </div>
-        <div className='relative z-10 responsivewidth mx-auto pt-20 px-4'>
+        <div className='relative z-10 responsivewidth mx-auto pt-10 px-4'>
           {/* Header */}
           <h1 className='text-black text-[40px] font-semibold text-center font-poppins mb-10'>
             Your next <span className='text-[#0099cc]'>Adventure</span> is just
@@ -98,7 +98,7 @@ export default function Contact() {
           </div>
 
           {/* Booking Form */}
-          <div className='max-w-4xl mx-auto bg-white p-8 rounded-lg border-2 border-gray-100 relative top-60'>
+          <div className='max-w-4xl mx-auto bg-white p-8 rounded-lg border-2 border-gray-100 relative top-40'>
             <form onSubmit={handleSubmit} className='space-y-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div>
