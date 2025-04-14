@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../../components/AboutComponents/Hero'
-import ClientSay from '../../components/AboutComponents/ClientSay'
+// import ClientSay from '../../components/AboutComponents/ClientSay'
 import Blogs from "../../components/HomePageComp/Blogs"
 import Grid from  "../../components/PackagePageComp/Grid"
 const Herodata = {
@@ -12,7 +12,7 @@ const page = () => {
         <div>
             <Hero data={Herodata} />
             <Grid/>
-            <ClientSay/>
+            {/* <ClientSay/> */}
             <Blogs/>
         </div>
     )
