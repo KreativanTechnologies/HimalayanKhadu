@@ -103,6 +103,8 @@ export default function Blog() {
             <Image
               src='/assets/heartNako.png'
               alt='Heart of Nako'
+              width={300}
+                height={200}
               className='w-[100px] sm:w-[150px] md:w-[180px] lg:w-[216px] lg:h-[92px] rounded-[54px]'
             />
           </div>
@@ -119,6 +121,8 @@ export default function Blog() {
                 <Image
                   src={item.image}
                   alt={item.title}
+                  width={300}
+                height={200}
                   className='w-full h-full rounded-md object-cover'
                 />
               </div>
