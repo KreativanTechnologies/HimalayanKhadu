@@ -61,6 +61,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               width={600}
               height={400}
               className='w-full h-auto rounded-lg object-cover'
+              
             />
           </div>
           <div className='absolute bottom-[-40px] right-[-20px] z-10 hidden md:block'>
@@ -70,6 +71,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               width={300}
               height={200}
               className='w-64 h-auto rounded-lg object-cover shadow-lg'
+             
             />
           </div>
         </div>
@@ -86,9 +88,10 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               <Image
                 src={tour.image || '/assets/spiritualTours/img3.png'}
                 alt={tour.name}
-                width={300}
-                height={200}
+                
                 className='w-32 h-24 rounded-lg object-cover'
+                width={128} 
+                height={96}
               />
             </div>
             <div className='flex flex-col'>

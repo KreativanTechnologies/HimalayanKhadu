@@ -49,6 +49,8 @@ const Section3 = () => {
                   alt='Buddhist stupa with prayer flags'
                   
                   className='w-full h-auto rounded-lg object-cover'
+                  width={500}
+                  height={300}
                 />
               </div>
               <div className='absolute bottom-[-40px] right-[-20px] z-10 '>
@@ -56,6 +58,8 @@ const Section3 = () => {
                   src='/assets/biketour/img2.png'
                   alt='Buddhist temple'
                   className='w-[50vw] md:w-64 h-auto rounded-lg object-cover shadow-lg'
+                  width={300}
+                  height={200}
                 />
               </div>
             </div>
