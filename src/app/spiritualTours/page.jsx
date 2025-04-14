@@ -2,7 +2,7 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
-import ClientSay from "../../components/HomePageComp/ClientSay";
+// import ClientSay from "../../components/HomePageComp/ClientSay";
 import Blogs from "../../components/HomePageComp/Blogs";
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan";
 
@@ -85,9 +85,13 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
                 src={tour.image || '/assets/spiritualTours/img3.png'}
                 alt={tour.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> 316f36720edc3b61e088082d7a9609d8431a5ada
+=======
+               
+>>>>>>> a77a62165770d111d90c6e55e94c17adf5880a87
                 className='w-32 h-24 rounded-lg object-cover'
                 width={128} 
                 height={96}
@@ -123,7 +127,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
       </div>
 
       <DestinationSlider />
-      <ClientSay />
+      {/* <ClientSay /> */}
       <WhyHimalayan />
       <Blogs />
     </div>

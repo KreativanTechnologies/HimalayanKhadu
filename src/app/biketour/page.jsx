@@ -2,7 +2,7 @@
 import { Star, Clock } from "lucide-react";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
-import ClientSay from "../../components/HomePageComp/ClientSay";
+// import ClientSay from "../../components/HomePageComp/ClientSay";
 import Blogs from "../../components/HomePageComp/Blogs";
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan";
 import { useState } from "react";
@@ -46,7 +46,7 @@ const BikeTour = () => {
       <TourBooking />
       <Recomended />
       <DestinationSlider />
-      <ClientSay />
+      {/* <ClientSay /> */}
       <WhyHimalayan />
       <Blogs />
     </div>
@@ -199,7 +199,7 @@ const TourBooking = () => {
             key={tour.id}
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
-          
+            /* Tour Image with Tag */
             <div className='relative' style={{ width: '100%' }}>
               <Image
                 src={tour.image || '/assets/biketour/img2.png'}
@@ -327,7 +327,7 @@ const Recomended = () => {
             key={tour.id}
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
-        
+            {/* Tour Image with Tag */}
             <div className='relative' style={{ width: '100%' }}>
                     <Image
                     src={tour.image || '/assets/biketour/img2.png'}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import ClientSay from '../../components/AboutComponents/ClientSay';
+// import ClientSay from '../../components/AboutComponents/ClientSay';
 import Recommended from "../../components/CyclingComp/Recommended";
 import Blogs from '../../components/HomePageComp/Blogs';
 import Gallery from '../../components/CyclingComp/Gallery';
@@ -15,7 +15,7 @@ const Page = () => {
         <FleetPage />
          <Recommended/>
          <Gallery />
-         <ClientSay/>
+         {/* <ClientSay/> */}
          <WhyHimalayan/>
          <Blogs/>
     </div>

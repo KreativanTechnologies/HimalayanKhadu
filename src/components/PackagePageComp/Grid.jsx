@@ -49,7 +49,7 @@ const data = [
     },
 ].map(item => ({
     ...item,
-    img: `${item.img}?resize=100x150` // Reduced width to 150px
+    img: `${item.img}?resize=100x150` 
 }));
 
 const Grid = () => {
