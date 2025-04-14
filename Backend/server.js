@@ -54,7 +54,7 @@ app.use("/api/admin/package",adminTourPackageRouter);
 app.use("/api/admin/order",adminOrderRouter);
 
 app.use("/api/client/cart",clientCartRouter);
-app.use("/api/client/order",clientOrderRouter);
+app.use("/api/client/orders",clientOrderRouter);
 app.use("/api/client/review",clientReviewRouter);
 app.use("/api/client/search",clientSearchRouter);
 app.use("/api/client/package",clientTourPackageRouter);

@@ -11,8 +11,8 @@ export const addToCart = async (req, res) => {
         message: "Invalid data provided!",
       });
     }
-    const tourPackage = await tourPackages.findById(tourPackageId);
 
+    const tourPackage = await tourPackages.findById(tourPackageId);
     if (!tourPackage) {
       return res.status(404).json({
         success: false,
@@ -21,17 +21,16 @@ export const addToCart = async (req, res) => {
     }
 
     let cart = await Cart.findOne({ userId });
+    if (!cart) cart = new Cart({ userId, items: [] });
 
-    if (!cart) {
-      cart = new Cart({ userId, items: [] });
-    }
-
-    const alreadyAdded = cart.items.some(
+    const existingIndex = cart.items.findIndex(
       (item) => item.tourPackageId.toString() === tourPackageId
     );
 
-    if (!alreadyAdded) {
-      cart.items.push({ tourPackageId });
+    if (existingIndex !== -1) {
+      cart.items[existingIndex].quantity += 1;
+    } else {
+      cart.items.push({ tourPackageId, quantity: 1 });
     }
 
     await cart.save();
@@ -77,10 +76,16 @@ export const fetchCartItems = async (req, res) => {
 
 export const updateCartItems = async (req, res) => {
   try {
-    const { userId, oldTourPackageId, newTourPackageId } = req.body;
+    const { userId, tourPackageId, quantity } = req.body;
+
+    if (!userId || !tourPackageId || quantity < 1) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid data",
+      });
+    }
 
     const cart = await Cart.findOne({ userId });
-
     if (!cart) {
       return res.status(404).json({
         success: false,
@@ -88,18 +93,18 @@ export const updateCartItems = async (req, res) => {
       });
     }
 
-    const itemIndex = cart.items.findIndex(
-      (item) => item.tourPackageId.toString() === oldTourPackageId
+    const item = cart.items.find(
+      (item) => item.tourPackageId.toString() === tourPackageId
     );
 
-    if (itemIndex === -1) {
+    if (!item) {
       return res.status(404).json({
         success: false,
         message: "Item not found in cart",
       });
     }
 
-    cart.items[itemIndex].tourPackageId = newTourPackageId;
+    item.quantity = quantity;
     await cart.save();
 
     res.status(200).json({
