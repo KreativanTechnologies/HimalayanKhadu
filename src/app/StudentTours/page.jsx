@@ -39,7 +39,7 @@ const Hero =() => {
         <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px]">
           {/* First image - Cycling with insurance text */}
           <div className="absolute top-0 left-0 md:left-40  w-[200px] h-[180px] rounded-lg overflow-hidden shadow-lg transform rotate-[9.23deg] z-10 ">
-            <Image src="/cycling-image.jpg" alt="Insurance qualways dreamt about" fill className="object-cover" />
+            <Image src="/assets/biketour/img2.png" alt="Insurance qualways dreamt about" fill className="object-cover" />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/30 flex flex-col justify-end p-3">
             
             </div>
@@ -47,12 +47,12 @@ const Hero =() => {
 
           {/* Second image - Blue/gray background */}
           <div className="absolute top-[80px] right-[20px] md:right-[40px] w-[280px] h-[200px] bg-blue-200 rounded-lg shadow-lg   transform rotate-[-4deg] z-0">
-            <Image src="/landscape-image.jpg" alt="Landscape view" fill className="object-cover rounded-lg" />
+            <Image src="/assets/spiritualTours/img1.png" alt="Landscape view" fill className="object-cover rounded-lg" />
           </div>
 
           {/* Third image - I love Nako */}
           <div className="absolute top-[180px] right-[0px] w-[200px] h-[180px] rounded-lg overflow-hidden shadow-lg z-20  transform rotate-[10.89deg] md:bottom-[10px]">
-            <Image src="/i-love-nako.jpg" alt="I love Nako sign" fill className="object-cover rounded-lg" />
+            <Image src="/assets/spiritualTours/img2.png" alt="I love Nako sign" fill className="object-cover rounded-lg" />
           </div>
         </div>
         </div>
@@ -131,6 +131,8 @@ const Recomended = () => {
                 src={tour.image || '/assets/biketour/img2.png'}
                 alt={tour.name}
                 className='w-full h-48 object-cover'
+                width={600}
+              height={400}
               />
               {tour.tag && (
                 <div

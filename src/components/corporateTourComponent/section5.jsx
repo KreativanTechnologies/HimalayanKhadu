@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Star } from "lucide-react";
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -15,6 +15,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
     {
       id: 2,
@@ -23,6 +25,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
     {
       id: 3,
@@ -31,6 +35,9 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+
+      height: 200,
     },
     {
       id: 4,
@@ -39,6 +46,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+        width: 200,
+      height: 200,
     },
     {
       id: 5,
@@ -47,6 +56,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
     {
       id: 6,
@@ -55,6 +66,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
   ];
   const scrollRef = useRef(null);
@@ -87,10 +100,12 @@ const Section5 = () => {
                 className="min-w-[200px]   md:min-w-[360px] md:flex-row flex flex-col items-start md:space-x-4 p-4 rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.1)]   bg-white"
               >
                 <div className="md:flex-shrink-0 ">
-                  <Image
+                  <img
                     src={tour.image || '/assets/spiritualTours/img3.png'}
                     alt={tour.name}
                     className="w-[170px]  md:w-32 h-24 rounded-lg object-cover"
+                    width={tour.width}
+                    height={tour.height}
                   />
                 </div>
                 <div className="flex flex-col md:gap-2  ">

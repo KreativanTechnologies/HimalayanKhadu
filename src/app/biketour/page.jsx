@@ -205,8 +205,8 @@ const TourBooking = () => {
                 src={tour.image || '/assets/biketour/img2.png'}
                 alt={tour.name}
                 className='w-full h-48 object-cover'
-                width={300} // Added width property
-                height={192} // Added height property
+                width={300} 
+                height={192} 
               />
               {tour.tag && (
                 <div
