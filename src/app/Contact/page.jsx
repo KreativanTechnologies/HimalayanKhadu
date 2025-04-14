@@ -68,8 +68,7 @@ export default function Contact() {
                 </h3>
               </div>
               <p className='self-stretch justify-start text-black text-xl font-normal font-poppins'>
-                Lorem ipsum is simply dummy text of the printing and typesetting
-                industry.
+              Himlayan Khadu 16 Miles, Shimla-Mandi National Highway, Ghandal, District Shimla, Himachal Pradesh-171014.
               </p>
             </div>
 
@@ -81,7 +80,7 @@ export default function Contact() {
                 </h3>
               </div>
               <p className='self-stretch justify-start text-black text-xl font-normal font-poppins'>
-                +91 9876543210
+                +91 7876750072
               </p>
             </div>
 
@@ -93,7 +92,7 @@ export default function Contact() {
                 </h3>
               </div>
               <p className='self-stretch justify-start text-black text-xl font-normal font-poppins'>
-                abc@gmail.com
+              Himlyankhadu@gmail.com
               </p>
             </div>
           </div>
