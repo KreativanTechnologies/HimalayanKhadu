@@ -3,17 +3,17 @@ import React from "react";
 
 const data = [
   {
-    img: "/images/destinationPage/img1.webp",
+    img: "/images/destinationPage/IMG_0571.JPG",
     title: "Himachal Himalayan Trek",
     rewiew: 12,
   },
   {
-    img: "/images/destinationPage/img1.webp",
+    img: "/images/destinationPage/IMG_0736.JPG",
     title: "Kerala Backwater Escape",
     rewiew: 18,
   },
   {
-    img: "/images/destinationPage/img1.webp",
+    img: "/images/destinationPage/IMG_0764.JPG",
     title: "Rajasthan Desert Safari",
     rewiew: 25,
   },

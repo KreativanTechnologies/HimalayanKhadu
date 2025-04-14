@@ -70,6 +70,7 @@ export default function Navbar() {
                       {[
                         { name: "Trekking", href: "/trekking" },
                         { name: "Cycling", href: "/Cycling" },
+                        { name: "Transport", href: "/Transport" },
                       ].map((subItem) => (
                         <a
                           key={subItem.name}

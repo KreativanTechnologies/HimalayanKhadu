@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-white text-3xl md:text-5xl font-bold">
-          Book Your Trip Today To <span className="text-[#0C8699]">Meghalaya.</span>
+          Book Your Trip Today To <span className="text-[#0C8699]">Himalayan.</span>
         </h1>
         <div className="mt-6 flex items-center w-full max-w-lg bg-white rounded-full shadow-md overflow-hidden px-4 py-2">
           <input
