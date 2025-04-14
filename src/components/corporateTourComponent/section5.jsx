@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Star } from "lucide-react";
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -100,7 +100,7 @@ const Section5 = () => {
                 className="min-w-[200px]   md:min-w-[360px] md:flex-row flex flex-col items-start md:space-x-4 p-4 rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.1)]   bg-white"
               >
                 <div className="md:flex-shrink-0 ">
-                  <Image
+                  <img
                     src={tour.image || '/assets/spiritualTours/img3.png'}
                     alt={tour.name}
                     className="w-[170px]  md:w-32 h-24 rounded-lg object-cover"
