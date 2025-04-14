@@ -43,7 +43,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href='#'
+                    href='/destinations'
                     className='text-neutral-50 text-base font-normal font-poppins'
                   >
                     {" "}
@@ -53,7 +53,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href='#'
+                    href='/about'
                     className='text-neutral-50 text-base font-normal font-poppins'
                   >
                     {" "}
@@ -63,7 +63,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href='#'
+                    href='/Package'
                     className='text-neutral-50 text-base font-normal font-poppins'
                   >
                     {" "}
@@ -73,7 +73,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href='#'
+                    href='/Blog'
                     className='text-neutral-50 text-base font-normal font-poppins'
                   >
                     {" "}
