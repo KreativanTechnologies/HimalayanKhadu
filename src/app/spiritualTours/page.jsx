@@ -59,8 +59,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               src='/assets/spiritualTours/img1.png'
               alt='Buddhist stupa with prayer flags'
               className='w-full h-auto rounded-lg object-cover'
-              width={500}
-              height={300}
+              
             />
           </div>
           <div className='absolute bottom-[-40px] right-[-20px] z-10 hidden md:block'>
@@ -68,8 +67,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               src='/assets/spiritualTours/img2.png'
               alt='Buddhist temple'
               className='w-64 h-auto rounded-lg object-cover shadow-lg'
-              width={300} 
-              height={200}
+             
             />
           </div>
         </div>
@@ -86,6 +84,10 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               <Image
                 src={tour.image || '/assets/spiritualTours/img3.png'}
                 alt={tour.name}
+<<<<<<< HEAD
+=======
+                
+>>>>>>> 316f36720edc3b61e088082d7a9609d8431a5ada
                 className='w-32 h-24 rounded-lg object-cover'
                 width={128} 
                 height={96}
