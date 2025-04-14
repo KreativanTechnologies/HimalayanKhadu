@@ -2,7 +2,7 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
-import ClientSay from "../../components/HomePageComp/ClientSay";
+// import ClientSay from "../../components/HomePageComp/ClientSay";
 import Blogs from "../../components/HomePageComp/Blogs";
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan";
 
@@ -124,7 +124,7 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
       </div>
 
       <DestinationSlider />
-      <ClientSay />
+      {/* <ClientSay /> */}
       <WhyHimalayan />
       <Blogs />
     </div>

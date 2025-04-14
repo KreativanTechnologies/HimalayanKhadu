@@ -2,7 +2,7 @@
 import { Star, Clock } from "lucide-react";
 import Image from "next/image";
 import DestinationSlider from "../../components/DestinationsComp/DestinationSlider";
-import ClientSay from "../../components/HomePageComp/ClientSay";
+// import ClientSay from "../../components/HomePageComp/ClientSay";
 import Blogs from "../../components/HomePageComp/Blogs";
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan";
 import { useState } from "react";
@@ -46,7 +46,7 @@ const BikeTour = () => {
       <TourBooking />
       <Recomended />
       <DestinationSlider />
-      <ClientSay />
+      {/* <ClientSay /> */}
       <WhyHimalayan />
       <Blogs />
     </div>
