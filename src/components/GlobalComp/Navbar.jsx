@@ -216,7 +216,7 @@ const navLinks = [
   },
   {
     name: "Trips/Tours",
-    href: "/Package",
+    href: "",
   },
   {
     name: "Blog",
