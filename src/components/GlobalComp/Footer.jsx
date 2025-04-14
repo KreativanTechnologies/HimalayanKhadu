@@ -102,8 +102,8 @@ const Footer = () => {
                     </span>
                     <span className='break-all'>
                       {" "}
-                      info@dreamationresorts.com
-                    </span>
+                      Himlyankhadu@gmail.com
+                      </span>
                   </a>
                 </li>
 
@@ -115,7 +115,8 @@ const Footer = () => {
                     <span>
                       <Phone />
                     </span>
-                    <span className='break-all'>  8580758626, 7837000888</span>{" "}
+                    <span className='break-all'>  7876750072
+                    </span>{" "}
                   </a>
                 </li>
 
@@ -130,8 +131,7 @@ const Footer = () => {
                     </span>
                     <span className='break-all'>
                       {" "}
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      Himlayan Khadu 16 Miles, Shimla-Mandi National Highway, Ghandal, District Shimla, Himachal Pradesh-171014.
                     </span>{" "}
                   </a>
                 </li>
