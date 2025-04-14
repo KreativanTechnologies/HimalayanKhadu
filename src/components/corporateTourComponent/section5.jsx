@@ -15,6 +15,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
     {
       id: 2,
@@ -23,6 +25,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
     {
       id: 3,
@@ -31,6 +35,9 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+
+      height: 200,
     },
     {
       id: 4,
@@ -39,6 +46,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+        width: 200,
+      height: 200,
     },
     {
       id: 5,
@@ -47,6 +56,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
     {
       id: 6,
@@ -55,6 +66,8 @@ const Section5 = () => {
       reviews: 2,
       rating: 5,
       image: '/assets/spiritualTours/img3.png',
+      width: 200,
+      height: 200,
     },
   ];
   const scrollRef = useRef(null);
@@ -91,6 +104,8 @@ const Section5 = () => {
                     src={tour.image || '/assets/spiritualTours/img3.png'}
                     alt={tour.name}
                     className="w-[170px]  md:w-32 h-24 rounded-lg object-cover"
+                    width={tour.width}
+                    height={tour.height}
                   />
                 </div>
                 <div className="flex flex-col md:gap-2  ">
