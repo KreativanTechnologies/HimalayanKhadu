@@ -14,35 +14,34 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const tripsData = {
   "Top Destinations": [
-    { id: 1, title: "Chandigarh To Spiti Valley Circuit Tour", duration: "8 Nights, 9 Days", price: "₹ 16950", badge: "Best Seller", image: "/images/HomePage/IMG-20250408-WA0009.jpg" },
-    { id: 2, title: "Manali To Chandratal Lake Tour", duration: "4 Nights, 5 Days", price: "₹ 8950", badge: "20% OFF", image: "/images/HomePage/IMG_4438.JPG" },
-    { id: 3, title: "Shimla To Kalpa Tour ", duration: "6 Nights, 7 Days", price: "₹ 14499", badge: "New", image: "/images/HomePage/IMG_4441.JPG" },
-    { id: 4, title: "Chandigarh To Shimla Tour", duration: "9 Nights, 10 Days", price: "₹ 18500", badge: "New", image: "/images/HomePage/IMG_5056.JPG" },
-    
+    { id: 1, title: "Chandigarh To Spiti Valley Tour", duration: "8 Nights, 9 Days", price: "₹ 16,950", badge: "Best Seller", image: "images/HomePage/IMG-20250408-WA0004.webp" },
+    { id: 2, title: "Manali To Chandratal Tour", duration: "4 Nights, 5 Days", price: "₹ 8,950", badge: "20% OFF", image: "images/HomePage/IMG-20250408-WA0005.webp" },
+    { id: 3, title: "Shimla To Kalpa Tour", duration: "6 Nights, 7 Days", price: "₹ 14,499", badge: "New", image: "images/HomePage/IMG-20250408-WA0006.webp" },
+    { id: 4, title: "Chandigarh To Shimla Tour", duration: "9 Nights, 10 Days", price: "₹ 18,500", badge: "New", image: "images/HomePage/IMG-20250408-WA0010.webp" },
   ],
   "New Launches": [
-    { id: 5, title: "Shimla To Manali Tour", duration: "6 Nights, 7 Days", price: "₹ 14999", badge: "Best Seller", image: "/images/HomePage/IMG-20250408-WA0004.jpg" },
-    { id: 6, title: "Delhi To Shimla Tour", duration: "8 Nights, 9 Days", price: "₹ 15,999", badge: "20% OFF", image: "/images/HomePage/IMG-20250408-WA0005.jpg" },
-    { id: 7, title: "Delhi To Manali Tour", duration: "8 Nights, 9 Days", price: "₹ 17999", badge: "New", image: "/images/HomePage/IMG-20250408-WA0007.jpg" },
-    { id: 8, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 5, title: "Shimla To Manali Tour", duration: "6 Nights, 7 Days", price: "₹ 14,999", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 6, title: "Delhi To Shimla Tour", duration: "8 Nights, 9 Days", price: "₹ 15,999", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 7, title: "Delhi To Manali Tour", duration: "8 Nights, 9 Days", price: "₹ 17,999", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 8, title: "Manali To Chandratal Spiti Tour", duration: "8 Nights, 9 Days", badge: "New", image: "/images/HomePage/h1.png" },
   ],
   "Trending": [
-    { id: 9, title: "Rajasthan Desert Safari", duration: "5 Nights, 6 Days", price: "₹ 13,500", badge: "Trending", image: "/images/HomePage/h1.png" },
-    { id: 10, title: "Andaman Islands", duration: "6 Nights, 7 Days", price: "₹ 20,000", badge: "Trending", image: "/images/HomePage/h1.png" },
-    { id: 11, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
-    { id: 12, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 9, title: "Shimla Spiti Tour", duration: "6 Nights, 7 Days", price: "₹ 14,499", badge: "Trending", image: "/images/HomePage/h1.png" },
+    { id: 10, title: "Chandigarh kinnour Spiti Tour", duration: "9 Nights, 10 Days", price: "₹ 18,500", badge: "Trending", image: "/images/HomePage/h1.png" },
+    { id: 11, title: "Shimla Spiti Circuit Manali ", duration: "6 Nights, 7 Days", price: "₹ 14,999", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 12, title: "Delhi Spiti Shimla Tour", duration: "8 Nights, 9 Days", price: "₹ 15,999", badge: "New", image: "/images/HomePage/h1.png" },
   ],
   "Recommended": [
-    { id: 13, title: "Rajasthan Desert Safari", duration: "5 Nights, 6 Days", price: "₹ 13,500", badge: "Trending", image: "/images/HomePage/h1.png" },
-    { id: 14, title: "Andaman Islands", duration: "6 Nights, 7 Days", price: "₹ 20,000", badge: "Trending", image: "/images/HomePage/h1.png" },
-    { id: 15, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
-    { id: 16, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 13, title: "Delhi Spiti Chandratal Manali Tour", duration: "8 Nights, 9 Days", price: "₹ 17,999", badge: "Trending", image: "/images/HomePage/h1.png" },
+    { id: 14, title: "Chandigarh To Shimla Tour", duration: "2 Nights, 3 Days", price: "₹ 15,500", badge: "Trending", image: "/images/HomePage/h1.png" },
+    { id: 15, title: "Shimla - Manali Tour ", duration: "5 Nights, 6 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 16, title: "Chandigarh Shimla Kinnaur Tour ", duration: "3 Nights, 4 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
   ],
   "Featured": [
-    { id: 17, title: "Rajasthan Desert Safari", duration: "5 Nights, 6 Days", price: "₹ 13,500", badge: "Trending", image: "/images/HomePage/h1.png" },
-    { id: 18, title: "Andaman Islands", duration: "6 Nights, 7 Days", price: "₹ 20,000", badge: "Trending", image: "/images/HomePage/h1.png" },
-    { id: 19, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
-    { id: 20, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 17, title: "Chandigarh - Shimla Tour", duration: "3 Nights, 4 Days", price: "₹ 18,500", badge: "Trending", image: "/images/HomePage/h1.png" },
+    { id: 18, title: "CHD - Shimla - Manali Tour ", duration: "4 Nights, 5 Days", price: "₹ 20,000", badge: "Trending", image: "/images/HomePage/h1.png" },
+    { id: 19, title: "Chandigarh To Manali Tour", duration: "6 Nights, 7 Days", price: "₹ 18,000", badge: "New", image: "/images/HomePage/h1.png" },
+    { id: 20, title: "Delhi To Manali Tour", duration: "5 Nights, 6 Days", price: "₹ 15,500", badge: "New", image: "/images/HomePage/h1.png" },
   ],
 };
 
