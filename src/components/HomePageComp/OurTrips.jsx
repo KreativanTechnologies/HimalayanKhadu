@@ -46,7 +46,7 @@ const tripsData = {
   ],
   "Featured": [
     { id: 33, title: "Rajasthan Desert Safari", duration: "5 Nights, 6 Days", price: "₹ 13,500", badge: "Trending", image: "images/HomePage/IMG_1815.webp" },
-    { id: 34, title: "Andaman Islands", duration: "6 Nights, 7 Days", price: "₹ 20,000", badge: "Trending", image: "images/HomePage/IMG_1902.webp" },
+    { id: 34, title: "Andaman Islands", duration: "6 Nights, 7 Days", price: "₹ 20,000", badge: "Trending", image: "images/HomePage/IMG_1501.webp" },
     { id: 35, title: "Himalayan Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "images/HomePage/IMG_1907.webp" },
     { id: 36, title: "Kerala Backwaters", duration: "6 Nights, 7 Days", price: "₹ 15,500", badge: "New", image: "images/HomePage/IMG_1930.webp" },
     { id: 37, title: "Hrgrfr Adventure", duration: "7 Nights, 8 Days", price: "₹ 18,000", badge: "New", image: "images/HomePage/IMG_1948.webp" },
