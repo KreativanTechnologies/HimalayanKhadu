@@ -13,9 +13,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent } from "@/components/ui/card"
 import { ImageUploader } from "../../components/Dashboard/imageUploader"
 import { Loader2 } from "lucide-react"
-import { DynamicFieldArray } from "@/components/dynamic-field-array"
-import { NestedFieldArray } from "@/components/nested-field-array"
-import { ItineraryFieldArray } from "@/components/itinerary-field-array"
+import { DynamicFieldArray } from "@/components/Dashboard/dynamicFieldArray"
+import { NestedFieldArray } from "@/components/Dashboard/nestedFieldArray"
+import { ItineraryFieldArray } from "@/components/Dashboard/itineraryFieldArray"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 // Mock data for editing
