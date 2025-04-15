@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { ModeToggle } from "../../components/Dashboard/modeToggle"
 import { PlaneTakeoff } from "lucide-react"
 
 export function SiteHeader() {
@@ -15,7 +14,6 @@ export function SiteHeader() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            <ModeToggle />
             <Button variant="ghost" className="text-sm font-medium" asChild>
               <Link href="/dashboard">Dashboard</Link>
             </Button>
