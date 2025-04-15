@@ -125,7 +125,7 @@ const Recomended = () => {
             key={tour.id}
             className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'
           >
-            {/* Tour Image with Tag */}
+           
             <div className='relative'>
               <Image
                 src={tour.image || '/assets/biketour/img2.png'}
