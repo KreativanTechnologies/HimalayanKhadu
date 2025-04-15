@@ -17,26 +17,7 @@ const navItems = [
     href: "/Dashboard/ListingsTable",
     icon: ListIcon,
   },
-  {
-    title: "Media",
-    href: "/Dashboard/media",
-    icon: ImageIcon,
-  },
-  {
-    title: "Analytics",
-    href: "/Dashboard/analytics",
-    icon: BarChart3,
-  },
-  {
-    title: "Customers",
-    href: "/Dashboard/customers",
-    icon: UsersIcon,
-  },
-  {
-    title: "Settings",
-    href: "/Dashboard/settings",
-    icon: Settings,
-  },
+  
 ]
 
 export function DashboardNav() {
