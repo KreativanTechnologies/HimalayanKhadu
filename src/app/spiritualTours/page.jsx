@@ -44,13 +44,13 @@ const SpiritualTours = () => {
             <span className='text-teal-500'>Tours</span>
           </h1>
           <p className='text-gray-800 leading-relaxed'>
-          Discover peace and serenity amidst the majestic Himalayas with our specially curated spiritual tours. Whether you're seeking inner peace, a break from the hustle, or a meaningful connection with nature and culture — our spiritual journeys offer it all.
-<br />
-<br />
-From meditative lakes and ancient temples to sacred trails surrounded by snow-capped peaks, each destination is designed to rejuvenate your soul and elevate your spirit.
-<br />
-<br />
-Join us on a path of mindfulness, healing, and self-discovery through the sacred landscapes of Himachal Pradesh and beyond. Let the calm winds, serene chants, and peaceful vistas guide you to your true self.
+            Discover peace and serenity amidst the majestic Himalayas with our specially curated spiritual tours. Whether you're seeking inner peace, a break from the hustle, or a meaningful connection with nature and culture — our spiritual journeys offer it all.
+            <br />
+            <br />
+            From meditative lakes and ancient temples to sacred trails surrounded by snow-capped peaks, each destination is designed to rejuvenate your soul and elevate your spirit.
+            <br />
+            <br />
+            Join us on a path of mindfulness, healing, and self-discovery through the sacred landscapes of Himachal Pradesh and beyond. Let the calm winds, serene chants, and peaceful vistas guide you to your true self.
           </p>
         </div>
         <div className='w-full md:w-1/2 relative'>
@@ -59,7 +59,9 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               src='/assets/spiritualTours/img1.png'
               alt='Buddhist stupa with prayer flags'
               className='w-full h-auto rounded-lg object-cover'
-              
+              width={600}
+              height={400}
+
             />
           </div>
           <div className='absolute bottom-[-40px] right-[-20px] z-10 hidden md:block'>
@@ -67,7 +69,9 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               src='/assets/spiritualTours/img2.png'
               alt='Buddhist temple'
               className='w-64 h-auto rounded-lg object-cover shadow-lg'
-             
+              width={256}
+              height={256}
+
             />
           </div>
         </div>
@@ -84,16 +88,8 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
               <Image
                 src={tour.image || '/assets/spiritualTours/img3.png'}
                 alt={tour.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                
->>>>>>> 316f36720edc3b61e088082d7a9609d8431a5ada
-=======
-               
->>>>>>> a77a62165770d111d90c6e55e94c17adf5880a87
                 className='w-32 h-24 rounded-lg object-cover'
-                width={128} 
+                width={128}
                 height={96}
               />
             </div>
@@ -110,11 +106,10 @@ Join us on a path of mindfulness, healing, and self-discovery through the sacred
                   <Star
                     key={i}
                     size={16}
-                    className={`${
-                      i < tour.rating
+                    className={`${i < tour.rating
                         ? "fill-yellow-400 text-yellow-400"
                         : "text-gray-300"
-                    }`}
+                      }`}
                   />
                 ))}
                 <span className='text-gray-500 text-sm ml-2'>
