@@ -15,8 +15,16 @@ export default function LayoutWrapper({ children }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const token = JSON.parse(sessionStorage.getItem("token"));
-    dispatch(checkAuth(token));
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      try {
+        dispatch(checkAuth(JSON.parse(token)));
+      } catch (error) {
+        console.log("Error parsing token:", error);
+      }
+    } else {
+      console.log("Token not found in sessionStorage.");
+    }
   }, [dispatch]);
 
   return (
