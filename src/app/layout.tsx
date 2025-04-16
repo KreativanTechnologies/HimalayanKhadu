@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+// app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/GlobalComp/Navbar"
-import Footer from "../components/GlobalComp/Footer"
+import Providers from "../components/GlobalComp/providers";
+import LayoutWrapper from "@/components/GlobalComp/LayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,27 +14,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Himalyan Khadu",
   description: "Tour and Travel Agency",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
-        {children}
-        <Footer/>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Providers>
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </Providers>
       </body>
     </html>
   );
