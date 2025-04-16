@@ -1,11 +1,16 @@
-import React from 'react'
-import Form from '../../components/Logincomp/Form';
+"use client"
+import Form from "../../components/Logincomp/Form";
+
 const Page = () => {
+
+
+  
+
   return (
     <div>
-        <Form/>
+      <Form/>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

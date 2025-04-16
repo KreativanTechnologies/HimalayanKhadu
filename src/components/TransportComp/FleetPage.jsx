@@ -23,10 +23,10 @@ export default function FleetPage() {
               alt="Biker riding in mountains" 
               layout="fill" 
               objectFit="cover" 
-              className="rounded-xl shadow-lg"
+              // className="rounded-xl shadow-lg"
             />
           </div>
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 border-4 border-white rounded-xl overflow-hidden shadow-md">
+          <div className="absolute bottom-0 right-0 w-1/2 h-1/2  overflow-hidden  rounded-lg ">
             <Image 
               src="/images/TransportComp/Rectangle 17.png" 
               alt="Scenic road" 

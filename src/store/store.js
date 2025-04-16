@@ -1,5 +1,5 @@
-// import {configureStore} from "@reduxjs/toolkit"
-// import authReducer from "./auth-slice"
+import {configureStore} from "@reduxjs/toolkit"
+import authReducer from "./auth-slice"
 // import adminTourPackageSlice from './admin/tourPackage-slice'
 // import adminOrderSlice from './admin/order-slice'
 
@@ -10,20 +10,20 @@
 // import clientReviewSlice from "./client/review-slice"
 
 
-// const store = configureStore({
-//     reducer : {
-//         auth : authReducer,
+const store = configureStore({
+    reducer : {
+        auth : authReducer,
 
-//         adminTourPackages : adminTourPackageSlice,
-//         adminOrder : adminOrderSlice,
+        // adminTourPackages : adminTourPackageSlice,
+        // adminOrder : adminOrderSlice,
         
-//         clientTourPackages : clientTourPackageSlice,
-//         clientCart : clientCartSlice,
-//         clientAddress : shopAddressSlice,
-//         clientOrder : clientOrderSlice, 
-//         clientSearch : clientSearchSlice,
-//         clientReview : clientReviewSlice,
-//     }
-// })
+        // clientTourPackages : clientTourPackageSlice,
+        // clientCart : clientCartSlice,
+        // clientAddress : shopAddressSlice,
+        // clientOrder : clientOrderSlice, 
+        // clientSearch : clientSearchSlice,
+        // clientReview : clientReviewSlice,
+    }
+})
 
-// export default store;
+export default store;

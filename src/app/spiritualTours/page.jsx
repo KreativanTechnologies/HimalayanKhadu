@@ -35,7 +35,7 @@ const SpiritualTours = () => {
   ];
 
   return (
-    <div className='responsivewidth px-4 py-12 font-sans'>
+    <div className='responsivewidth px-0 py-12 font-sans'>
       {/* Hero Section */}
       <div className='flex flex-col justify-center items-center md:flex-row gap-8 mb-16'>
         <div className='w-full md:w-1/2'>
