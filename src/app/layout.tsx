@@ -1,8 +1,8 @@
-// app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "../components/GlobalComp/providers";
 import LayoutWrapper from "@/components/GlobalComp/LayoutWrapper";
+import { ReactNode } from "react"; // Import ReactNode for typing
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +19,11 @@ export const metadata = {
   description: "Tour and Travel Agency",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode; // Explicitly typing children
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
