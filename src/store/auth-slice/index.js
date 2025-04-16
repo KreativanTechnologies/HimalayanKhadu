@@ -74,9 +74,9 @@ const authSlice = createSlice({
     setUser: (state, action) => {},
     resetTokenAndCredentials : (state) => {
       // for live token
-      (state.isAuthenticated = false),
-        (state.user = null),
-        (state.token = null);
+      state.isAuthenticated = false;
+      state.user = null;
+      state.token = null;
     },
   },
   extraReducers: (builder) => {
