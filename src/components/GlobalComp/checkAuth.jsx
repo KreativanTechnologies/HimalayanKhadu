@@ -2,26 +2,22 @@
 import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-function CheckAuth({ isAuthenticated, user, children }) {
+function CheckAuth({ isAuthenticated, user, children, isLoading }) {
   const pathname = usePathname();
   const router = useRouter();
 
   useEffect(() => {
     const isLoginOrSignup = pathname.includes("Login") || pathname.includes("Signup");
-    const isAdminRoute = pathname.includes("admin");
+    const isDashboard = pathname === "/Dashboard";
 
-    if (!isAuthenticated) {
-      if (!isLoginOrSignup) {
+    if (isDashboard) {
+      if (!isAuthenticated) {
         router.push("/Login");
+      } else if (user?.role !== "admin") {
+        router.push("/");
       }
-    } else {
-      if (isLoginOrSignup) {
-        router.push(user?.role === "admin" ? "/Dashboard" : "/");
-      } else if (isAdminRoute && user?.role !== "admin") {
-        router.push("/unAuthPage");
-      } else if (pathname === "/" && user?.role === "admin") {
-        router.push("/Dashboard");
-      }
+    } else if (isAuthenticated && isLoginOrSignup) {
+      router.push(user?.role === "admin" ? "/Dashboard" : "/");
     }
   }, [isAuthenticated, user, pathname, router]);
 

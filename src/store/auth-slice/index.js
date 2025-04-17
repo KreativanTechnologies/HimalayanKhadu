@@ -3,7 +3,7 @@ import axios from "axios";
 
 const initialState = {
   isAuthenticated: false,
-  isLoading: true,
+  isLoading: false,
   user: null,
   token: null, // for live token
 };
@@ -18,7 +18,7 @@ export const registerUser = createAsyncThunk(
       `${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`,
       formData,
       {
-        withCredentials: true,
+        withCredentials: true,m 
       }
     );
     return response.data;
@@ -52,18 +52,21 @@ export const logoutUser = createAsyncThunk("/auth/logout", async () => {
 });
 
 // checkAuth user async thunk  for live token
-export const checkAuth = createAsyncThunk("/auth/checkauth", async (token) => {
-  const response = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/auth/check-auth`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Cache-Control":
-          "no-store, no-cache, must-revalidate, proxy-revalidate",
-      },
-    }
-  );
-  return response.data;
+export const checkAuth = createAsyncThunk("/auth/checkauth", async (token, { rejectWithValue }) => { 
+  try {
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/auth/check-auth`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        },
+      }
+    );
+    return response.data;
+  } catch (err) {
+    return rejectWithValue(err.response?.data || "Auth failed");
+  }
 });
 
 // Explanation file k end mein hai

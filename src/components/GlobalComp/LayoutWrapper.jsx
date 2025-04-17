@@ -1,19 +1,17 @@
 "use client";
-
 import { useDispatch, useSelector } from "react-redux";
+import CheckAuth from "./checkAuth"; // adjust the path if needed
 import { usePathname } from "next/navigation";
+import { checkAuth, resetTokenAndCredentials } from "@/store/auth-slice";
 import { useEffect } from "react";
-
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import CheckAuth from "./checkAuth"; // adjust the path if needed
-import { checkAuth } from "@/store/auth-slice";
 
 export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
-  const isDashboard = pathname.startsWith("/Dashboard");
+  const hideLayout = pathname.startsWith("/Dashboard");
 
-  const { user, isAuthenticated } = useSelector((state) => state.auth);
+  const { user, isAuthenticated, isLoading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,22 +22,27 @@ export default function LayoutWrapper({ children }) {
       } catch (error) {
         console.log("Error parsing token:", error);
       }
+    } else {
+      // force loading to false if no token
+      dispatch(resetTokenAndCredentials());
     }
   }, [dispatch]);
 
-  const content = isDashboard ? (
-    <CheckAuth isAuthenticated={isAuthenticated} user={user}>
-      {children}
-    </CheckAuth>
-  ) : (
-    children
-  );
+  if (isLoading) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center">
+        <p className="text-xl font-semibold">Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <>
-      {!isDashboard && <Navbar />}
-      {content}
-      {!isDashboard && <Footer />}
+      {!hideLayout && <Navbar />}
+      <CheckAuth isAuthenticated={isAuthenticated} user={user} isLoading={isLoading}>
+        {children}
+      </CheckAuth>
+      {!hideLayout && <Footer />}
     </>
   );
 }
