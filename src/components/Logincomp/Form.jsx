@@ -1,35 +1,43 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import {loginUser} from "../../store/auth-slice"
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../store/auth-slice";
+
 const initialState = {
   email: "",
   password: "",
 };
 
 const Form = () => {
-
   const [formData, setFormData] = useState(initialState);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- function onSubmit(event) {
-     event.preventDefault();
-     dispatch(loginUser(formData)).then((data) => {
-       if (data?.payload?.success) {
-         alert(data?.payload?.message);
-       } else {
-         alert(`Error: ${data?.payload?.message}`);
-       }
-     });
-   }
-
-  const router = useRouter();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    try {
+      const data = await dispatch(loginUser(formData));
+      if (data?.payload?.success) {
+        alert(data.payload.message);
+      } else {
+        alert(`Error: ${data.payload.message}`);
+      }
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+    setFormData(initialState)
+  };
 
   return (
     <div
@@ -43,9 +51,10 @@ const Form = () => {
 
         <form onSubmit={onSubmit}>
           <input
-            type="text"
+            type="email"
             name="email"
-            placeholder="email"
+            placeholder="Email"
+            required
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-2 mb-3 rounded-full bg-white/10 text-teal-900 placeholder-gray-600 focus:ring-2 focus:ring-teal-400 focus:outline-none backdrop-blur-2xl"
@@ -55,6 +64,7 @@ const Form = () => {
             type="password"
             name="password"
             placeholder="Password"
+            required
             value={formData.password}
             onChange={handleChange}
             className="w-full px-4 py-2 mb-3 rounded-full bg-white/10 text-teal-900 placeholder-gray-600 focus:ring-2 focus:ring-teal-400 focus:outline-none backdrop-blur-2xl"
@@ -66,9 +76,12 @@ const Form = () => {
 
           <button
             type="submit"
-            className="w-full bg-teal-600 text-white py-2 rounded-full hover:bg-teal-700 transition shadow-md"
+            disabled={loading}
+            className={`w-full text-white py-2 rounded-full transition shadow-md ${
+              loading ? "bg-teal-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"
+            }`}
           >
-            Submit
+            {loading ? "Submiting..." : "Submit"}
           </button>
         </form>
 
@@ -76,7 +89,7 @@ const Form = () => {
           Don’t have an Account?{" "}
           <span
             className="text-[#0C8699] font-bold hover:underline cursor-pointer"
-            onClick={() => router.push('/Signup')}
+            onClick={() => router.push("/Signup")}
           >
             Sign up
           </span>

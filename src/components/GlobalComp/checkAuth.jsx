@@ -1,11 +1,10 @@
 "use client";
-
-import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 function CheckAuth({ isAuthenticated, user, children }) {
+  const pathname = usePathname();
   const router = useRouter();
-  const { pathname } = router;
 
   useEffect(() => {
     const isLoginOrSignup = pathname.includes("Login") || pathname.includes("Signup");
@@ -28,5 +27,4 @@ function CheckAuth({ isAuthenticated, user, children }) {
 
   return <>{children}</>;
 }
-
 export default CheckAuth;

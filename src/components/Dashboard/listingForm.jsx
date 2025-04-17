@@ -232,7 +232,7 @@ export function ListingForm({ id }) {
     setTimeout(() => {
       console.log({ ...values, gallery: images })
       setIsSubmitting(false)
-      router.push("/dashboard")
+      router.push("/Dashboard")
     }, 1500)
   }
 

@@ -114,7 +114,7 @@ export function ListingsTable() {
                       <DropdownMenuLabel>Actions</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem asChild>
-                        <Link href={`/dashboard/edit/${listing.id}`}>
+                        <Link href={`/Dashboard/edit/${listing.id}`}>
                           <Edit className="mr-2 h-4 w-4" />
                           Edit
                         </Link>
