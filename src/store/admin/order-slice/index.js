@@ -11,7 +11,7 @@
 //   "/order/getAllOrdersForAdmin",
 //   async () => {
 //     const response = await axios.get(
-//       `${import.meta.env.NEXT_PUBLIC_API_URL}/api/admin/orders/get`
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/orders/get`
 //     );
 //     return response.data;
 //   }
@@ -21,7 +21,7 @@
 //   "/order/getOrderDetailsForAdmin",
 //   async (id) => {
 //     const response = await axios.get(
-//       `${import.meta.env.NEXT_PUBLIC_API_URL}/api/admin/orders/details/${id}`
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/orders/details/${id}`
 //     );
 //     return response.data;
 //   }
@@ -31,7 +31,7 @@
 //   "/order/updateOrderStatus",
 //   async ({ id, orderStatus }) => {
 //     const response = await axios.put(
-//       `${import.meta.env.NEXT_PUBLIC_API_URL}/api/admin/orders/update/${id}`,
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/orders/update/${id}`,
 //       {
 //         orderStatus,
 //       }
@@ -58,17 +58,20 @@
 //         state.orderList = action?.payload?.data;
 //       })
 //       .addCase(getAllOrdersForAdmin.rejected, (state) => {
-//         (state.isLoading = false), (state.orderList = []);
+//         state.isLoading = false;
+//         state.orderList = [];
 //       })
 
 //       .addCase(getOrderDetailsForAdmin.pending, (state) => {
 //         state.isLoading = true;
 //       })
 //       .addCase(getOrderDetailsForAdmin.fulfilled, (state, action) => {
-//         (state.isLoading = false), (state.orderDetails = action?.payload?.data);
+//         state.isLoading = false;
+//         state.orderDetails = action?.payload?.data;
 //       })
 //       .addCase(getOrderDetailsForAdmin.rejected, (state) => {
-//         (state.isLoading = false), (state.orderDetails = null);
+//         state.isLoading = false;
+//         state.orderDetails = null;
 //       });
 //   },
 // });

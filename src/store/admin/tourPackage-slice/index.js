@@ -11,7 +11,7 @@
 //   "/package/addnewpackage",
 //   async (formData) => {
 //     const result = await axios.post(
-//       `${import.meta.env.VITE_API_URL}/api/admin/package/add`,
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/add`,
 //       formData,
 //       {
 //         headers: {
@@ -28,7 +28,7 @@
 //   "/package/fetchAllPackages",
 //   async () => {
 //     const result = await axios.get(
-//       `${import.meta.env.VITE_API_URL}/api/admin/package/get`
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/get`
 //     );
 
 //     return result?.data;
@@ -39,7 +39,7 @@
 //   "/package/editPackage",
 //   async ({ id, formData }) => {
 //     const result = await axios.put(
-//       `${import.meta.env.VITE_API_URL}/api/admin/package/edit/${id}`,
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/edit/${id}`,
 //       formData,
 //       {
 //         headers: {
@@ -56,7 +56,7 @@
 //   "/package/deletePackage",
 //   async (id) => {
 //     const result = await axios.delete(
-//       `${import.meta.env.VITE_API_URL}/api/admin/package/delete/${id}`
+//       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/delete/${id}`
 //     );
 
 //     return result?.data;
@@ -76,7 +76,7 @@
 //         state.isLoading = false;
 //         state.packageList = action.payload.data;
 //       })
-//       .addCase(fetchAllPackages.rejected, (state, action) => {
+//       .addCase(fetchAllPackages.rejected, (state) => {
 //         state.isLoading = false;
 //         state.packageList = [];
 //       });
