@@ -15,7 +15,6 @@ import {
 import { Badge } from "../ui/badge"
 import { Edit, MoreHorizontal, Trash } from "lucide-react"
 
-// Mock data for demonstration
 const initialListings = [
   {
     id: "1",
@@ -80,7 +79,6 @@ export function ListingsTable() {
         <TableHeader>
           <TableRow>
             <TableHead>Name</TableHead>
-            <TableHead>Status</TableHead>
             <TableHead>Price</TableHead>
             <TableHead>Created</TableHead>
             <TableHead className="text-right">Actions</TableHead>
@@ -89,7 +87,7 @@ export function ListingsTable() {
         <TableBody>
           {listings.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={5} className="h-24 text-center">
+              <TableCell colSpan={4} className="h-24 text-center">
                 No listings found.
               </TableCell>
             </TableRow>
@@ -97,9 +95,6 @@ export function ListingsTable() {
             listings.map((listing) => (
               <TableRow key={listing.id}>
                 <TableCell className="font-medium">{listing.name}</TableCell>
-                <TableCell>
-                  <Badge variant={listing.status === "published" ? "default" : "secondary"}>{listing.status}</Badge>
-                </TableCell>
                 <TableCell>${listing.price}</TableCell>
                 <TableCell>{formatDate(listing.createdAt)}</TableCell>
                 <TableCell className="text-right">
@@ -137,4 +132,3 @@ export function ListingsTable() {
     </div>
   )
 }
-

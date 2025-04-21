@@ -8,15 +8,15 @@ import { LayoutDashboard, ListIcon, Settings, ImageIcon, UsersIcon, BarChart3 } 
 
 const navItems = [
   {
-    title: "Overview",
-    href: "/Dashboard",
-    icon: LayoutDashboard,
-  },
-  {
     title: "Listings",
-    href: "/Dashboard/ListingsTable",
+    href: "/Dashboard",
     icon: ListIcon,
   },
+  // {
+  //   title: "Listings",
+  //   href: "/components/Dashboard/listingsTable.jsx",
+  //   icon: ListIcon,
+  // },
   
 ]
 
@@ -29,7 +29,7 @@ export function DashboardNav() {
         <Button
           key={item.href}
           variant={pathname === item.href ? "default" : "ghost"}
-          className={cn("justify-start", pathname === item.href && "bg-accent text-accent-foreground")}
+          className={cn("justify-start", pathname === item.href && "")}
           asChild
         >
           <Link href={item.href}>
