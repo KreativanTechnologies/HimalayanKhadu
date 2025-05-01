@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
@@ -13,27 +13,86 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { ImagePlus, X, Upload } from "lucide-react"
+} from "../ui/dialog"
+import { ImagePlus, X, Upload, Loader2 } from "lucide-react"
+import { uploadImage } from "@/app/actions/upload-image"
 
-export function ImageUploader({ images, onUpload, onRemove }) {
+export function ImageUploader({ images = [], onImagesChange }) {
   const [isUploading, setIsUploading] = useState(false)
   const [dialogOpen, setDialogOpen] = useState(false)
+  const [uploadProgress, setUploadProgress] = useState(0)
+  const fileInputRef = useRef(null)
+  const [dragActive, setDragActive] = useState(false)
 
-  const handleUpload = () => {
-    setIsUploading(true)
+  const handleUpload = async (file) => {
+    if (!file) return
 
-    // Simulate upload delay
-    setTimeout(() => {
-      // Generate a placeholder image with random dimensions
-      const width = Math.floor(Math.random() * 200) + 400
-      const height = Math.floor(Math.random() * 200) + 300
-      const placeholderUrl = `/placeholder.svg?height=${height}&width=${width}`
+    try {
+      setIsUploading(true)
+      setUploadProgress(10)
 
-      onUpload(placeholderUrl)
+      // Simulate progress while uploading
+      const progressInterval = setInterval(() => {
+        setUploadProgress((prev) => Math.min(prev + 10, 90))
+      }, 300)
+
+      // Upload to Cloudinary via server action
+      const imageUrl = await uploadImage(file)
+
+      clearInterval(progressInterval)
+      setUploadProgress(100)
+
+      // Add the new image URL to the existing images
+      onImagesChange([...images, imageUrl])
+
+      // Reset the form
+      if (fileInputRef.current) {
+        fileInputRef.current.value = ""
+      }
+
+      setTimeout(() => {
+        setIsUploading(false)
+        setDialogOpen(false)
+        setUploadProgress(0)
+      }, 500)
+    } catch (error) {
+      console.error("Upload failed:", error)
       setIsUploading(false)
-      setDialogOpen(false)
-    }, 1500)
+      setUploadProgress(0)
+    }
+  }
+
+  const handleRemove = (index) => {
+    const updatedImages = [...images]
+    updatedImages.splice(index, 1)
+    onImagesChange(updatedImages)
+  }
+
+  const handleDrag = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+
+    if (e.type === "dragenter" || e.type === "dragover") {
+      setDragActive(true)
+    } else if (e.type === "dragleave") {
+      setDragActive(false)
+    }
+  }
+
+  const handleDrop = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setDragActive(false)
+
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleUpload(e.dataTransfer.files[0])
+    }
+  }
+
+  const handleFileChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      handleUpload(e.target.files[0])
+    }
   }
 
   return (
@@ -43,7 +102,7 @@ export function ImageUploader({ images, onUpload, onRemove }) {
           <Card key={index} className="overflow-hidden group relative">
             <div className="aspect-video relative">
               <Image
-                src={image }
+                src={image || "/placeholder.svg"}
                 alt={`Listing image ${index + 1}`}
                 fill
                 className="object-cover"
@@ -52,7 +111,7 @@ export function ImageUploader({ images, onUpload, onRemove }) {
                 variant="destructive"
                 size="icon"
                 className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                onClick={() => onRemove(index)}
+                onClick={() => handleRemove(index)}
               >
                 <X className="h-4 w-4" />
               </Button>
@@ -73,27 +132,55 @@ export function ImageUploader({ images, onUpload, onRemove }) {
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Upload Image</DialogTitle>
-              <DialogDescription>Upload an image for your travel listing.</DialogDescription>
+              <DialogDescription>Upload an image to Cloudinary for your listing.</DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <label htmlFor="image-upload">Select image</label>
-                <Input id="image-upload" type="file" accept="image/*" />
+                <Input
+                  id="image-upload"
+                  type="file"
+                  accept="image/*"
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                  disabled={isUploading}
+                />
               </div>
-              <div className="border-2 border-dashed rounded-lg p-12 text-center">
+              <div
+                className={`border-2 border-dashed rounded-lg p-12 text-center ${dragActive ? "border-primary bg-primary/5" : ""}`}
+                onDragEnter={handleDrag}
+                onDragLeave={handleDrag}
+                onDragOver={handleDrag}
+                onDrop={handleDrop}
+              >
                 <div className="flex flex-col items-center">
-                  <Upload className="h-8 w-8 mb-2 text-muted-foreground" />
-                  <p className="text-sm text-muted-foreground mb-1">Drag and drop your image here</p>
-                  <p className="text-xs text-muted-foreground">PNG, JPG, GIF up to 10MB</p>
+                  {isUploading ? (
+                    <>
+                      <Loader2 className="h-8 w-8 mb-2 text-primary animate-spin" />
+                      <p className="text-sm text-muted-foreground mb-1">Uploading to Cloudinary...</p>
+                      <div className="w-full bg-secondary rounded-full h-2.5 mt-2">
+                        <div
+                          className="bg-primary h-2.5 rounded-full transition-all duration-300"
+                          style={{ width: `${uploadProgress}%` }}
+                        ></div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="h-8 w-8 mb-2 text-muted-foreground" />
+                      <p className="text-sm text-muted-foreground mb-1">Drag and drop your image here</p>
+                      <p className="text-xs text-muted-foreground">PNG, JPG, GIF up to 10MB</p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
             <DialogFooter>
-              <Button variant="outline" onClick={() => setDialogOpen(false)}>
+              <Button variant="outline" onClick={() => setDialogOpen(false)} disabled={isUploading}>
                 Cancel
               </Button>
-              <Button onClick={handleUpload} disabled={isUploading}>
-                {isUploading ? "Uploading..." : "Upload"}
+              <Button onClick={() => fileInputRef.current?.click()} disabled={isUploading}>
+                {isUploading ? "Uploading..." : "Select File"}
               </Button>
             </DialogFooter>
           </DialogContent>
@@ -102,4 +189,3 @@ export function ImageUploader({ images, onUpload, onRemove }) {
     </div>
   )
 }
-
