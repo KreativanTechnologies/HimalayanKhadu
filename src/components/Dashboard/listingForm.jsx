@@ -704,7 +704,29 @@ export function ListingForm({ id }) {
                           <FormItem>
                             <FormLabel>Image URL</FormLabel>
                             <FormControl>
-                              <Input placeholder="Enter image URL" {...field} />
+
+                              <Input
+                                type="file"
+                                accept="image/*"
+                                onChange={async (e) => {
+                                  const file = e.target.files?.[0];
+                                  if (file) {
+                                    // Upload logic (mock or real API)
+                                    const formData = new FormData();
+                                    formData.append('file', file);
+
+                                    // Replace this with your actual upload logic
+                                    const response = await fetch('/api/upload', {
+                                      method: 'POST',
+                                      body: formData,
+                                    });
+
+                                    const data = await response.json();
+                                    field.onChange(data.url); // Update form with uploaded image URL
+                                  }
+                                }}
+                              />
+
                             </FormControl>
                             <FormMessage />
                           </FormItem>
