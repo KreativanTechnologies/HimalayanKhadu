@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit"
 import authReducer from "./auth-slice"
-// import adminTourPackageSlice from './admin/tourPackage-slice'
+import adminTourPackageSlice from './admin/tourPackage-slice'
 // import adminOrderSlice from './admin/order-slice'
 
 // import clientTourPackageSlice from './client/tourPackage-slice'
@@ -14,7 +14,7 @@ const store = configureStore({
     reducer : {
         auth : authReducer,
 
-        // adminTourPackages : adminTourPackageSlice,
+        adminTourPackages : adminTourPackageSlice,
         // adminOrder : adminOrderSlice,
         
         // clientTourPackages : clientTourPackageSlice,

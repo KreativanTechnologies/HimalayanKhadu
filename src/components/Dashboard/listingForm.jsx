@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -9,35 +8,31 @@ import { Button } from "../ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
 import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 import { Card, CardContent } from "../ui/card"
 import { ImageUploader } from "../../components/Dashboard/imageUploader"
 import { Loader2, Plus, X } from "lucide-react"
+import { useDispatch } from "react-redux"
+import {addNewPackage} from "../../store/admin/tourPackage-slice"
 
 // Mock data for editing
 const mockListings = {
   1: {
     id: "1",
-    name: "Bali Beach Resort",
+    title: "Bali Beach Resort",
     description: "Luxury beach resort in Bali with private villas",
     price: 1299,
-    status: "published",
     images: ["/placeholder.svg?height=300&width=500"],
   },
   2: {
     id: "2",
-    name: "Paris City Break",
+    title: "Paris City Break",
     description: "3-day city break in the heart of Paris",
     price: 799,
-    status: "published",
     images: ["/placeholder.svg?height=300&width=500"],
   },
 }
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
   title: z.string().min(2, {
     message: "Title must be at least 2 characters.",
   }),
@@ -61,7 +56,6 @@ const formSchema = z.object({
     .optional(),
   pickDrop: z.string().optional(),
   duration: z.string().optional(),
-  status: z.enum(["draft", "published"]),
   inclusions: z
     .array(
       z.object({
@@ -163,6 +157,7 @@ export function ListingForm({ id }) {
   const router = useRouter()
   const [images, setImages] = useState(id && mockListings[id] ? mockListings[id].images : [])
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const dispatch = useDispatch()
 
   // Add state for managing dynamic arrays
   const [inclusionsCount, setInclusionsCount] = useState(1)
@@ -182,14 +177,12 @@ export function ListingForm({ id }) {
     resolver: zodResolver(formSchema),
     defaultValues: existingListing
       ? {
-          name: existingListing.name,
           title: existingListing.title || "",
           description: existingListing.description || "",
           price: existingListing.price || 0,
           salePrice: existingListing.salePrice || 0,
           pickDrop: existingListing.pickDrop || "",
           duration: existingListing.duration || "",
-          status: existingListing.status || "draft",
           inclusions: existingListing.inclusions || [{ text: "" }],
           exclusions: existingListing.exclusions || [{ text: "" }],
           itinerary: existingListing.itinerary || [
@@ -204,14 +197,12 @@ export function ListingForm({ id }) {
           averageReview: existingListing.averageReview || 0,
         }
       : {
-          name: "",
           title: "",
           description: "",
           price: 0,
           salePrice: 0,
           pickDrop: "",
           duration: "",
-          status: "draft",
           inclusions: [{ text: "" }],
           exclusions: [{ text: "" }],
           itinerary: [{ day: 1, Title: "", todayActivities: [""], Note: "", Highlight: "" }],
@@ -225,17 +216,27 @@ export function ListingForm({ id }) {
         },
   })
 
-  function onSubmit(values) {
-    setIsSubmitting(true)
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log({ ...values, gallery: images })
-      setIsSubmitting(false)
-      router.push("/Dashboard")
-    }, 1500)
+  function onSubmit(values) {
+    setIsSubmitting(true);
+    console.log(values,images, "final data");
+  
+    setTimeout(async () => {
+      const dataToSend = { ...values, gallery: images };
+  
+      try {
+        await dispatch(addNewPackage(values)).unwrap(); // Dispatch properly
+        router.push("/Dashboard");
+      } catch (error) {
+        console.error("Error adding package:", error);
+      } finally {
+        setIsSubmitting(false);
+      }
+    }, 1500);
   }
 
+
+  // Images
   const handleImageUpload = (imageUrl) => {
     setImages([...images, imageUrl])
   }
@@ -246,8 +247,14 @@ export function ListingForm({ id }) {
     setImages(newImages)
   }
 
+
+
+
+
   return (
     <div className="grid gap-6">
+
+      {/* Image upload */}
       <Card>
         <CardContent className="pt-6">
           <div className="mb-6">
@@ -260,26 +267,15 @@ export function ListingForm({ id }) {
         </CardContent>
       </Card>
 
+
+      {/* other data here */}
       <Card>
         <CardContent className="pt-6">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Enter listing name" {...field} />
-                      </FormControl>
-                      <FormDescription>The name of your travel package or destination.</FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
 
+              {/* Package Title */}
                 <FormField
                   control={form.control}
                   name="title"
@@ -296,6 +292,7 @@ export function ListingForm({ id }) {
                 />
               </div>
 
+              {/* Package Description */}
               <FormField
                 control={form.control}
                 name="description"
@@ -311,6 +308,7 @@ export function ListingForm({ id }) {
                 )}
               />
 
+              {/* Package Price , sale price */}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                 <FormField
                   control={form.control}
@@ -348,30 +346,11 @@ export function ListingForm({ id }) {
                   )}
                 />
 
-                <FormField
-                  control={form.control}
-                  name="status"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Status</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select status" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="draft">Draft</SelectItem>
-                          <SelectItem value="published">Published</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormDescription>Set the visibility status of your listing.</FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+             
+                
               </div>
 
+              {/* Package Pickup & drop, Duration */}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <FormField
                   control={form.control}
@@ -404,6 +383,7 @@ export function ListingForm({ id }) {
                 />
               </div>
 
+              {/* Package Avg Review */}
               <FormField
                 control={form.control}
                 name="averageReview"
@@ -419,7 +399,7 @@ export function ListingForm({ id }) {
                 )}
               />
 
-              {/* Inclusions Section */}
+              {/* Package Inclusion  */}
               <div className="space-y-4 border p-4 rounded-md">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-medium">Inclusions</h3>
@@ -471,7 +451,7 @@ export function ListingForm({ id }) {
                 ))}
               </div>
 
-              {/* Exclusions Section */}
+              {/* Package Exclusion */}
               <div className="space-y-4 border p-4 rounded-md">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-medium">Exclusions</h3>
@@ -523,7 +503,7 @@ export function ListingForm({ id }) {
                 ))}
               </div>
 
-              {/* Itinerary Section */}
+              {/* Package Itinerary */}
               <div className="space-y-4 border p-4 rounded-md">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-medium">Itinerary</h3>
@@ -662,7 +642,7 @@ export function ListingForm({ id }) {
                 ))}
               </div>
 
-              {/* Things to Pack Section */}
+              {/* Package Things to Pack Section */}
               <div className="space-y-4 border p-4 rounded-md">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-medium">Things to Pack</h3>
@@ -749,7 +729,7 @@ export function ListingForm({ id }) {
                 ))}
               </div>
 
-              {/* FAQ Section */}
+              {/* Package FAQ Section */}
               <div className="space-y-4 border p-4 rounded-md">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-medium">FAQs</h3>
@@ -820,7 +800,8 @@ export function ListingForm({ id }) {
                 ))}
               </div>
 
-              {/* How to Reach Section */}
+
+              {/* Package How to Reach Section */}
               <div className="space-y-4 border p-4 rounded-md">
                 <h3 className="text-lg font-medium">How to Reach</h3>
 
@@ -909,7 +890,7 @@ export function ListingForm({ id }) {
                 </div>
               </div>
 
-              {/* Best Time to Visit Section */}
+              {/* Package Best Time to Visit Section */}
               <div className="space-y-4 border p-4 rounded-md">
                 <h3 className="text-lg font-medium">Best Time to Visit</h3>
 
@@ -998,7 +979,7 @@ export function ListingForm({ id }) {
                 </div>
               </div>
 
-              {/* Places to Visit Section */}
+              {/* Packages Places to Visit Section */}
               <div className="space-y-4 border p-4 rounded-md">
                 <h3 className="text-lg font-medium">Places to Visit</h3>
 
@@ -1087,7 +1068,7 @@ export function ListingForm({ id }) {
                 </div>
               </div>
 
-              {/* Things to Do Section */}
+              {/* Package Things to Do Section */}
               <div className="space-y-4 border p-4 rounded-md">
                 <h3 className="text-lg font-medium">Things to Do</h3>
 
@@ -1176,6 +1157,7 @@ export function ListingForm({ id }) {
                 </div>
               </div>
 
+              {/* Form Submit button */}
               <div className="flex justify-end">
                 <Button type="button" variant="outline" className="mr-2" onClick={() => router.push("/Dashboard")}>
                   Cancel
@@ -1185,6 +1167,7 @@ export function ListingForm({ id }) {
                   {id ? "Update Listing" : "Create Listing"}
                 </Button>
               </div>
+              
             </form>
           </Form>
         </CardContent>

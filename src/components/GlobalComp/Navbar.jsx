@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useDispatch } from 'react-redux';
+import { logoutUser, resetTokenAndCredentials } from "../../store/auth-slice";
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -18,8 +20,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isPackageOpen, setIsPackageOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
+  const dispatch = useDispatch();
+
+  function handleLogout() {
+    dispatch(logoutUser());
+    dispatch(resetTokenAndCredentials());
+    sessionStorage.clear();
+    router.push("/");
+    setIsLoggedIn(false)
+  }
 
   return (
     <nav className='bg-white shadow-md py-4'>
@@ -117,7 +128,7 @@ export default function Navbar() {
           {isLoggedIn ? (
             <button
               className='bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition-all'
-              onClick={() => setIsLoggedIn(false)}
+              onClick={handleLogout}
             >
               Logout
             </button>
@@ -129,7 +140,7 @@ export default function Navbar() {
               Login
             </button>
           )}
-
+          
           {/* Mobile menu button */}
           <button
             className='lg:hidden text-gray-700'

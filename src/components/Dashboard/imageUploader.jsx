@@ -28,7 +28,7 @@ export function ImageUploader({ images, onUpload, onRemove }) {
       // Generate a placeholder image with random dimensions
       const width = Math.floor(Math.random() * 200) + 400
       const height = Math.floor(Math.random() * 200) + 300
-      // const placeholderUrl = `/placeholder.svg?height=${height}&width=${width}`
+      const placeholderUrl = `/placeholder.svg?height=${height}&width=${width}`
 
       onUpload(placeholderUrl)
       setIsUploading(false)

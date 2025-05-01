@@ -1,9 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
-import { Button } from "../ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../ui/table";
+import { Button } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,74 +18,29 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu"
-import { Badge } from "../ui/badge"
-import { Edit, MoreHorizontal, Trash } from "lucide-react"
+} from "../ui/dropdown-menu";
+import { Edit, MoreHorizontal, Trash } from "lucide-react";
 
-const initialListings = [
-  {
-    id: "1",
-    name: "Bali Beach Resort",
-    description: "Luxury beach resort in Bali with private villas",
-    price: 1299,
-    status: "published",
-    createdAt: "2023-04-12T09:00:00.000Z",
-  },
-  {
-    id: "2",
-    name: "Paris City Break",
-    description: "3-day city break in the heart of Paris",
-    price: 799,
-    status: "published",
-    createdAt: "2023-05-23T14:30:00.000Z",
-  },
-  {
-    id: "3",
-    name: "Swiss Alps Adventure",
-    description: "Hiking and skiing package in the Swiss Alps",
-    price: 1499,
-    status: "draft",
-    createdAt: "2023-06-05T11:15:00.000Z",
-  },
-  {
-    id: "4",
-    name: "New York City Tour",
-    description: "5-day comprehensive tour of NYC landmarks",
-    price: 1899,
-    status: "published",
-    createdAt: "2023-07-18T16:45:00.000Z",
-  },
-  {
-    id: "5",
-    name: "Tokyo Cultural Experience",
-    description: "Immersive cultural tour of Tokyo",
-    price: 2199,
-    status: "draft",
-    createdAt: "2023-08-02T08:20:00.000Z",
-  },
-]
-
-export function ListingsTable() {
-  const [listings, setListings] = useState(initialListings)
-
+export function ListingsTable({ initialListings }) {
+  const [listings, setListings] = useState(initialListings);
   const deleteListing = (id) => {
-    setListings(listings.filter((listing) => listing.id !== id))
-  }
+    setListings(listings.filter((listing) => listing.id !== id));
+  };
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
       day: "numeric",
-    })
-  }
+    });
+  };
 
   return (
     <div className="rounded-md border">
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Name</TableHead>
+            <TableHead>Title</TableHead>
             <TableHead>Price</TableHead>
             <TableHead>Created</TableHead>
             <TableHead className="text-right">Actions</TableHead>
@@ -92,9 +54,9 @@ export function ListingsTable() {
               </TableCell>
             </TableRow>
           ) : (
-            listings.map((listing) => (
-              <TableRow key={listing.id}>
-                <TableCell className="font-medium">{listing.name}</TableCell>
+            listings.map((listing,index) => (
+              <TableRow key={index}>
+                <TableCell className="font-medium">{listing.title}</TableCell>
                 <TableCell>${listing.price}</TableCell>
                 <TableCell>{formatDate(listing.createdAt)}</TableCell>
                 <TableCell className="text-right">
@@ -109,7 +71,7 @@ export function ListingsTable() {
                       <DropdownMenuLabel>Actions</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem asChild>
-                        <Link href={`/Dashboard/edit/${listing.id}`}>
+                        <Link href={`/Dashboard/edit/${listing._id}`}>
                           <Edit className="mr-2 h-4 w-4" />
                           Edit
                         </Link>
@@ -130,5 +92,5 @@ export function ListingsTable() {
         </TableBody>
       </Table>
     </div>
-  )
+  );
 }
