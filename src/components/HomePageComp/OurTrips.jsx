@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Cards from "../../components/GlobalComp/Cards.jsx";
+import Cards from "../../components/GlobalComp/Cards.jsx"; 
 
-const OurTrips = ({ data }) => {
-  const categories = Object.keys(data);
+const OurTrips = ({ tripsData }) => {
+  const categories = Object.keys(tripsData);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [showAll, setShowAll] = useState(false);
 
@@ -19,11 +19,10 @@ const OurTrips = ({ data }) => {
         <span className="text-teal-600">Discover</span> Our Trips
       </motion.h2>
 
-      {/* Category Buttons */}
       <motion.div className="flex flex-wrap justify-center gap-4 mb-6">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <motion.button
-            key={category}
+            key={index}
             className={`px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer border transition-all ${
               activeCategory === category
                 ? "bg-teal-600 text-white"
@@ -38,7 +37,6 @@ const OurTrips = ({ data }) => {
         ))}
       </motion.div>
 
-      {/* Cards Section */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeCategory}
@@ -48,12 +46,11 @@ const OurTrips = ({ data }) => {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
-          <Cards trips={data[activeCategory]} showAll={showAll} />
+          <Cards trips={tripsData[activeCategory]} showAll={showAll} />
         </motion.div>
       </AnimatePresence>
 
-      {/* View All Packages Button */}
-      {data[activeCategory].length > 4 && (
+      {tripsData[activeCategory].length > 4 && (
         <div className="flex items-center justify-center w-full">
           <button
             className="mt-6 px-6 py-2 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-all"
