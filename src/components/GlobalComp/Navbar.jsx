@@ -55,23 +55,29 @@ export default function Navbar() {
                   </button>
                   {isPackageOpen && (
                     <div className='absolute top-full mt-2 bg-white shadow-md rounded-md p-2 w-48 z-50'>
-                      <a
-                        href='/treks'
+                       <a
+                        href='/spiritualTours'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                        Treks
+                        Spiritual Tours
                       </a>
                       <a
-                        href='/expeditions'
+                        href='/StudentTours'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                        Expeditions
+                       Student Tours
                       </a>
                       <a
-                        href='/tours'
+                        href='/biketour'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                        Tours
+                       Bike Tours
+                      </a>
+                      <a
+                        href='/corporateTour'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Corporate Tours
                       </a>
                     </div>
                   )}
@@ -91,18 +97,30 @@ export default function Navbar() {
                   </button>
                   {isMoreOpen && (
                     <div className='absolute top-full mt-2 bg-white shadow-md rounded-md p-2 w-48 z-50'>
-                      <a
-                        href='/gallery'
+                     
+
+                     <a
+                        href='/Cycling'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                        Gallery
+                       Cycling
                       </a>
                       <a
-                        href='/ourteam'
+                        href='/trekking'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                        Our Team
+                       Trekking
                       </a>
+                      <a
+                        href='/Transport'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Transport
+                      </a>
+
+
+
+
                     </div>
                   )}
                 </div>
@@ -167,9 +185,30 @@ export default function Navbar() {
                   </button>
                   {isPackageOpen && (
                     <div className='pl-4'>
-                      <a href='/treks' className='block py-1'>Treks</a>
-                      <a href='/expeditions' className='block py-1'>Expeditions</a>
-                      <a href='/tours' className='block py-1'>Tours</a>
+                      <a
+                        href='/spiritualTours'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                        Spiritual Tours
+                      </a>
+                      <a
+                        href='/StudentTours'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Student Tours
+                      </a>
+                      <a
+                        href='/biketour'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Bike Tours
+                      </a>
+                      <a
+                        href='/corporateTour'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Corporate Tours
+                      </a>
                     </div>
                   )}
                 </div>
@@ -188,8 +227,24 @@ export default function Navbar() {
                   </button>
                   {isMoreOpen && (
                     <div className='pl-4'>
-                      <a href='/gallery' className='block py-1'>Gallery</a>
-                      <a href='/ourteam' className='block py-1'>Our Team</a>
+                      <a
+                        href='/Cycling'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Cycling
+                      </a>
+                      <a
+                        href='/trekking'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Trekking
+                      </a>
+                      <a
+                        href='/Transport'
+                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                      >
+                       Transport
+                      </a>
                     </div>
                   )}
                 </div>
