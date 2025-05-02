@@ -12,7 +12,7 @@ const initialState = {
 
 // Register user async thunk
 export const registerUser = createAsyncThunk(
-  "/auth/register",
+  "auth/register",
   async (formData) => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`,
@@ -26,7 +26,7 @@ export const registerUser = createAsyncThunk(
 );
 
 // Login user async thunk
-export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
+export const loginUser = createAsyncThunk("auth/login", async (formData) => {
   console.log("api hit",formData)
   const response = await axios.post(
     `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`,
@@ -40,7 +40,7 @@ export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
 });
 
 // Logout user async thunk
-export const logoutUser = createAsyncThunk("/auth/logout", async () => {
+export const logoutUser = createAsyncThunk("auth/logout", async () => {
   const response = await axios.post(
     `${process.env.NEXT_PUBLIC_API_URL}/api/auth/logout`,
     {},
@@ -52,7 +52,7 @@ export const logoutUser = createAsyncThunk("/auth/logout", async () => {
 });
 
 // checkAuth user async thunk  for live token
-export const checkAuth = createAsyncThunk("/auth/checkauth", async (token, { rejectWithValue }) => { 
+export const checkAuth = createAsyncThunk("auth/checkauth", async (token, { rejectWithValue }) => { 
   try {
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_API_URL}/api/auth/check-auth`,

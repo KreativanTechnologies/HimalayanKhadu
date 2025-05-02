@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const addNewPackage = createAsyncThunk(
-  "/package/addnewpackage",
+  "package/addnewpackage",
   async (formData) => {
     const result = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/add`,
@@ -25,7 +25,7 @@ export const addNewPackage = createAsyncThunk(
 );
 
 export const fetchAllPackages = createAsyncThunk(
-  "/package/fetchAllPackages",
+  "package/fetchAllPackages",
   async () => {
     const result = await axios.get(
       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/get`
@@ -36,7 +36,7 @@ export const fetchAllPackages = createAsyncThunk(
 );
 
 export const editPackage = createAsyncThunk(
-  "/package/editPackage",
+  "package/editPackage",
   async ({ id, formData }) => {
     const result = await axios.put(
       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/edit/${id}`,
@@ -52,7 +52,7 @@ export const editPackage = createAsyncThunk(
 );
 
 export const deletePackage = createAsyncThunk(
-  "/package/deletePackage",
+  "package/deletePackage",
   async (id) => {
     const result = await axios.delete(
       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/delete/${id}`

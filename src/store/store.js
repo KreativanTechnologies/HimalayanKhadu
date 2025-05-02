@@ -3,7 +3,7 @@ import authReducer from "./auth-slice"
 import adminTourPackageSlice from './admin/tourPackage-slice'
 // import adminOrderSlice from './admin/order-slice'
 
-// import clientTourPackageSlice from './client/tourPackage-slice'
+import clientTourPackageSlice from './client/tourPackage-slice'
 // import clientCartSlice from "./client/cart-slice"
 // import clientOrderSlice from "./client/order-slice"
 // import clientSearchSlice from "./client/search-slice"
@@ -17,7 +17,7 @@ const store = configureStore({
         adminTourPackages : adminTourPackageSlice,
         // adminOrder : adminOrderSlice,
         
-        // clientTourPackages : clientTourPackageSlice,
+        clientTourPackages : clientTourPackageSlice,
         // clientCart : clientCartSlice,
         // clientAddress : shopAddressSlice,
         // clientOrder : clientOrderSlice, 
