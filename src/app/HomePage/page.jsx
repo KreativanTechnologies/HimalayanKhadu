@@ -16,6 +16,7 @@ const page = () => {
   useEffect(() => {
     dispatch(fetchAllPackages());
   }, [dispatch]);
+  console.log(packageList,"data")
 
   if (!packageList || Object.keys(packageList).length === 0) {
     return <p>Loading packages...</p>;
