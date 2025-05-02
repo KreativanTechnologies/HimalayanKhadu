@@ -15,7 +15,7 @@ import {
   DialogTrigger,
 } from "../ui/dialog"
 import { ImagePlus, X, Upload, Loader2 } from "lucide-react"
-import { uploadImage } from "@/app/actions/upload-image"
+// import { uploadImage } from "@/app/actions/upload-image"
 
 export function ImageUploader({ images = [], onImagesChange }) {
   const [isUploading, setIsUploading] = useState(false)
