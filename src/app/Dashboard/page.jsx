@@ -5,12 +5,7 @@ import { ListingsTable } from "../../components/Dashboard/listingsTable";
 import { Button } from "../../components/ui/button";
 import { PlusCircle } from "lucide-react";
 import Link from "next/link";
-import {
-  addNewPackage,
-  fetchAllPackages,
-  editPackage,
-  deletePackage,
-} from "../../store/admin/tourPackage-slice";
+import { fetchAllPackages } from "../../store/admin/tourPackage-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
