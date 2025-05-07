@@ -17,8 +17,6 @@ export default function DashboardPage() {
     dispatch(fetchAllPackages());
   }, [dispatch]);
 
-  console.log(packageList,'list')
-
   return (
     <DashboardShell>
       <DashboardHeader

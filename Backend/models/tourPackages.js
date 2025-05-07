@@ -43,7 +43,6 @@ const PackageSchema = new mongoose.Schema({
     }],
     thingsToPack: [{
         title: { type: String, required: false },
-        image: { type: String, required: false },
         desc: { type: String, required: false },
     }],
     faq: [{
