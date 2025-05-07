@@ -7,7 +7,6 @@ const OurTrips = ({ tripsData }) => {
   const categories = Object.keys(tripsData);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [showAll, setShowAll] = useState(false);
-
   return (
     <div className="w-full px-6 md:px-18 py-10 pt-36">
       <motion.h2
@@ -46,7 +45,7 @@ const OurTrips = ({ tripsData }) => {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
-          <Cards trips={tripsData[activeCategory]} showAll={showAll} />
+          <Cards trips={tripsData} showAll={showAll} />
         </motion.div>
       </AnimatePresence>
 

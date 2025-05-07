@@ -2,13 +2,14 @@
 import { motion } from "framer-motion";
 
 export default function Cards({ trips, showAll }) {
+  console.log(trips,"tripdata")
   return (
     <>
       {trips
         .slice(0, trips.length <= 4 ? trips.length : showAll ? trips.length : 4)
-        .map((trip) => (
+        .map((trip,index) => (
           <motion.div
-            key={trip.id}
+            key={index}
             className="bg-white rounded-lg shadow-lg overflow-hidden"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, scale: 0.9 }}
