@@ -18,7 +18,7 @@ export default function Cards({ trips, showAll }) {
             transition={{ duration: 0.3 }}
           >
             <div className="relative">
-              <img src={trip.image} alt={trip.title} className="w-full h-48 object-cover" />
+              <img src={trip.gallery[0]} alt={trip.title} className="w-full h-48 object-cover" />
               {trip.badge && (
                 <motion.span
                   className="absolute top-2 left-2 bg-teal-600 text-white text-xs px-3 py-1 rounded-full"
