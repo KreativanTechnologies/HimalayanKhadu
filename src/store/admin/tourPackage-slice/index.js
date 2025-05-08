@@ -10,6 +10,7 @@ const initialState = {
 export const addNewPackage = createAsyncThunk(
   "package/addnewpackage",
   async (formData) => {
+    console.log(formData,"slice aata")
     const result = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/api/admin/package/add`,
       formData,

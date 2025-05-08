@@ -14,23 +14,6 @@ import { Loader2, Plus, X } from "lucide-react"
 import { useDispatch } from "react-redux"
 import {addNewPackage} from "../../store/admin/tourPackage-slice"
 
-// Mock data for editing
-const mockListings = {
-  1: {
-    id: "1",
-    title: "Bali Beach Resort",
-    description: "Luxury beach resort in Bali with private villas",
-    price: 1299,
-    images: ["/placeholder.svg?height=300&width=500"],
-  },
-  2: {
-    id: "2",
-    title: "Paris City Break",
-    description: "3-day city break in the heart of Paris",
-    price: 799,
-    images: ["/placeholder.svg?height=300&width=500"],
-  },
-}
 
 const formSchema = z.object({
   title: z.string().min(2, {
@@ -85,7 +68,6 @@ const formSchema = z.object({
     .array(
       z.object({
         title: z.string().optional(),
-        image: z.string().optional(),
         desc: z.string().optional(),
       }),
     )
@@ -155,7 +137,7 @@ const formSchema = z.object({
 
 export function ListingForm({ id }) {
   const router = useRouter()
-  const [images, setImages] = useState(id && mockListings[id] ? mockListings[id].images : [])
+  const [images, setImages] = useState([])
   const [isSubmitting, setIsSubmitting] = useState(false)
   const dispatch = useDispatch()
 
@@ -171,7 +153,7 @@ export function ListingForm({ id }) {
   const [thingsToDoCount, setThingsToDoCount] = useState(1)
 
   // Get listing data if editing
-  const existingListing = id ? mockListings[id] : null
+  const existingListing = id 
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -188,7 +170,7 @@ export function ListingForm({ id }) {
           itinerary: existingListing.itinerary || [
             { day: 1, Title: "", todayActivities: [""], Note: "", Highlight: "" },
           ],
-          thingsToPack: existingListing.thingsToPack || [{ title: "", image: "", desc: "" }],
+          thingsToPack: existingListing.thingsToPack || [{ title: "", desc: "" }],
           faq: existingListing.faq || [{ que: "", ans: "" }],
           howToReach: existingListing.howToReach || { title: "", multipleWays: [{ medium: "", desc: "" }] },
           bestTimeToVisit: existingListing.bestTimeToVisit || { title: "", multipleWays: [{ time: "", desc: "" }] },
@@ -206,7 +188,7 @@ export function ListingForm({ id }) {
           inclusions: [{ text: "" }],
           exclusions: [{ text: "" }],
           itinerary: [{ day: 1, Title: "", todayActivities: [""], Note: "", Highlight: "" }],
-          thingsToPack: [{ title: "", image: "", desc: "" }],
+          thingsToPack: [{ title: "", desc: "" }],
           faq: [{ que: "", ans: "" }],
           howToReach: { title: "", multipleWays: [{ medium: "", desc: "" }] },
           bestTimeToVisit: { title: "", multipleWays: [{ time: "", desc: "" }] },
@@ -219,13 +201,11 @@ export function ListingForm({ id }) {
 
   function onSubmit(values) {
     setIsSubmitting(true);
-    console.log(values,images, "final data");
-  
+    
     setTimeout(async () => {
-      const dataToSend = { ...values, gallery: images };
-  
+      const dataToSend = { ...values, gallery: images };  
       try {
-        await dispatch(addNewPackage(values)).unwrap(); // Dispatch properly
+        await dispatch(addNewPackage(dataToSend)).unwrap(); // Dispatch properly
         router.push("/Dashboard");
       } catch (error) {
         console.error("Error adding package:", error);
@@ -247,6 +227,10 @@ export function ListingForm({ id }) {
     setImages(newImages)
   }
 
+  const handleImagesChange = (newImages) => {
+    setImages(newImages);
+  }
+
 
 
 
@@ -261,7 +245,7 @@ export function ListingForm({ id }) {
             <h3 className="text-lg font-medium">Images</h3>
             <p className="text-sm text-muted-foreground">Upload images for your travel listing.</p>
             <div className="mt-4">
-              <ImageUploader images={images} onUpload={handleImageUpload} onRemove={handleImageRemove} />
+              <ImageUploader images={images} onUpload={handleImageUpload} onRemove={handleImageRemove} onImagesChange={handleImagesChange}  />
             </div>
           </div>
         </CardContent>
@@ -652,7 +636,7 @@ export function ListingForm({ id }) {
                     size="sm"
                     onClick={() => {
                       const currentThingsToPack = form.getValues("thingsToPack") || []
-                      form.setValue("thingsToPack", [...currentThingsToPack, { title: "", image: "", desc: "" }])
+                      form.setValue("thingsToPack", [...currentThingsToPack, { title: "", desc: "" }])
                       setThingsToPackCount(thingsToPackCount + 1)
                     }}
                   >
@@ -691,42 +675,6 @@ export function ListingForm({ id }) {
                             <FormLabel>Title</FormLabel>
                             <FormControl>
                               <Input placeholder="Enter item title" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name={`thingsToPack.${index}.image`}
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Image URL</FormLabel>
-                            <FormControl>
-
-                              <Input
-                                type="file"
-                                accept="image/*"
-                                onChange={async (e) => {
-                                  const file = e.target.files?.[0];
-                                  if (file) {
-                                    // Upload logic (mock or real API)
-                                    const formData = new FormData();
-                                    formData.append('file', file);
-
-                                    // Replace this with your actual upload logic
-                                    const response = await fetch('/api/upload', {
-                                      method: 'POST',
-                                      body: formData,
-                                    });
-
-                                    const data = await response.json();
-                                    field.onChange(data.url); // Update form with uploaded image URL
-                                  }
-                                }}
-                              />
-
                             </FormControl>
                             <FormMessage />
                           </FormItem>
