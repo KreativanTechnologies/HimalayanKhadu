@@ -46,84 +46,88 @@ export default function Navbar() {
             if (item.name === 'Trips/Tours') {
               return (
                 <div key={index} className='relative'>
-                  <button
-                    onClick={() => setIsPackageOpen(!isPackageOpen)}
-                    className='hover:text-primary transition-all flex items-center gap-1'
+                  <div
+                    onMouseEnter={() => setIsPackageOpen(true)}
+                    onMouseLeave={() => setIsPackageOpen(false)}
+                    className='relative'
                   >
-                    {item.name}
-                    <ChevronDown className='w-4 h-4' />
-                  </button>
-                  {isPackageOpen && (
-                    <div className='absolute top-full mt-2 bg-white shadow-md rounded-md p-2 w-48 z-50'>
-                       <a
-                        href='/spiritualTours'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                        Spiritual Tours
-                      </a>
-                      <a
-                        href='/StudentTours'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                       Student Tours
-                      </a>
-                      <a
-                        href='/biketour'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                       Bike Tours
-                      </a>
-                      <a
-                        href='/corporateTour'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                       Corporate Tours
-                      </a>
-                    </div>
-                  )}
+                    <button className='hover:text-primary transition-all flex items-center gap-1'>
+                      {item.name}
+                      <ChevronDown className='w-4 h-4' />
+                    </button>
+
+                    {isPackageOpen && (
+                      <div className='absolute top-full bg-white shadow-md rounded-md p-2 w-48 z-50'>
+                        <a
+                          href='/spiritualTours'
+                          className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                        >
+                          Spiritual Tours
+                        </a>
+                        <a
+                          href='/StudentTours'
+                          className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                        >
+                          Student Tours
+                        </a>
+                        <a
+                          href='/biketour'
+                          className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                        >
+                          Bike Tours
+                        </a>
+                        <a
+                          href='/corporateTour'
+                          className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                        >
+                          Corporate Tours
+                        </a>
+                      </div>
+                    )}
+
+                  </div>
+
+
                 </div>
               );
             }
 
             if (item.name === 'More') {
               return (
-                <div key={index} className='relative'>
-                  <button
-                    onClick={() => setIsMoreOpen(!isMoreOpen)}
-                    className='hover:text-primary transition-all flex items-center gap-1'
-                  >
-                    {item.name}
-                    <ChevronDown className='w-4 h-4' />
-                  </button>
-                  {isMoreOpen && (
-                    <div className='absolute top-full mt-2 bg-white shadow-md rounded-md p-2 w-48 z-50'>
-                     
-
-                     <a
-                        href='/Cycling'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                       Cycling
-                      </a>
-                      <a
-                        href='/trekking'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                       Trekking
-                      </a>
-                      <a
-                        href='/Transport'
-                        className='block px-4 py-2 hover:bg-gray-100 transition-all'
-                      >
-                       Transport
-                      </a>
-
-
-
-
-                    </div>
-                  )}
-                </div>
+                <div
+                key={index}
+                className='relative'
+                onMouseEnter={() => setIsMoreOpen(true)}
+                onMouseLeave={() => setIsMoreOpen(false)}
+              >
+                <button className='hover:text-primary transition-all flex items-center gap-1'>
+                  {item.name}
+                  <ChevronDown className='w-4 h-4' />
+                </button>
+                {isMoreOpen && (
+                  <div className='absolute top-full bg-white shadow-md rounded-md p-2 w-48 z-50'>
+                    <a
+                      href='/Cycling'
+                      className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                    >
+                      Cycling
+                    </a>
+                    <a
+                      href='/trekking'
+                      className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                    >
+                      Trekking
+                    </a>
+                    <a
+                      href='/Transport'
+                      className='block px-4 py-2 hover:bg-gray-100 transition-all'
+                    >
+                      Transport
+                    </a>
+                  </div>
+                )}
+              </div>
+              
               );
             }
 
@@ -158,7 +162,7 @@ export default function Navbar() {
               Login
             </button>
           )}
-          
+
           {/* Mobile menu button */}
           <button
             className='lg:hidden text-gray-700'
@@ -195,19 +199,19 @@ export default function Navbar() {
                         href='/StudentTours'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                       Student Tours
+                        Student Tours
                       </a>
                       <a
                         href='/biketour'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                       Bike Tours
+                        Bike Tours
                       </a>
                       <a
                         href='/corporateTour'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                       Corporate Tours
+                        Corporate Tours
                       </a>
                     </div>
                   )}
@@ -231,19 +235,19 @@ export default function Navbar() {
                         href='/Cycling'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                       Cycling
+                        Cycling
                       </a>
                       <a
                         href='/trekking'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                       Trekking
+                        Trekking
                       </a>
                       <a
                         href='/Transport'
                         className='block px-4 py-2 hover:bg-gray-100 transition-all'
                       >
-                       Transport
+                        Transport
                       </a>
                     </div>
                   )}
