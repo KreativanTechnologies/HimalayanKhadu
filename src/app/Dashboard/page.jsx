@@ -5,7 +5,7 @@ import { ListingsTable } from "../../components/Dashboard/listingsTable";
 import { Button } from "../../components/ui/button";
 import { PlusCircle } from "lucide-react";
 import Link from "next/link";
-import { fetchAllPackages } from "../../store/admin/tourPackage-slice";
+import { fetchAllPackages, deletePackage } from "../../store/admin/tourPackage-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
@@ -16,6 +16,14 @@ export default function DashboardPage() {
   useEffect(() => {
     dispatch(fetchAllPackages());
   }, [dispatch]);
+
+  const deleteListing = (id) => {
+    dispatch(deletePackage(id)).then(data => {
+      if(data?.payload?.success){
+        dispatch(fetchAllPackages())
+      }
+    })
+  };
 
   return (
     <DashboardShell>
@@ -32,7 +40,7 @@ export default function DashboardPage() {
       </DashboardHeader>
       <div className="grid gap-4">
         {packageList.length > 0 && (
-          <ListingsTable initialListings={packageList} />
+          <ListingsTable initialListings={packageList} deleteListing={deleteListing} />
         )}
       </div>
     </DashboardShell>

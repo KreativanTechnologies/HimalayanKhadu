@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
 import HeroSection from "../../components/HomePageComp/HeroSection";
 import OurTrips from "../../components/HomePageComp/OurTrips";
 import BookTour from "../../components/HomePageComp/BookTour";
 import WhyHimalayan from "../../components/HomePageComp/WhyHimalayan";
-// import ClientSay from "../../components/HomePageComp/ClientSay"
 import Blogs from "../../components/HomePageComp/Blogs";
-import { fetchAllPackages } from "../../store/client/tourPackage-slice";
 import { useDispatch, useSelector } from "react-redux";
+import { fetchAllPackages } from "@/store/admin/tourPackage-slice";
+import { useEffect } from "react";
+import LoadingState from '../../components/GlobalComp/LoadingState'
 
 const page = () => {
   const { packageList } = useSelector((state) => state.clientTourPackages);
@@ -18,8 +18,8 @@ const page = () => {
   }, [dispatch]);
 
   if (!packageList || Object.keys(packageList).length === 0) {
-    return <p>Loading packages...</p>;
-  }    
+    return <LoadingState/>;
+  }
 
   return (
     <div className="w-full h-full flex flex-col ">
@@ -27,7 +27,6 @@ const page = () => {
       <OurTrips tripsData={packageList} />
       <BookTour />
       <WhyHimalayan />
-      {/* <ClientSay/> */}
       <Blogs />
     </div>
   );

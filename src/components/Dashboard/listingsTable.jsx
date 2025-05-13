@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Table,
@@ -21,11 +21,8 @@ import {
 } from "../ui/dropdown-menu";
 import { Edit, MoreHorizontal, Trash } from "lucide-react";
 
-export function ListingsTable({ initialListings }) {
+export function ListingsTable({ initialListings, deleteListing }) {
   const [listings, setListings] = useState(initialListings);
-  const deleteListing = (id) => {
-    setListings(listings.filter((listing) => listing.id !== id));
-  };
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-US", {
@@ -54,7 +51,7 @@ export function ListingsTable({ initialListings }) {
               </TableCell>
             </TableRow>
           ) : (
-            listings.map((listing,index) => (
+            listings.map((listing, index) => (
               <TableRow key={index}>
                 <TableCell className="font-medium">{listing.title}</TableCell>
                 <TableCell>${listing.price}</TableCell>
@@ -78,7 +75,7 @@ export function ListingsTable({ initialListings }) {
                       </DropdownMenuItem>
                       <DropdownMenuItem
                         className="text-destructive focus:text-destructive"
-                        onClick={() => deleteListing(listing.id)}
+                        onClick={() => deleteListing(listing._id)}
                       >
                         <Trash className="mr-2 h-4 w-4" />
                         Delete

@@ -27,7 +27,6 @@ export default function EditListingPage({ params }) {
   const initialListings = packageList;
   const { id } = React.use(params);
   const [listing, setListing] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const foundListing = initialListings.find((item) => item._id === id);
@@ -35,7 +34,6 @@ export default function EditListingPage({ params }) {
     if (foundListing) {
       setListing(foundListing);
     }
-    setIsLoading(false);
   }, [id]);
 
 
@@ -47,7 +45,6 @@ useEffect(() => {
   if (packageList.length > 0) {
     const foundListing = packageList.find((item) => item._id === id);
     setListing(foundListing);
-    setIsLoading(false);
   }
 }, [id, packageList]);
 
@@ -65,14 +62,6 @@ useEffect(() => {
     dispatch(editPackage({id,...listing}))
     router.push("/Dashboard");
   };
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        Loading...
-      </div>
-    );
-  }
 
   if (!listing) {
     return (

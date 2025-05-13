@@ -158,6 +158,3 @@ const ClientSay = () => {
 }
 
 export default ClientSay
-
-
-

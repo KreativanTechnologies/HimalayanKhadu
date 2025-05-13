@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 
 export default function Cards({ trips, showAll }) {
-  console.log(trips,"tripdata")
   return (
     <>
       {trips

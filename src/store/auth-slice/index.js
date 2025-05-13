@@ -27,7 +27,6 @@ export const registerUser = createAsyncThunk(
 
 // Login user async thunk
 export const loginUser = createAsyncThunk("auth/login", async (formData) => {
-  console.log("api hit",formData)
   const response = await axios.post(
     `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`,
     formData,
@@ -35,7 +34,6 @@ export const loginUser = createAsyncThunk("auth/login", async (formData) => {
       withCredentials: true,
     }
   );
-  console.log(formData,"slice")
   return response.data;
 });
 
