@@ -1,11 +1,10 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt, FaTag, FaSmile, FaBolt, FaSearch } from "react-icons/fa";
 
 const images = [
-  "/images/HomePage/h1.png",
-  "/images/HomePage/h3.png",
-  "/images/HomePage/h4.png",
+  process.env.PUBLIC_URL + "/images/HomePage/h1.png",
+  process.env.PUBLIC_URL + "/images/HomePage/h3.png",
+  process.env.PUBLIC_URL + "/images/HomePage/h4.png",
 ];
 
 const HeroSection = () => {
@@ -19,8 +18,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-cover bg-center transition-all duration-1000"
-      style={{ backgroundImage: `url(${images[currentImage]})` }}>
+    <div
+      className="relative w-full h-screen bg-cover bg-center transition-all duration-1000"
+      style={{ backgroundImage: `url(${images[currentImage]})` }}
+    >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 className="text-white text-3xl md:text-5xl font-bold">

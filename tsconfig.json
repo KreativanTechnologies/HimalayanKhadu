@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/GlobalComp/LayoutWrapper.jsx", "src/app/layout.tsx", "src/app/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/GlobalComp/LayoutWrapper.jsx", "src/app/layout.tsx", "src/app/page.jsx", "my-frontend/src/components/ui/accordion.jsx", "my-frontend/src/components/ui/badge.jsx", "my-frontend/src/components/ui/button.jsx", "my-frontend/src/components/ui/card.jsx", "my-frontend/src/components/ui/dialog.jsx", "my-frontend/src/components/ui/dropdown-menu.jsx", "my-frontend/src/components/ui/form.jsx", "my-frontend/src/components/ui/input.jsx", "my-frontend/src/components/ui/label.jsx", "my-frontend/src/components/ui/select.jsx", "my-frontend/src/components/ui/separator.jsx", "my-frontend/src/components/ui/table.jsx", "my-frontend/src/components/ui/tabs.jsx", "my-frontend/src/components/ui/textarea.jsx"],
   "exclude": ["node_modules"]
 }

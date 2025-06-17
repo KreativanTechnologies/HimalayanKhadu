@@ -1,4 +1,3 @@
-"use client"
 import React, { useState } from "react";
 
 const WhyHimalayan = () => {
@@ -7,7 +6,6 @@ const WhyHimalayan = () => {
   return (
     <div className="w-full h-full p-[4vw] md:p-0 md:px-[4vw] relative">
       <div className="w-full h-full gap-[3vw] flex flex-col md:flex-row relative">
-
         <div className="w-full h-full py-[2vw] flex flex-col gap-2 md:gap-[1vw]">
           <h1 className="text-xl md:text-[2.5vw] font-semibold">
             Why <span className="text-[#0C8699]">Himalayan Khadu?</span>
@@ -71,7 +69,7 @@ const WhyHimalayan = () => {
                 <h1 className="text-center text-2xl md:text-[2vw] font-bold text-[#0C8699]">
                   100+
                 </h1>
-                <p className=" text-md md:text-[1.6vw]">Destianations</p>
+                <p className=" text-md md:text-[1.6vw]">Destinations</p>
               </div>
               <div>
                 <h1 className="text-center text-2xl md:text-[2vw] font-bold text-[#0C8699]">
@@ -97,26 +95,26 @@ const WhyHimalayan = () => {
           </div>
         </div>
 
-        <div className=" relative w-full h-[70vw] md:h-full flex justify-end p-[5vw]">
+        <div className="relative w-full h-[70vw] md:h-full flex justify-end p-[5vw]">
           <div className="absolute w-[35vw] h-[32vw] md:w-[14vw] md:h-[13vw] overflow-hidden left-0 md:left-2/12 top-5/12 md:top-3/12 z-20 rounded-[1vw] hover:z-40 cursor-pointer hover:scale-110 duration-1000">
             <img
               className="w-full h-full object-cover object-center"
-              src="\images\HomePage\IMG_0764.webp"
-              alt=""
+              src={process.env.PUBLIC_URL + "/images/HomePage/IMG_0764.webp"}
+              alt="himalayan 1"
             />
           </div>
           <div className="w-[70vw] h-[60vw] md:w-[28vw] md:h-[25vw] overflow-hidden rounded-[1vw] hover:z-40 cursor-pointer hover:scale-110 duration-1000">
             <img
               className="w-full h-full object-cover object-center"
-              src="\images\HomePage\IMG_0261.webp"
-              alt=""
+              src={process.env.PUBLIC_URL + "/images/HomePage/IMG_0261.webp"}
+              alt="himalayan 2"
             />
           </div>
           <div className="absolute w-[60vw] h-[50vw] md:w-[24vw] md:h-[20vw] overflow-hidden bottom-0 left-1/12 md:left-3/12 z-10 rounded-[1vw] hover:z-40 cursor-pointer hover:scale-110 duration-1000">
             <img
               className="w-full h-full object-cover object-center"
-              src="\images\HomePage\IMG_0320.webp"
-              alt=""
+              src={process.env.PUBLIC_URL + "/images/HomePage/IMG_0320.webp"}
+              alt="himalayan 3"
             />
           </div>
         </div>

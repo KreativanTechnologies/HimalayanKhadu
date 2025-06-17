@@ -1,27 +1,27 @@
-import React from 'react'
-import Hero from '../../components/AboutComponents/Hero'
-import AboutSection from '../../components/AboutComponents/About'
-import Memory from '../../components/AboutComponents/Memory'
-import WhyChooseus from '../../components/AboutComponents/WhyChooseus'
-// import ClientSay from '../../components/AboutComponents/ClientSay'
-import DiscoverTrips from '../../components/AboutComponents/OurPackages'
+import React from 'react';
+import Hero from '../../components/AboutComponents/Hero';
+import AboutSection from '../../components/AboutComponents/About';
+import Memory from '../../components/AboutComponents/Memory';
+import WhyChooseus from '../../components/AboutComponents/WhyChooseus';
+// import ClientSay from '../../components/AboutComponents/ClientSay';
+import DiscoverTrips from '../../components/AboutComponents/OurPackages';
 
 const Herodata = {
-  img_Src : "/images/aboutimg/IMG_4421.JPG",
-  heading : "About Us"
-}
+  img_Src: "/images/aboutimg/IMG_4421.JPG",
+  heading: "About Us"
+};
 
-const page = () => {
+const Page = () => {
   return (
     <>
-    <Hero data={Herodata}/>
-    <AboutSection/>
-    <DiscoverTrips/>
-    <Memory/>
-    <WhyChooseus/>
-    {/* <ClientSay/> */}
+      <Hero data={Herodata} />
+      <AboutSection />
+      <DiscoverTrips />
+      <Memory />
+      <WhyChooseus />
+      {/* <ClientSay /> */}
     </>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
