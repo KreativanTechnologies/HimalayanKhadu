@@ -9,7 +9,7 @@ export default function AboutSection() {
           <h2 className="text-[4vh] md:text-[5vh] font-bold">
             <span className="text-[#0C8699]">About</span> Himalayan Khadu
           </h2>
-          <p className="text-gray-700 leading-relaxed text-[1.6vh] sm:text-[2vh] sm:text-base">
+          <p className="text-gray-700 leading-relaxed text-[2.4vh] sm:text-[2.8vh] md:text-[2.6vh] sm:text-base">
             <strong>"Where passion meets the peaks!"</strong>
             <br />
             <br />
