@@ -14,7 +14,7 @@ import Trippage from './app/Trippage/page';
 import Transport from './app/Transport/page';
 import StudentTour from './app/StudentTours/page'
 import Spirtiualtours from './app/spiritualTours/page'
-// import Destinations from './app/destinations/page'
+import Destinations from './app/destinations/page'
 // import Carddetail from '../../my-frontend/src/app/Carddetail/page';
 import BikeTour from './app/biketour/page';
 
@@ -38,7 +38,7 @@ export default function App() {
         <Route path="/Transport" element={<Transport/>} />
         <Route path="/StudentTours" element={<StudentTour />} />
         <Route path="/spiritualTours" element={<Spirtiualtours/>} />
-        {/* <Route path="/destinations" element={<Destinations />} /> */}
+        <Route path="/destinations" element={<Destinations />} />
         {/* <Route path="/carddetail" element={<Carddetail />} /> */}
         <Route path="/biketour" element={<BikeTour />} />
       </Route>
