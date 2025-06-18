@@ -15,5 +15,5 @@ module.exports = {
       },
     },
   },
-  plugins: [], // 👈 No animation plugin
+  plugins: [], 
 };
